@@ -1,0 +1,16 @@
+{
+  "simple_verdict": "Watch closely: Traffic is normal, but order creation has dropped.",
+  "what_happened": "People are visiting the site and reaching the goal page at normal rates, but the number of orders created dropped by 17%. Because fewer orders were started, the total number of paid orders also fell by 21%.",
+  "main_insight": "Traffic was okay, but conversion got weaker. The specific problem is happening right after users visit the goal page—they are not taking the next step to create an order. The payment system itself appears to be working normally for those who do create an order.",
+  "likely_reasons": [
+    "A broken 'Add to Cart' or 'Create Order' button on the goal page.",
+    "An issue with product availability, unexpected pricing, or a broken promotion.",
+    "A recent website update that made the checkout process confusing or difficult to start."
+  ],
+  "what_to_check_now": [
+    "Test the order creation process directly from the goal page on both mobile and desktop devices.",
+    "Review recent changes to the website, product inventory, or active promotions.",
+    "Check customer support tickets and website error logs for complaints about trying to place an order."
+  ],
+  "one_line_summary": "Traffic is healthy, but a sharp drop in users moving from the goal page to creating an order is lowering overall sales."
+}

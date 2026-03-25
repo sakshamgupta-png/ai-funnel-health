@@ -1,0 +1,4243 @@
+{
+  "funnel_id": "super_pass_live",
+  "funnel_name": "Super Pass Live",
+  "generated_at": "2026-03-25T17:54:42.694431+05:30",
+  "timezone": "Asia/Kolkata",
+  "window_start": "2026-03-14T00:00:00",
+  "target_hour": "2026-03-25T16:00:00",
+  "comparison_days": 10,
+  "steps": [
+    "Sessions",
+    "Goal Page Visited",
+    "Orders Created",
+    "Orders Paid"
+  ],
+  "source_meta": {
+    "webengage": {
+      "bucket_count": 282
+    },
+    "redash": {
+      "retrieved_at": "2026-03-25T12:25:14.850Z",
+      "query_result_id": 48033349,
+      "row_count": 1074,
+      "time_column": "Date"
+    }
+  },
+  "buckets": [
+    {
+      "bucket_start": "2026-03-14T00:00:00",
+      "values": {
+        "Sessions": 41760.0,
+        "Goal Page Visited": 5945.0,
+        "Orders Created": 389.0,
+        "Orders Paid": 82.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T01:00:00",
+      "values": {
+        "Sessions": 22306.0,
+        "Goal Page Visited": 2884.0,
+        "Orders Created": 181.0,
+        "Orders Paid": 40.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T02:00:00",
+      "values": {
+        "Sessions": 12822.0,
+        "Goal Page Visited": 1547.0,
+        "Orders Created": 111.0,
+        "Orders Paid": 26.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T03:00:00",
+      "values": {
+        "Sessions": 9674.0,
+        "Goal Page Visited": 1066.0,
+        "Orders Created": 86.0,
+        "Orders Paid": 19.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T04:00:00",
+      "values": {
+        "Sessions": 12968.0,
+        "Goal Page Visited": 1543.0,
+        "Orders Created": 87.0,
+        "Orders Paid": 17.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T05:00:00",
+      "values": {
+        "Sessions": 22444.0,
+        "Goal Page Visited": 3065.0,
+        "Orders Created": 173.0,
+        "Orders Paid": 29.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T06:00:00",
+      "values": {
+        "Sessions": 40245.0,
+        "Goal Page Visited": 6059.0,
+        "Orders Created": 425.0,
+        "Orders Paid": 106.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T07:00:00",
+      "values": {
+        "Sessions": 66865.0,
+        "Goal Page Visited": 10195.0,
+        "Orders Created": 698.0,
+        "Orders Paid": 143.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T08:00:00",
+      "values": {
+        "Sessions": 90813.0,
+        "Goal Page Visited": 13900.0,
+        "Orders Created": 980.0,
+        "Orders Paid": 209.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T09:00:00",
+      "values": {
+        "Sessions": 118178.0,
+        "Goal Page Visited": 18459.0,
+        "Orders Created": 1303.0,
+        "Orders Paid": 256.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T10:00:00",
+      "values": {
+        "Sessions": 137907.0,
+        "Goal Page Visited": 21100.0,
+        "Orders Created": 1471.0,
+        "Orders Paid": 307.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T11:00:00",
+      "values": {
+        "Sessions": 146127.0,
+        "Goal Page Visited": 22039.0,
+        "Orders Created": 1509.0,
+        "Orders Paid": 317.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T12:00:00",
+      "values": {
+        "Sessions": 147698.0,
+        "Goal Page Visited": 21594.0,
+        "Orders Created": 1372.0,
+        "Orders Paid": 314.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T13:00:00",
+      "values": {
+        "Sessions": 132268.0,
+        "Goal Page Visited": 18912.0,
+        "Orders Created": 1432.0,
+        "Orders Paid": 262.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T14:00:00",
+      "values": {
+        "Sessions": 129639.0,
+        "Goal Page Visited": 19222.0,
+        "Orders Created": 1300.0,
+        "Orders Paid": 260.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T15:00:00",
+      "values": {
+        "Sessions": 132608.0,
+        "Goal Page Visited": 19098.0,
+        "Orders Created": 1305.0,
+        "Orders Paid": 239.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T16:00:00",
+      "values": {
+        "Sessions": 128154.0,
+        "Goal Page Visited": 17686.0,
+        "Orders Created": 1225.0,
+        "Orders Paid": 234.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T17:00:00",
+      "values": {
+        "Sessions": 118523.0,
+        "Goal Page Visited": 16080.0,
+        "Orders Created": 1019.0,
+        "Orders Paid": 215.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T18:00:00",
+      "values": {
+        "Sessions": 120516.0,
+        "Goal Page Visited": 16813.0,
+        "Orders Created": 1193.0,
+        "Orders Paid": 223.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T19:00:00",
+      "values": {
+        "Sessions": 131992.0,
+        "Goal Page Visited": 18379.0,
+        "Orders Created": 1577.0,
+        "Orders Paid": 293.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T20:00:00",
+      "values": {
+        "Sessions": 132117.0,
+        "Goal Page Visited": 17549.0,
+        "Orders Created": 1696.0,
+        "Orders Paid": 334.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T21:00:00",
+      "values": {
+        "Sessions": 127241.0,
+        "Goal Page Visited": 17258.0,
+        "Orders Created": 1594.0,
+        "Orders Paid": 294.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T22:00:00",
+      "values": {
+        "Sessions": 105873.0,
+        "Goal Page Visited": 14090.0,
+        "Orders Created": 1099.0,
+        "Orders Paid": 226.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-14T23:00:00",
+      "values": {
+        "Sessions": 70558.0,
+        "Goal Page Visited": 8806.0,
+        "Orders Created": 675.0,
+        "Orders Paid": 120.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T00:00:00",
+      "values": {
+        "Sessions": 40689.0,
+        "Goal Page Visited": 4856.0,
+        "Orders Created": 414.0,
+        "Orders Paid": 95.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T01:00:00",
+      "values": {
+        "Sessions": 22776.0,
+        "Goal Page Visited": 2475.0,
+        "Orders Created": 196.0,
+        "Orders Paid": 41.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T02:00:00",
+      "values": {
+        "Sessions": 13696.0,
+        "Goal Page Visited": 1322.0,
+        "Orders Created": 103.0,
+        "Orders Paid": 17.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T03:00:00",
+      "values": {
+        "Sessions": 9985.0,
+        "Goal Page Visited": 1022.0,
+        "Orders Created": 78.0,
+        "Orders Paid": 21.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T04:00:00",
+      "values": {
+        "Sessions": 12710.0,
+        "Goal Page Visited": 1362.0,
+        "Orders Created": 104.0,
+        "Orders Paid": 17.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T05:00:00",
+      "values": {
+        "Sessions": 21004.0,
+        "Goal Page Visited": 2420.0,
+        "Orders Created": 196.0,
+        "Orders Paid": 43.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T06:00:00",
+      "values": {
+        "Sessions": 38320.0,
+        "Goal Page Visited": 4963.0,
+        "Orders Created": 454.0,
+        "Orders Paid": 101.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T07:00:00",
+      "values": {
+        "Sessions": 61597.0,
+        "Goal Page Visited": 8362.0,
+        "Orders Created": 784.0,
+        "Orders Paid": 172.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T08:00:00",
+      "values": {
+        "Sessions": 82355.0,
+        "Goal Page Visited": 10980.0,
+        "Orders Created": 1049.0,
+        "Orders Paid": 218.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T09:00:00",
+      "values": {
+        "Sessions": 103468.0,
+        "Goal Page Visited": 14242.0,
+        "Orders Created": 1410.0,
+        "Orders Paid": 299.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T10:00:00",
+      "values": {
+        "Sessions": 119920.0,
+        "Goal Page Visited": 15854.0,
+        "Orders Created": 1458.0,
+        "Orders Paid": 298.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T11:00:00",
+      "values": {
+        "Sessions": 128720.0,
+        "Goal Page Visited": 16689.0,
+        "Orders Created": 1593.0,
+        "Orders Paid": 324.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T12:00:00",
+      "values": {
+        "Sessions": 132356.0,
+        "Goal Page Visited": 16505.0,
+        "Orders Created": 1574.0,
+        "Orders Paid": 318.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T13:00:00",
+      "values": {
+        "Sessions": 134486.0,
+        "Goal Page Visited": 15182.0,
+        "Orders Created": 1396.0,
+        "Orders Paid": 293.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T14:00:00",
+      "values": {
+        "Sessions": 129813.0,
+        "Goal Page Visited": 14936.0,
+        "Orders Created": 1246.0,
+        "Orders Paid": 273.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T15:00:00",
+      "values": {
+        "Sessions": 128665.0,
+        "Goal Page Visited": 15380.0,
+        "Orders Created": 1402.0,
+        "Orders Paid": 288.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T16:00:00",
+      "values": {
+        "Sessions": 124649.0,
+        "Goal Page Visited": 14591.0,
+        "Orders Created": 1245.0,
+        "Orders Paid": 232.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T17:00:00",
+      "values": {
+        "Sessions": 117190.0,
+        "Goal Page Visited": 13606.0,
+        "Orders Created": 1070.0,
+        "Orders Paid": 197.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T18:00:00",
+      "values": {
+        "Sessions": 118324.0,
+        "Goal Page Visited": 14313.0,
+        "Orders Created": 1106.0,
+        "Orders Paid": 203.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T19:00:00",
+      "values": {
+        "Sessions": 127025.0,
+        "Goal Page Visited": 15605.0,
+        "Orders Created": 1511.0,
+        "Orders Paid": 277.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T20:00:00",
+      "values": {
+        "Sessions": 124879.0,
+        "Goal Page Visited": 15353.0,
+        "Orders Created": 1548.0,
+        "Orders Paid": 297.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T21:00:00",
+      "values": {
+        "Sessions": 120020.0,
+        "Goal Page Visited": 14922.0,
+        "Orders Created": 1397.0,
+        "Orders Paid": 255.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T22:00:00",
+      "values": {
+        "Sessions": 102192.0,
+        "Goal Page Visited": 12136.0,
+        "Orders Created": 1159.0,
+        "Orders Paid": 197.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-15T23:00:00",
+      "values": {
+        "Sessions": 67731.0,
+        "Goal Page Visited": 7741.0,
+        "Orders Created": 694.0,
+        "Orders Paid": 135.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T00:00:00",
+      "values": {
+        "Sessions": 41545.0,
+        "Goal Page Visited": 4324.0,
+        "Orders Created": 386.0,
+        "Orders Paid": 92.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T01:00:00",
+      "values": {
+        "Sessions": 20868.0,
+        "Goal Page Visited": 2173.0,
+        "Orders Created": 180.0,
+        "Orders Paid": 36.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T02:00:00",
+      "values": {
+        "Sessions": 12035.0,
+        "Goal Page Visited": 1104.0,
+        "Orders Created": 117.0,
+        "Orders Paid": 33.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T03:00:00",
+      "values": {
+        "Sessions": 9186.0,
+        "Goal Page Visited": 789.0,
+        "Orders Created": 76.0,
+        "Orders Paid": 25.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T04:00:00",
+      "values": {
+        "Sessions": 11586.0,
+        "Goal Page Visited": 1082.0,
+        "Orders Created": 99.0,
+        "Orders Paid": 19.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T05:00:00",
+      "values": {
+        "Sessions": 21152.0,
+        "Goal Page Visited": 2231.0,
+        "Orders Created": 227.0,
+        "Orders Paid": 61.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T06:00:00",
+      "values": {
+        "Sessions": 40030.0,
+        "Goal Page Visited": 4506.0,
+        "Orders Created": 396.0,
+        "Orders Paid": 97.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T07:00:00",
+      "values": {
+        "Sessions": 66627.0,
+        "Goal Page Visited": 7721.0,
+        "Orders Created": 765.0,
+        "Orders Paid": 166.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T08:00:00",
+      "values": {
+        "Sessions": 92719.0,
+        "Goal Page Visited": 11033.0,
+        "Orders Created": 930.0,
+        "Orders Paid": 190.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T09:00:00",
+      "values": {
+        "Sessions": 125620.0,
+        "Goal Page Visited": 14454.0,
+        "Orders Created": 1314.0,
+        "Orders Paid": 285.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T10:00:00",
+      "values": {
+        "Sessions": 148204.0,
+        "Goal Page Visited": 17375.0,
+        "Orders Created": 1533.0,
+        "Orders Paid": 304.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T11:00:00",
+      "values": {
+        "Sessions": 159608.0,
+        "Goal Page Visited": 18689.0,
+        "Orders Created": 1757.0,
+        "Orders Paid": 353.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T12:00:00",
+      "values": {
+        "Sessions": 157912.0,
+        "Goal Page Visited": 40192.0,
+        "Orders Created": 1683.0,
+        "Orders Paid": 353.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T13:00:00",
+      "values": {
+        "Sessions": 146852.0,
+        "Goal Page Visited": 39584.0,
+        "Orders Created": 1439.0,
+        "Orders Paid": 293.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T14:00:00",
+      "values": {
+        "Sessions": 140440.0,
+        "Goal Page Visited": 40635.0,
+        "Orders Created": 1415.0,
+        "Orders Paid": 289.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T15:00:00",
+      "values": {
+        "Sessions": 145546.0,
+        "Goal Page Visited": 42157.0,
+        "Orders Created": 1459.0,
+        "Orders Paid": 293.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T16:00:00",
+      "values": {
+        "Sessions": 138249.0,
+        "Goal Page Visited": 40175.0,
+        "Orders Created": 1265.0,
+        "Orders Paid": 241.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T17:00:00",
+      "values": {
+        "Sessions": 127729.0,
+        "Goal Page Visited": 35697.0,
+        "Orders Created": 1181.0,
+        "Orders Paid": 215.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T18:00:00",
+      "values": {
+        "Sessions": 130629.0,
+        "Goal Page Visited": 37320.0,
+        "Orders Created": 1391.0,
+        "Orders Paid": 278.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T19:00:00",
+      "values": {
+        "Sessions": 145784.0,
+        "Goal Page Visited": 40838.0,
+        "Orders Created": 2088.0,
+        "Orders Paid": 412.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T20:00:00",
+      "values": {
+        "Sessions": 144220.0,
+        "Goal Page Visited": 39445.0,
+        "Orders Created": 2056.0,
+        "Orders Paid": 384.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T21:00:00",
+      "values": {
+        "Sessions": 140479.0,
+        "Goal Page Visited": 38923.0,
+        "Orders Created": 2225.0,
+        "Orders Paid": 394.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T22:00:00",
+      "values": {
+        "Sessions": 113033.0,
+        "Goal Page Visited": 31286.0,
+        "Orders Created": 1185.0,
+        "Orders Paid": 224.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-16T23:00:00",
+      "values": {
+        "Sessions": 73345.0,
+        "Goal Page Visited": 19294.0,
+        "Orders Created": 838.0,
+        "Orders Paid": 152.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T00:00:00",
+      "values": {
+        "Sessions": 39873.0,
+        "Goal Page Visited": 10144.0,
+        "Orders Created": 411.0,
+        "Orders Paid": 94.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T01:00:00",
+      "values": {
+        "Sessions": 20428.0,
+        "Goal Page Visited": 4939.0,
+        "Orders Created": 251.0,
+        "Orders Paid": 49.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T02:00:00",
+      "values": {
+        "Sessions": 11493.0,
+        "Goal Page Visited": 2609.0,
+        "Orders Created": 77.0,
+        "Orders Paid": 13.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T03:00:00",
+      "values": {
+        "Sessions": 8758.0,
+        "Goal Page Visited": 1987.0,
+        "Orders Created": 90.0,
+        "Orders Paid": 17.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T04:00:00",
+      "values": {
+        "Sessions": 11614.0,
+        "Goal Page Visited": 3114.0,
+        "Orders Created": 114.0,
+        "Orders Paid": 25.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T05:00:00",
+      "values": {
+        "Sessions": 21595.0,
+        "Goal Page Visited": 6336.0,
+        "Orders Created": 206.0,
+        "Orders Paid": 45.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T06:00:00",
+      "values": {
+        "Sessions": 41572.0,
+        "Goal Page Visited": 13091.0,
+        "Orders Created": 467.0,
+        "Orders Paid": 108.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T07:00:00",
+      "values": {
+        "Sessions": 69686.0,
+        "Goal Page Visited": 21979.0,
+        "Orders Created": 891.0,
+        "Orders Paid": 175.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T08:00:00",
+      "values": {
+        "Sessions": 95228.0,
+        "Goal Page Visited": 30111.0,
+        "Orders Created": 1247.0,
+        "Orders Paid": 264.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T09:00:00",
+      "values": {
+        "Sessions": 124056.0,
+        "Goal Page Visited": 39741.0,
+        "Orders Created": 1462.0,
+        "Orders Paid": 324.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T10:00:00",
+      "values": {
+        "Sessions": 148657.0,
+        "Goal Page Visited": 45336.0,
+        "Orders Created": 1887.0,
+        "Orders Paid": 375.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T11:00:00",
+      "values": {
+        "Sessions": 158690.0,
+        "Goal Page Visited": 46949.0,
+        "Orders Created": 2018.0,
+        "Orders Paid": 378.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T12:00:00",
+      "values": {
+        "Sessions": 154246.0,
+        "Goal Page Visited": 44348.0,
+        "Orders Created": 1888.0,
+        "Orders Paid": 326.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T13:00:00",
+      "values": {
+        "Sessions": 140566.0,
+        "Goal Page Visited": 41448.0,
+        "Orders Created": 1681.0,
+        "Orders Paid": 312.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T14:00:00",
+      "values": {
+        "Sessions": 142504.0,
+        "Goal Page Visited": 42786.0,
+        "Orders Created": 1570.0,
+        "Orders Paid": 281.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T15:00:00",
+      "values": {
+        "Sessions": 144932.0,
+        "Goal Page Visited": 42869.0,
+        "Orders Created": 1439.0,
+        "Orders Paid": 242.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T16:00:00",
+      "values": {
+        "Sessions": 138327.0,
+        "Goal Page Visited": 40961.0,
+        "Orders Created": 1428.0,
+        "Orders Paid": 268.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T17:00:00",
+      "values": {
+        "Sessions": 129595.0,
+        "Goal Page Visited": 37328.0,
+        "Orders Created": 1222.0,
+        "Orders Paid": 220.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T18:00:00",
+      "values": {
+        "Sessions": 135221.0,
+        "Goal Page Visited": 37056.0,
+        "Orders Created": 1415.0,
+        "Orders Paid": 291.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T19:00:00",
+      "values": {
+        "Sessions": 154736.0,
+        "Goal Page Visited": 40839.0,
+        "Orders Created": 1726.0,
+        "Orders Paid": 378.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T20:00:00",
+      "values": {
+        "Sessions": 158482.0,
+        "Goal Page Visited": 41113.0,
+        "Orders Created": 2382.0,
+        "Orders Paid": 481.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T21:00:00",
+      "values": {
+        "Sessions": 151033.0,
+        "Goal Page Visited": 40088.0,
+        "Orders Created": 1978.0,
+        "Orders Paid": 363.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T22:00:00",
+      "values": {
+        "Sessions": 120579.0,
+        "Goal Page Visited": 31873.0,
+        "Orders Created": 1359.0,
+        "Orders Paid": 275.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-17T23:00:00",
+      "values": {
+        "Sessions": 75987.0,
+        "Goal Page Visited": 20059.0,
+        "Orders Created": 777.0,
+        "Orders Paid": 148.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T00:00:00",
+      "values": {
+        "Sessions": 41267.0,
+        "Goal Page Visited": 10532.0,
+        "Orders Created": 444.0,
+        "Orders Paid": 99.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T01:00:00",
+      "values": {
+        "Sessions": 20995.0,
+        "Goal Page Visited": 4931.0,
+        "Orders Created": 219.0,
+        "Orders Paid": 35.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T02:00:00",
+      "values": {
+        "Sessions": 12569.0,
+        "Goal Page Visited": 2613.0,
+        "Orders Created": 72.0,
+        "Orders Paid": 11.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T03:00:00",
+      "values": {
+        "Sessions": 9474.0,
+        "Goal Page Visited": 1899.0,
+        "Orders Created": 79.0,
+        "Orders Paid": 17.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T04:00:00",
+      "values": {
+        "Sessions": 13613.0,
+        "Goal Page Visited": 3047.0,
+        "Orders Created": 75.0,
+        "Orders Paid": 24.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T05:00:00",
+      "values": {
+        "Sessions": 22458.0,
+        "Goal Page Visited": 6509.0,
+        "Orders Created": 184.0,
+        "Orders Paid": 40.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T06:00:00",
+      "values": {
+        "Sessions": 43595.0,
+        "Goal Page Visited": 13230.0,
+        "Orders Created": 392.0,
+        "Orders Paid": 97.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T07:00:00",
+      "values": {
+        "Sessions": 71663.0,
+        "Goal Page Visited": 21916.0,
+        "Orders Created": 713.0,
+        "Orders Paid": 191.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T08:00:00",
+      "values": {
+        "Sessions": 98271.0,
+        "Goal Page Visited": 29483.0,
+        "Orders Created": 937.0,
+        "Orders Paid": 215.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T09:00:00",
+      "values": {
+        "Sessions": 124102.0,
+        "Goal Page Visited": 37872.0,
+        "Orders Created": 1177.0,
+        "Orders Paid": 247.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T10:00:00",
+      "values": {
+        "Sessions": 145249.0,
+        "Goal Page Visited": 44638.0,
+        "Orders Created": 1369.0,
+        "Orders Paid": 310.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T11:00:00",
+      "values": {
+        "Sessions": 154278.0,
+        "Goal Page Visited": 45665.0,
+        "Orders Created": 1543.0,
+        "Orders Paid": 341.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T12:00:00",
+      "values": {
+        "Sessions": 149308.0,
+        "Goal Page Visited": 43278.0,
+        "Orders Created": 1422.0,
+        "Orders Paid": 318.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T13:00:00",
+      "values": {
+        "Sessions": 137609.0,
+        "Goal Page Visited": 40991.0,
+        "Orders Created": 1187.0,
+        "Orders Paid": 256.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T14:00:00",
+      "values": {
+        "Sessions": 139214.0,
+        "Goal Page Visited": 41320.0,
+        "Orders Created": 1088.0,
+        "Orders Paid": 215.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T15:00:00",
+      "values": {
+        "Sessions": 141645.0,
+        "Goal Page Visited": 42357.0,
+        "Orders Created": 1201.0,
+        "Orders Paid": 244.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T16:00:00",
+      "values": {
+        "Sessions": 136988.0,
+        "Goal Page Visited": 40645.0,
+        "Orders Created": 976.0,
+        "Orders Paid": 203.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T17:00:00",
+      "values": {
+        "Sessions": 125536.0,
+        "Goal Page Visited": 36404.0,
+        "Orders Created": 967.0,
+        "Orders Paid": 212.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T18:00:00",
+      "values": {
+        "Sessions": 131382.0,
+        "Goal Page Visited": 36362.0,
+        "Orders Created": 1162.0,
+        "Orders Paid": 252.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T19:00:00",
+      "values": {
+        "Sessions": 141974.0,
+        "Goal Page Visited": 38548.0,
+        "Orders Created": 1486.0,
+        "Orders Paid": 334.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T20:00:00",
+      "values": {
+        "Sessions": 146212.0,
+        "Goal Page Visited": 38274.0,
+        "Orders Created": 1923.0,
+        "Orders Paid": 393.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T21:00:00",
+      "values": {
+        "Sessions": 134854.0,
+        "Goal Page Visited": 36712.0,
+        "Orders Created": 1953.0,
+        "Orders Paid": 352.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T22:00:00",
+      "values": {
+        "Sessions": 109148.0,
+        "Goal Page Visited": 29745.0,
+        "Orders Created": 1192.0,
+        "Orders Paid": 232.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-18T23:00:00",
+      "values": {
+        "Sessions": 71021.0,
+        "Goal Page Visited": 19009.0,
+        "Orders Created": 690.0,
+        "Orders Paid": 140.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T00:00:00",
+      "values": {
+        "Sessions": 40020.0,
+        "Goal Page Visited": 10159.0,
+        "Orders Created": 362.0,
+        "Orders Paid": 83.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T01:00:00",
+      "values": {
+        "Sessions": 20585.0,
+        "Goal Page Visited": 4780.0,
+        "Orders Created": 215.0,
+        "Orders Paid": 45.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T02:00:00",
+      "values": {
+        "Sessions": 11357.0,
+        "Goal Page Visited": 2541.0,
+        "Orders Created": 126.0,
+        "Orders Paid": 31.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T03:00:00",
+      "values": {
+        "Sessions": 8651.0,
+        "Goal Page Visited": 1851.0,
+        "Orders Created": 65.0,
+        "Orders Paid": 18.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T04:00:00",
+      "values": {
+        "Sessions": 12336.0,
+        "Goal Page Visited": 3068.0,
+        "Orders Created": 116.0,
+        "Orders Paid": 32.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T05:00:00",
+      "values": {
+        "Sessions": 22379.0,
+        "Goal Page Visited": 6260.0,
+        "Orders Created": 204.0,
+        "Orders Paid": 44.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T06:00:00",
+      "values": {
+        "Sessions": 41820.0,
+        "Goal Page Visited": 12549.0,
+        "Orders Created": 426.0,
+        "Orders Paid": 91.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T07:00:00",
+      "values": {
+        "Sessions": 66944.0,
+        "Goal Page Visited": 20674.0,
+        "Orders Created": 762.0,
+        "Orders Paid": 186.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T08:00:00",
+      "values": {
+        "Sessions": 90527.0,
+        "Goal Page Visited": 27838.0,
+        "Orders Created": 1119.0,
+        "Orders Paid": 230.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T09:00:00",
+      "values": {
+        "Sessions": 117824.0,
+        "Goal Page Visited": 36931.0,
+        "Orders Created": 1270.0,
+        "Orders Paid": 301.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T10:00:00",
+      "values": {
+        "Sessions": 140426.0,
+        "Goal Page Visited": 42120.0,
+        "Orders Created": 1391.0,
+        "Orders Paid": 285.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T11:00:00",
+      "values": {
+        "Sessions": 152539.0,
+        "Goal Page Visited": 44724.0,
+        "Orders Created": 1650.0,
+        "Orders Paid": 362.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T12:00:00",
+      "values": {
+        "Sessions": 151372.0,
+        "Goal Page Visited": 42406.0,
+        "Orders Created": 1608.0,
+        "Orders Paid": 328.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T13:00:00",
+      "values": {
+        "Sessions": 144745.0,
+        "Goal Page Visited": 39883.0,
+        "Orders Created": 1406.0,
+        "Orders Paid": 332.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T14:00:00",
+      "values": {
+        "Sessions": 148194.0,
+        "Goal Page Visited": 40975.0,
+        "Orders Created": 1469.0,
+        "Orders Paid": 314.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T15:00:00",
+      "values": {
+        "Sessions": 147971.0,
+        "Goal Page Visited": 42553.0,
+        "Orders Created": 1337.0,
+        "Orders Paid": 280.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T16:00:00",
+      "values": {
+        "Sessions": 141376.0,
+        "Goal Page Visited": 41211.0,
+        "Orders Created": 1324.0,
+        "Orders Paid": 291.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T17:00:00",
+      "values": {
+        "Sessions": 130572.0,
+        "Goal Page Visited": 37257.0,
+        "Orders Created": 1191.0,
+        "Orders Paid": 263.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T18:00:00",
+      "values": {
+        "Sessions": 130393.0,
+        "Goal Page Visited": 37499.0,
+        "Orders Created": 1367.0,
+        "Orders Paid": 303.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T19:00:00",
+      "values": {
+        "Sessions": 143217.0,
+        "Goal Page Visited": 40116.0,
+        "Orders Created": 1567.0,
+        "Orders Paid": 327.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T20:00:00",
+      "values": {
+        "Sessions": 142510.0,
+        "Goal Page Visited": 39234.0,
+        "Orders Created": 1968.0,
+        "Orders Paid": 387.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T21:00:00",
+      "values": {
+        "Sessions": 134804.0,
+        "Goal Page Visited": 37291.0,
+        "Orders Created": 1720.0,
+        "Orders Paid": 340.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T22:00:00",
+      "values": {
+        "Sessions": 108497.0,
+        "Goal Page Visited": 29893.0,
+        "Orders Created": 1272.0,
+        "Orders Paid": 248.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-19T23:00:00",
+      "values": {
+        "Sessions": 70148.0,
+        "Goal Page Visited": 18776.0,
+        "Orders Created": 668.0,
+        "Orders Paid": 139.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T00:00:00",
+      "values": {
+        "Sessions": 38645.0,
+        "Goal Page Visited": 10071.0,
+        "Orders Created": 399.0,
+        "Orders Paid": 86.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T01:00:00",
+      "values": {
+        "Sessions": 20114.0,
+        "Goal Page Visited": 4740.0,
+        "Orders Created": 256.0,
+        "Orders Paid": 57.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T02:00:00",
+      "values": {
+        "Sessions": 11890.0,
+        "Goal Page Visited": 2621.0,
+        "Orders Created": 140.0,
+        "Orders Paid": 23.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T03:00:00",
+      "values": {
+        "Sessions": 8994.0,
+        "Goal Page Visited": 1833.0,
+        "Orders Created": 69.0,
+        "Orders Paid": 22.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T04:00:00",
+      "values": {
+        "Sessions": 12432.0,
+        "Goal Page Visited": 2910.0,
+        "Orders Created": 105.0,
+        "Orders Paid": 19.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T05:00:00",
+      "values": {
+        "Sessions": 22786.0,
+        "Goal Page Visited": 6370.0,
+        "Orders Created": 231.0,
+        "Orders Paid": 46.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T06:00:00",
+      "values": {
+        "Sessions": 43328.0,
+        "Goal Page Visited": 13032.0,
+        "Orders Created": 484.0,
+        "Orders Paid": 119.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T07:00:00",
+      "values": {
+        "Sessions": 71563.0,
+        "Goal Page Visited": 21915.0,
+        "Orders Created": 841.0,
+        "Orders Paid": 205.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T08:00:00",
+      "values": {
+        "Sessions": 98248.0,
+        "Goal Page Visited": 30377.0,
+        "Orders Created": 1116.0,
+        "Orders Paid": 245.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T09:00:00",
+      "values": {
+        "Sessions": 124449.0,
+        "Goal Page Visited": 39298.0,
+        "Orders Created": 1563.0,
+        "Orders Paid": 347.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T10:00:00",
+      "values": {
+        "Sessions": 147498.0,
+        "Goal Page Visited": 44191.0,
+        "Orders Created": 1666.0,
+        "Orders Paid": 378.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T11:00:00",
+      "values": {
+        "Sessions": 155896.0,
+        "Goal Page Visited": 45735.0,
+        "Orders Created": 1643.0,
+        "Orders Paid": 367.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T12:00:00",
+      "values": {
+        "Sessions": 151278.0,
+        "Goal Page Visited": 43381.0,
+        "Orders Created": 1520.0,
+        "Orders Paid": 345.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T13:00:00",
+      "values": {
+        "Sessions": 140319.0,
+        "Goal Page Visited": 41037.0,
+        "Orders Created": 1576.0,
+        "Orders Paid": 311.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T14:00:00",
+      "values": {
+        "Sessions": 140282.0,
+        "Goal Page Visited": 40857.0,
+        "Orders Created": 1353.0,
+        "Orders Paid": 278.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T15:00:00",
+      "values": {
+        "Sessions": 149622.0,
+        "Goal Page Visited": 41883.0,
+        "Orders Created": 1282.0,
+        "Orders Paid": 266.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T16:00:00",
+      "values": {
+        "Sessions": 143950.0,
+        "Goal Page Visited": 39969.0,
+        "Orders Created": 1317.0,
+        "Orders Paid": 258.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T17:00:00",
+      "values": {
+        "Sessions": 140224.0,
+        "Goal Page Visited": 36508.0,
+        "Orders Created": 1162.0,
+        "Orders Paid": 234.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T18:00:00",
+      "values": {
+        "Sessions": 142487.0,
+        "Goal Page Visited": 38117.0,
+        "Orders Created": 1320.0,
+        "Orders Paid": 265.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T19:00:00",
+      "values": {
+        "Sessions": 152841.0,
+        "Goal Page Visited": 40450.0,
+        "Orders Created": 1662.0,
+        "Orders Paid": 348.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T20:00:00",
+      "values": {
+        "Sessions": 147203.0,
+        "Goal Page Visited": 39803.0,
+        "Orders Created": 2636.0,
+        "Orders Paid": 497.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T21:00:00",
+      "values": {
+        "Sessions": 143673.0,
+        "Goal Page Visited": 36916.0,
+        "Orders Created": 1850.0,
+        "Orders Paid": 355.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T22:00:00",
+      "values": {
+        "Sessions": 114536.0,
+        "Goal Page Visited": 28890.0,
+        "Orders Created": 1075.0,
+        "Orders Paid": 222.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-20T23:00:00",
+      "values": {
+        "Sessions": 69896.0,
+        "Goal Page Visited": 18651.0,
+        "Orders Created": 777.0,
+        "Orders Paid": 139.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T00:00:00",
+      "values": {
+        "Sessions": 40592.0,
+        "Goal Page Visited": 10151.0,
+        "Orders Created": 404.0,
+        "Orders Paid": 94.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T01:00:00",
+      "values": {
+        "Sessions": 22461.0,
+        "Goal Page Visited": 4787.0,
+        "Orders Created": 195.0,
+        "Orders Paid": 46.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T02:00:00",
+      "values": {
+        "Sessions": 14990.0,
+        "Goal Page Visited": 2499.0,
+        "Orders Created": 101.0,
+        "Orders Paid": 21.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T03:00:00",
+      "values": {
+        "Sessions": 10266.0,
+        "Goal Page Visited": 1812.0,
+        "Orders Created": 68.0,
+        "Orders Paid": 15.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T04:00:00",
+      "values": {
+        "Sessions": 12696.0,
+        "Goal Page Visited": 2454.0,
+        "Orders Created": 114.0,
+        "Orders Paid": 17.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T05:00:00",
+      "values": {
+        "Sessions": 21333.0,
+        "Goal Page Visited": 5385.0,
+        "Orders Created": 230.0,
+        "Orders Paid": 56.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T06:00:00",
+      "values": {
+        "Sessions": 43991.0,
+        "Goal Page Visited": 11991.0,
+        "Orders Created": 509.0,
+        "Orders Paid": 106.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T07:00:00",
+      "values": {
+        "Sessions": 72576.0,
+        "Goal Page Visited": 21462.0,
+        "Orders Created": 905.0,
+        "Orders Paid": 219.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T08:00:00",
+      "values": {
+        "Sessions": 97576.0,
+        "Goal Page Visited": 29905.0,
+        "Orders Created": 1183.0,
+        "Orders Paid": 301.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T09:00:00",
+      "values": {
+        "Sessions": 128310.0,
+        "Goal Page Visited": 39057.0,
+        "Orders Created": 1530.0,
+        "Orders Paid": 337.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T10:00:00",
+      "values": {
+        "Sessions": 147210.0,
+        "Goal Page Visited": 44200.0,
+        "Orders Created": 1532.0,
+        "Orders Paid": 357.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T11:00:00",
+      "values": {
+        "Sessions": 158900.0,
+        "Goal Page Visited": 46233.0,
+        "Orders Created": 1881.0,
+        "Orders Paid": 430.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T12:00:00",
+      "values": {
+        "Sessions": 157768.0,
+        "Goal Page Visited": 44254.0,
+        "Orders Created": 1785.0,
+        "Orders Paid": 364.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T13:00:00",
+      "values": {
+        "Sessions": 143362.0,
+        "Goal Page Visited": 40357.0,
+        "Orders Created": 1622.0,
+        "Orders Paid": 366.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T14:00:00",
+      "values": {
+        "Sessions": 136893.0,
+        "Goal Page Visited": 40164.0,
+        "Orders Created": 1364.0,
+        "Orders Paid": 273.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T15:00:00",
+      "values": {
+        "Sessions": 144292.0,
+        "Goal Page Visited": 41410.0,
+        "Orders Created": 1510.0,
+        "Orders Paid": 314.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T16:00:00",
+      "values": {
+        "Sessions": 143379.0,
+        "Goal Page Visited": 40520.0,
+        "Orders Created": 1375.0,
+        "Orders Paid": 285.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T17:00:00",
+      "values": {
+        "Sessions": 129290.0,
+        "Goal Page Visited": 37266.0,
+        "Orders Created": 1262.0,
+        "Orders Paid": 295.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T18:00:00",
+      "values": {
+        "Sessions": 138459.0,
+        "Goal Page Visited": 38220.0,
+        "Orders Created": 1465.0,
+        "Orders Paid": 283.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T19:00:00",
+      "values": {
+        "Sessions": 152152.0,
+        "Goal Page Visited": 40783.0,
+        "Orders Created": 1909.0,
+        "Orders Paid": 419.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T20:00:00",
+      "values": {
+        "Sessions": 150294.0,
+        "Goal Page Visited": 38001.0,
+        "Orders Created": 2070.0,
+        "Orders Paid": 427.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T21:00:00",
+      "values": {
+        "Sessions": 142598.0,
+        "Goal Page Visited": 35187.0,
+        "Orders Created": 1723.0,
+        "Orders Paid": 353.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T22:00:00",
+      "values": {
+        "Sessions": 118488.0,
+        "Goal Page Visited": 30039.0,
+        "Orders Created": 1281.0,
+        "Orders Paid": 277.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-21T23:00:00",
+      "values": {
+        "Sessions": 78424.0,
+        "Goal Page Visited": 18327.0,
+        "Orders Created": 832.0,
+        "Orders Paid": 176.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T00:00:00",
+      "values": {
+        "Sessions": 48602.0,
+        "Goal Page Visited": 9368.0,
+        "Orders Created": 453.0,
+        "Orders Paid": 84.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T01:00:00",
+      "values": {
+        "Sessions": 24385.0,
+        "Goal Page Visited": 4594.0,
+        "Orders Created": 237.0,
+        "Orders Paid": 51.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T02:00:00",
+      "values": {
+        "Sessions": 16737.0,
+        "Goal Page Visited": 2411.0,
+        "Orders Created": 111.0,
+        "Orders Paid": 32.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T03:00:00",
+      "values": {
+        "Sessions": 13032.0,
+        "Goal Page Visited": 1794.0,
+        "Orders Created": 81.0,
+        "Orders Paid": 21.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T04:00:00",
+      "values": {
+        "Sessions": 14247.0,
+        "Goal Page Visited": 2489.0,
+        "Orders Created": 68.0,
+        "Orders Paid": 15.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T05:00:00",
+      "values": {
+        "Sessions": 22871.0,
+        "Goal Page Visited": 5499.0,
+        "Orders Created": 215.0,
+        "Orders Paid": 37.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T06:00:00",
+      "values": {
+        "Sessions": 44799.0,
+        "Goal Page Visited": 12041.0,
+        "Orders Created": 526.0,
+        "Orders Paid": 115.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T07:00:00",
+      "values": {
+        "Sessions": 73202.0,
+        "Goal Page Visited": 20338.0,
+        "Orders Created": 901.0,
+        "Orders Paid": 196.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T08:00:00",
+      "values": {
+        "Sessions": 94967.0,
+        "Goal Page Visited": 27171.0,
+        "Orders Created": 1122.0,
+        "Orders Paid": 259.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T09:00:00",
+      "values": {
+        "Sessions": 116109.0,
+        "Goal Page Visited": 34524.0,
+        "Orders Created": 1402.0,
+        "Orders Paid": 338.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T10:00:00",
+      "values": {
+        "Sessions": 133641.0,
+        "Goal Page Visited": 38238.0,
+        "Orders Created": 1463.0,
+        "Orders Paid": 328.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T11:00:00",
+      "values": {
+        "Sessions": 148007.0,
+        "Goal Page Visited": 39241.0,
+        "Orders Created": 1593.0,
+        "Orders Paid": 340.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T12:00:00",
+      "values": {
+        "Sessions": 145612.0,
+        "Goal Page Visited": 38461.0,
+        "Orders Created": 1629.0,
+        "Orders Paid": 332.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T13:00:00",
+      "values": {
+        "Sessions": 133004.0,
+        "Goal Page Visited": 35115.0,
+        "Orders Created": 1496.0,
+        "Orders Paid": 312.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T14:00:00",
+      "values": {
+        "Sessions": 133122.0,
+        "Goal Page Visited": 35457.0,
+        "Orders Created": 1313.0,
+        "Orders Paid": 262.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T15:00:00",
+      "values": {
+        "Sessions": 140971.0,
+        "Goal Page Visited": 36457.0,
+        "Orders Created": 1317.0,
+        "Orders Paid": 286.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T16:00:00",
+      "values": {
+        "Sessions": 137009.0,
+        "Goal Page Visited": 36341.0,
+        "Orders Created": 1226.0,
+        "Orders Paid": 269.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T17:00:00",
+      "values": {
+        "Sessions": 121597.0,
+        "Goal Page Visited": 33387.0,
+        "Orders Created": 1205.0,
+        "Orders Paid": 250.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T18:00:00",
+      "values": {
+        "Sessions": 122652.0,
+        "Goal Page Visited": 33351.0,
+        "Orders Created": 1302.0,
+        "Orders Paid": 245.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T19:00:00",
+      "values": {
+        "Sessions": 136394.0,
+        "Goal Page Visited": 36158.0,
+        "Orders Created": 1468.0,
+        "Orders Paid": 329.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T20:00:00",
+      "values": {
+        "Sessions": 137368.0,
+        "Goal Page Visited": 34810.0,
+        "Orders Created": 1434.0,
+        "Orders Paid": 304.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T21:00:00",
+      "values": {
+        "Sessions": 131449.0,
+        "Goal Page Visited": 32986.0,
+        "Orders Created": 1407.0,
+        "Orders Paid": 284.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T22:00:00",
+      "values": {
+        "Sessions": 106472.0,
+        "Goal Page Visited": 26498.0,
+        "Orders Created": 1028.0,
+        "Orders Paid": 222.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-22T23:00:00",
+      "values": {
+        "Sessions": 72539.0,
+        "Goal Page Visited": 16877.0,
+        "Orders Created": 586.0,
+        "Orders Paid": 95.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T00:00:00",
+      "values": {
+        "Sessions": 42119.0,
+        "Goal Page Visited": 9232.0,
+        "Orders Created": 398.0,
+        "Orders Paid": 82.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T01:00:00",
+      "values": {
+        "Sessions": 24068.0,
+        "Goal Page Visited": 4334.0,
+        "Orders Created": 165.0,
+        "Orders Paid": 38.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T02:00:00",
+      "values": {
+        "Sessions": 24829.0,
+        "Goal Page Visited": 2265.0,
+        "Orders Created": 107.0,
+        "Orders Paid": 27.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T03:00:00",
+      "values": {
+        "Sessions": 13994.0,
+        "Goal Page Visited": 1717.0,
+        "Orders Created": 71.0,
+        "Orders Paid": 15.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T04:00:00",
+      "values": {
+        "Sessions": 16354.0,
+        "Goal Page Visited": 2478.0,
+        "Orders Created": 72.0,
+        "Orders Paid": 16.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T05:00:00",
+      "values": {
+        "Sessions": 25185.0,
+        "Goal Page Visited": 5618.0,
+        "Orders Created": 201.0,
+        "Orders Paid": 32.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T06:00:00",
+      "values": {
+        "Sessions": 46257.0,
+        "Goal Page Visited": 11980.0,
+        "Orders Created": 419.0,
+        "Orders Paid": 95.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T07:00:00",
+      "values": {
+        "Sessions": 74107.0,
+        "Goal Page Visited": 20157.0,
+        "Orders Created": 731.0,
+        "Orders Paid": 180.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T08:00:00",
+      "values": {
+        "Sessions": 100608.0,
+        "Goal Page Visited": 27424.0,
+        "Orders Created": 1059.0,
+        "Orders Paid": 224.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T09:00:00",
+      "values": {
+        "Sessions": 122400.0,
+        "Goal Page Visited": 35527.0,
+        "Orders Created": 1388.0,
+        "Orders Paid": 304.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T10:00:00",
+      "values": {
+        "Sessions": 142824.0,
+        "Goal Page Visited": 40433.0,
+        "Orders Created": 1733.0,
+        "Orders Paid": 364.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T11:00:00",
+      "values": {
+        "Sessions": 151328.0,
+        "Goal Page Visited": 42640.0,
+        "Orders Created": 1729.0,
+        "Orders Paid": 341.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T12:00:00",
+      "values": {
+        "Sessions": 149247.0,
+        "Goal Page Visited": 41384.0,
+        "Orders Created": 1752.0,
+        "Orders Paid": 325.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T13:00:00",
+      "values": {
+        "Sessions": 169992.0,
+        "Goal Page Visited": 37619.0,
+        "Orders Created": 1585.0,
+        "Orders Paid": 275.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T14:00:00",
+      "values": {
+        "Sessions": 153838.0,
+        "Goal Page Visited": 39216.0,
+        "Orders Created": 1404.0,
+        "Orders Paid": 245.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T15:00:00",
+      "values": {
+        "Sessions": 156823.0,
+        "Goal Page Visited": 40424.0,
+        "Orders Created": 1444.0,
+        "Orders Paid": 261.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T16:00:00",
+      "values": {
+        "Sessions": 160862.0,
+        "Goal Page Visited": 38558.0,
+        "Orders Created": 1207.0,
+        "Orders Paid": 243.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T17:00:00",
+      "values": {
+        "Sessions": 144804.0,
+        "Goal Page Visited": 35014.0,
+        "Orders Created": 1288.0,
+        "Orders Paid": 251.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T18:00:00",
+      "values": {
+        "Sessions": 146068.0,
+        "Goal Page Visited": 35346.0,
+        "Orders Created": 1447.0,
+        "Orders Paid": 264.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T19:00:00",
+      "values": {
+        "Sessions": 151024.0,
+        "Goal Page Visited": 23771.0,
+        "Orders Created": 1692.0,
+        "Orders Paid": 296.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T20:00:00",
+      "values": {
+        "Sessions": 148791.0,
+        "Goal Page Visited": 22447.0,
+        "Orders Created": 2199.0,
+        "Orders Paid": 373.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T21:00:00",
+      "values": {
+        "Sessions": 141633.0,
+        "Goal Page Visited": 21771.0,
+        "Orders Created": 1631.0,
+        "Orders Paid": 281.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T22:00:00",
+      "values": {
+        "Sessions": 117673.0,
+        "Goal Page Visited": 16873.0,
+        "Orders Created": 1233.0,
+        "Orders Paid": 210.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-23T23:00:00",
+      "values": {
+        "Sessions": 82776.0,
+        "Goal Page Visited": 10369.0,
+        "Orders Created": 676.0,
+        "Orders Paid": 115.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T00:00:00",
+      "values": {
+        "Sessions": 46931.0,
+        "Goal Page Visited": 5557.0,
+        "Orders Created": 416.0,
+        "Orders Paid": 94.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T01:00:00",
+      "values": {
+        "Sessions": 25644.0,
+        "Goal Page Visited": 2591.0,
+        "Orders Created": 235.0,
+        "Orders Paid": 42.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T02:00:00",
+      "values": {
+        "Sessions": 16762.0,
+        "Goal Page Visited": 1289.0,
+        "Orders Created": 115.0,
+        "Orders Paid": 19.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T03:00:00",
+      "values": {
+        "Sessions": 11865.0,
+        "Goal Page Visited": 902.0,
+        "Orders Created": 74.0,
+        "Orders Paid": 13.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T04:00:00",
+      "values": {
+        "Sessions": 10722.0,
+        "Goal Page Visited": 1290.0,
+        "Orders Created": 108.0,
+        "Orders Paid": 18.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T05:00:00",
+      "values": {
+        "Sessions": 21374.0,
+        "Goal Page Visited": 2905.0,
+        "Orders Created": 229.0,
+        "Orders Paid": 48.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T06:00:00",
+      "values": {
+        "Sessions": 63306.0,
+        "Goal Page Visited": 6139.0,
+        "Orders Created": 451.0,
+        "Orders Paid": 89.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T07:00:00",
+      "values": {
+        "Sessions": 78658.0,
+        "Goal Page Visited": 10404.0,
+        "Orders Created": 772.0,
+        "Orders Paid": 173.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T08:00:00",
+      "values": {
+        "Sessions": 101326.0,
+        "Goal Page Visited": 14150.0,
+        "Orders Created": 1096.0,
+        "Orders Paid": 220.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T09:00:00",
+      "values": {
+        "Sessions": 128495.0,
+        "Goal Page Visited": 19299.0,
+        "Orders Created": 1640.0,
+        "Orders Paid": 290.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T10:00:00",
+      "values": {
+        "Sessions": 149558.0,
+        "Goal Page Visited": 28826.0,
+        "Orders Created": 1709.0,
+        "Orders Paid": 346.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T11:00:00",
+      "values": {
+        "Sessions": 159559.0,
+        "Goal Page Visited": 43215.0,
+        "Orders Created": 1770.0,
+        "Orders Paid": 345.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T12:00:00",
+      "values": {
+        "Sessions": 151472.0,
+        "Goal Page Visited": 41191.0,
+        "Orders Created": 1754.0,
+        "Orders Paid": 311.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T13:00:00",
+      "values": {
+        "Sessions": 221779.0,
+        "Goal Page Visited": 37661.0,
+        "Orders Created": 1449.0,
+        "Orders Paid": 251.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T14:00:00",
+      "values": {
+        "Sessions": 230060.0,
+        "Goal Page Visited": 38884.0,
+        "Orders Created": 1571.0,
+        "Orders Paid": 267.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T15:00:00",
+      "values": {
+        "Sessions": 228172.0,
+        "Goal Page Visited": 40855.0,
+        "Orders Created": 1587.0,
+        "Orders Paid": 274.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T16:00:00",
+      "values": {
+        "Sessions": 202740.0,
+        "Goal Page Visited": 38075.0,
+        "Orders Created": 1362.0,
+        "Orders Paid": 261.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T17:00:00",
+      "values": {
+        "Sessions": 179525.0,
+        "Goal Page Visited": 34024.0,
+        "Orders Created": 1106.0,
+        "Orders Paid": 220.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T18:00:00",
+      "values": {
+        "Sessions": 173534.0,
+        "Goal Page Visited": 33725.0,
+        "Orders Created": 1275.0,
+        "Orders Paid": 250.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T19:00:00",
+      "values": {
+        "Sessions": 181457.0,
+        "Goal Page Visited": 37499.0,
+        "Orders Created": 1578.0,
+        "Orders Paid": 293.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T20:00:00",
+      "values": {
+        "Sessions": 172903.0,
+        "Goal Page Visited": 36659.0,
+        "Orders Created": 2138.0,
+        "Orders Paid": 409.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T21:00:00",
+      "values": {
+        "Sessions": 164040.0,
+        "Goal Page Visited": 36204.0,
+        "Orders Created": 1567.0,
+        "Orders Paid": 335.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T22:00:00",
+      "values": {
+        "Sessions": 131478.0,
+        "Goal Page Visited": 29306.0,
+        "Orders Created": 1057.0,
+        "Orders Paid": 203.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-24T23:00:00",
+      "values": {
+        "Sessions": 87195.0,
+        "Goal Page Visited": 18452.0,
+        "Orders Created": 657.0,
+        "Orders Paid": 129.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-25T00:00:00",
+      "values": {
+        "Sessions": 46127.0,
+        "Goal Page Visited": 9591.0,
+        "Orders Created": 378.0,
+        "Orders Paid": 75.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-25T01:00:00",
+      "values": {
+        "Sessions": 24506.0,
+        "Goal Page Visited": 4648.0,
+        "Orders Created": 231.0,
+        "Orders Paid": 38.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-25T02:00:00",
+      "values": {
+        "Sessions": 14028.0,
+        "Goal Page Visited": 2456.0,
+        "Orders Created": 100.0,
+        "Orders Paid": 20.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-25T03:00:00",
+      "values": {
+        "Sessions": 10876.0,
+        "Goal Page Visited": 1780.0,
+        "Orders Created": 75.0,
+        "Orders Paid": 16.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-25T04:00:00",
+      "values": {
+        "Sessions": 11288.0,
+        "Goal Page Visited": 2716.0,
+        "Orders Created": 88.0,
+        "Orders Paid": 20.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-25T05:00:00",
+      "values": {
+        "Sessions": 22982.0,
+        "Goal Page Visited": 6067.0,
+        "Orders Created": 205.0,
+        "Orders Paid": 39.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-25T06:00:00",
+      "values": {
+        "Sessions": 53647.0,
+        "Goal Page Visited": 12544.0,
+        "Orders Created": 482.0,
+        "Orders Paid": 108.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-25T07:00:00",
+      "values": {
+        "Sessions": 81028.0,
+        "Goal Page Visited": 20538.0,
+        "Orders Created": 673.0,
+        "Orders Paid": 133.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-25T08:00:00",
+      "values": {
+        "Sessions": 105301.0,
+        "Goal Page Visited": 28036.0,
+        "Orders Created": 954.0,
+        "Orders Paid": 221.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-25T09:00:00",
+      "values": {
+        "Sessions": 131557.0,
+        "Goal Page Visited": 37089.0,
+        "Orders Created": 1352.0,
+        "Orders Paid": 274.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-25T10:00:00",
+      "values": {
+        "Sessions": 151546.0,
+        "Goal Page Visited": 41357.0,
+        "Orders Created": 1364.0,
+        "Orders Paid": 290.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-25T11:00:00",
+      "values": {
+        "Sessions": 157442.0,
+        "Goal Page Visited": 42902.0,
+        "Orders Created": 1496.0,
+        "Orders Paid": 301.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-25T12:00:00",
+      "values": {
+        "Sessions": 154917.0,
+        "Goal Page Visited": 39072.0,
+        "Orders Created": 1380.0,
+        "Orders Paid": 273.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-25T13:00:00",
+      "values": {
+        "Sessions": 147022.0,
+        "Goal Page Visited": 38733.0,
+        "Orders Created": 1214.0,
+        "Orders Paid": 231.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-25T14:00:00",
+      "values": {
+        "Sessions": 152337.0,
+        "Goal Page Visited": 41069.0,
+        "Orders Created": 1227.0,
+        "Orders Paid": 235.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-25T15:00:00",
+      "values": {
+        "Sessions": 156772.0,
+        "Goal Page Visited": 43045.0,
+        "Orders Created": 1218.0,
+        "Orders Paid": 243.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    },
+    {
+      "bucket_start": "2026-03-25T16:00:00",
+      "values": {
+        "Sessions": 149966.0,
+        "Goal Page Visited": 40119.0,
+        "Orders Created": 1050.0,
+        "Orders Paid": 202.0
+      },
+      "present_steps": [
+        "Goal Page Visited",
+        "Orders Created",
+        "Orders Paid",
+        "Sessions"
+      ]
+    }
+  ]
+}

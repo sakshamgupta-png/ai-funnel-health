@@ -1,0 +1,5652 @@
+{
+  "response": {
+    "data": [
+      {
+        "dimensions": [
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-00",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 41760,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 5945,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-01",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 22306,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2884,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-02",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 12822,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1547,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-03",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 9674,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1066,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-04",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 12968,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1543,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-05",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 22444,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 3065,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-06",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 40245,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 6059,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-07",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 66865,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 10195,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-08",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 90813,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 13900,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-09",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 118178,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 18459,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-10",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 137907,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 21100,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-11",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 146127,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 22039,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-12",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 147698,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 21594,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-13",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 132268,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 18912,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-14",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 129639,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 19222,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-15",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 132608,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 19098,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-16",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 128154,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 17686,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-17",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 118523,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 16080,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-18",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 120516,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 16813,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-19",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 131992,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 18379,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-20",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 132117,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 17549,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-21",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 127241,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 17258,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-22",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 105873,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 14090,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-14-23",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 70558,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 8806,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-00",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 40689,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 4856,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-01",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 22776,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2475,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-02",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 13696,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1322,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-03",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 9985,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1022,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-04",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 12710,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1362,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-05",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 21004,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2420,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-06",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 38320,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 4963,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-07",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 61597,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 8362,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-08",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 82355,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 10980,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-09",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 103468,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 14242,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-10",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 119920,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 15854,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-11",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 128720,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 16689,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-12",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 132356,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 16505,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-13",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 134486,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 15182,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-14",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 129813,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 14936,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-15",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 128665,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 15380,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-16",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 124649,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 14591,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-17",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 117190,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 13606,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-18",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 118324,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 14313,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-19",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 127025,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 15605,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-20",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 124879,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 15353,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-21",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 120020,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 14922,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-22",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 102192,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 12136,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-15-23",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 67731,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 7741,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-00",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 41545,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 4324,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-01",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 20868,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2173,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-02",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 12035,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1104,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-03",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 9186,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 789,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-04",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 11586,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1082,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-05",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 21152,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2231,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-06",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 40030,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 4506,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-07",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 66627,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 7721,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-08",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 92719,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 11033,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-09",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 125620,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 14454,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-10",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 148204,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 17375,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-11",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 159608,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 18689,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-12",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 157912,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40192,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-13",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 146852,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 39584,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-14",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 140440,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40635,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-15",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 145546,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 42157,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-16",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 138249,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40175,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-17",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 127729,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 35697,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-18",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 130629,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 37320,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-19",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 145784,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40838,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-20",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 144220,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 39445,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-21",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 140479,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 38923,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-22",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 113033,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 31286,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-16-23",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 73345,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 19294,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-00",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 39873,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 10144,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-01",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 20428,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 4939,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-02",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 11493,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2609,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-03",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 8758,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1987,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-04",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 11614,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 3114,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-05",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 21595,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 6336,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-06",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 41572,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 13091,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-07",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 69686,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 21979,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-08",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 95228,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 30111,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-09",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 124056,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 39741,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-10",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 148657,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 45336,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-11",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 158690,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 46949,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-12",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 154246,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 44348,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-13",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 140566,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 41448,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-14",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 142504,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 42786,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-15",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 144932,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 42869,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-16",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 138327,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40961,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-17",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 129595,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 37328,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-18",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 135221,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 37056,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-19",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 154736,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40839,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-20",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 158482,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 41113,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-21",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 151033,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40088,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-22",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 120579,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 31873,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-17-23",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 75987,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 20059,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-00",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 41267,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 10532,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-01",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 20995,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 4931,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-02",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 12569,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2613,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-03",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 9474,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1899,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-04",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 13613,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 3047,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-05",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 22458,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 6509,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-06",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 43595,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 13230,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-07",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 71663,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 21916,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-08",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 98271,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 29483,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-09",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 124102,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 37872,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-10",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 145249,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 44638,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-11",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 154278,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 45665,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-12",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 149308,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 43278,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-13",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 137609,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40991,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-14",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 139214,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 41320,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-15",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 141645,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 42357,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-16",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 136988,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40645,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-17",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 125536,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 36404,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-18",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 131382,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 36362,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-19",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 141974,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 38548,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-20",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 146212,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 38274,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-21",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 134854,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 36712,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-22",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 109148,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 29745,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-18-23",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 71021,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 19009,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-00",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 40020,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 10159,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-01",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 20585,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 4780,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-02",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 11357,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2541,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-03",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 8651,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1851,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-04",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 12336,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 3068,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-05",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 22379,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 6260,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-06",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 41820,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 12549,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-07",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 66944,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 20674,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-08",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 90527,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 27838,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-09",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 117824,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 36931,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-10",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 140426,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 42120,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-11",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 152539,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 44724,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-12",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 151372,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 42406,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-13",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 144745,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 39883,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-14",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 148194,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40975,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-15",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 147971,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 42553,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-16",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 141376,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 41211,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-17",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 130572,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 37257,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-18",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 130393,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 37499,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-19",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 143217,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40116,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-20",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 142510,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 39234,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-21",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 134804,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 37291,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-22",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 108497,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 29893,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-19-23",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 70148,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 18776,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-00",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 38645,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 10071,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-01",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 20114,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 4740,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-02",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 11890,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2621,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-03",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 8994,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1833,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-04",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 12432,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2910,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-05",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 22786,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 6370,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-06",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 43328,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 13032,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-07",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 71563,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 21915,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-08",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 98248,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 30377,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-09",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 124449,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 39298,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-10",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 147498,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 44191,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-11",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 155896,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 45735,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-12",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 151278,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 43381,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-13",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 140319,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 41037,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-14",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 140282,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40857,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-15",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 149622,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 41883,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-16",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 143950,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 39969,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-17",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 140224,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 36508,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-18",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 142487,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 38117,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-19",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 152841,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40450,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-20",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 147203,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 39803,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-21",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 143673,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 36916,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-22",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 114536,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 28890,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-20-23",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 69896,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 18651,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-00",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 40592,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 10151,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-01",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 22461,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 4787,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-02",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 14990,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2499,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-03",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 10266,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1812,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-04",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 12696,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2454,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-05",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 21333,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 5385,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-06",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 43991,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 11991,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-07",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 72576,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 21462,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-08",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 97576,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 29905,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-09",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 128310,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 39057,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-10",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 147210,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 44200,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-11",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 158900,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 46233,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-12",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 157768,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 44254,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-13",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 143362,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40357,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-14",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 136893,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40164,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-15",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 144292,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 41410,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-16",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 143379,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40520,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-17",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 129290,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 37266,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-18",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 138459,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 38220,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-19",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 152152,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40783,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-20",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 150294,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 38001,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-21",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 142598,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 35187,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-22",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 118488,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 30039,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-21-23",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 78424,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 18327,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-00",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 48602,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 9368,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-01",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 24385,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 4594,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-02",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 16737,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2411,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-03",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 13032,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1794,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-04",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 14247,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2489,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-05",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 22871,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 5499,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-06",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 44799,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 12041,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-07",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 73202,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 20338,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-08",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 94967,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 27171,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-09",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 116109,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 34524,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-10",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 133641,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 38238,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-11",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 148007,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 39241,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-12",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 145612,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 38461,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-13",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 133004,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 35115,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-14",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 133122,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 35457,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-15",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 140971,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 36457,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-16",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 137009,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 36341,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-17",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 121597,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 33387,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-18",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 122652,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 33351,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-19",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 136394,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 36158,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-20",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 137368,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 34810,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-21",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 131449,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 32986,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-22",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 106472,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 26498,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-22-23",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 72539,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 16877,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-00",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 42119,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 9232,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-01",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 24068,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 4334,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-02",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 24829,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2265,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-03",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 13994,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1717,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-04",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 16354,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2478,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-05",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 25185,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 5618,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-06",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 46257,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 11980,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-07",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 74107,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 20157,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-08",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 100608,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 27424,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-09",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 122400,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 35527,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-10",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 142824,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40433,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-11",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 151328,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 42640,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-12",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 149247,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 41384,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-13",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 169992,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 37619,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-14",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 153838,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 39216,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-15",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 156823,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40424,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-16",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 160862,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 38558,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-17",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 144804,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 35014,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-18",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 146068,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 35346,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-19",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 151024,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 23771,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-20",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 148791,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 22447,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-21",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 141633,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 21771,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-22",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 117673,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 16873,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-23-23",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 82776,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 10369,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-00",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 46931,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 5557,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-01",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 25644,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2591,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-02",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 16762,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1289,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-03",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 11865,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 902,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-04",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 10722,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1290,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-05",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 21374,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2905,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-06",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 63306,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 6139,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-07",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 78658,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 10404,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-08",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 101326,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 14150,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-09",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 128495,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 19299,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-10",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 149558,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 28826,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-11",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 159559,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 43215,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-12",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 151472,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 41191,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-13",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 221779,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 37661,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-14",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 230060,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 38884,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-15",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 228172,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40855,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-16",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 202740,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 38075,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-17",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 179525,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 34024,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-18",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 173534,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 33725,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-19",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 181457,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 37499,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-20",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 172903,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 36659,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-21",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 164040,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 36204,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-22",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 131478,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 29306,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-24-23",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 87195,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 18452,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-00",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 46127,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 9591,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-01",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 24506,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 4648,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-02",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 14028,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2456,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-03",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 10876,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 1780,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-04",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 11288,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 2716,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-05",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 22982,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 6067,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-06",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 53647,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 12544,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-07",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 81028,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 20538,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-08",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 105301,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 28036,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-09",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 131557,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 37089,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-10",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 151546,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 41357,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-11",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 157442,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 42902,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-12",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 154917,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 39072,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-13",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 147022,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 38733,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-14",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 152337,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 41069,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-15",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 156772,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 43045,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-16",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 149966,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 40119,
+                "sum_stats": 6609995
+              }
+            ]
+          },
+          {
+            "name": "hour",
+            "type": "date",
+            "value": "2026-03-25-17",
+            "attr-category": "system",
+            "stats": [
+              {
+                "series": "A",
+                "event_name": "Session Started",
+                "value": 127499,
+                "sum_stats": 27886996
+              },
+              {
+                "series": "B",
+                "event_name": "supercoaching_goal_page_visited",
+                "value": 32103,
+                "sum_stats": 6609995
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "message": "Event Stats",
+    "version": "V2"
+  }
+}
