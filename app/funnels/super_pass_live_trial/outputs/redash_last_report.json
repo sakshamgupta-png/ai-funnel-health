@@ -1,0 +1,6468 @@
+{
+  "query_result": {
+    "id": 48619318,
+    "query_hash": "c0fa55583cbcbf0b4c1d0a9c2de86af6",
+    "query": "{\n    \"collection\": \"trans_logs\",\n    \"aggregate\": [\n        {\n            \"$match\": {\n                \"createdOn\": {\n                    \"$gte\": {\n                        \"$humanTime\": \"45 days ago at 18:30\"\n                    }\n                },\n                \"payment.amount\": {\n                    \"$lt\": 10\n                },\n                \"products.goalId\": {\n                    \"$oid\": \"685e851a620511f4ba002ff6\"\n                },\n                \"type\": \"purchase\",\n                \"$or\": [\n                    {\n                        \"emiId\": {\n                            \"$exists\": false\n                        }\n                    },\n                    {\n                        \"isEmiFirstInstallment\": true\n                    }\n                ]\n            }\n        },\n        {\n            \"$addFields\": {\n                \"isSuccess\": {\n                    \"$cond\": [\n                        {\n                            \"$in\": [\n                                \"$status\",\n                                [\n                                    \"success\",\n                                    \"partial-refund\",\n                                    \"emandatePending\",\n                                    \"emandateAuthSuccess\",\n                                    \"loggedoutPaid\",\n                                    \"eMandateFailed\"\n                                ]\n                            ]\n                        },\n                        true,\n                        false\n                    ]\n                }\n            }\n        },\n        {\n            \"$group\": {\n                \"_id\": {\n                    \"date\": {\n                        \"$dateToString\": {\n                            \"format\": \"%Y-%m-%d %H:00\",\n                            \"date\": {\n                                \"$add\": [\n                                    \"$createdOn\",\n                                    19800000\n                                ]\n                            }\n                        }\n                    }\n                },\n                \"TotalTransactions\": {\n                    \"$addToSet\": \"$_id\"\n                },\n                \"TotalUsers\": {\n                    \"$addToSet\": \"$sid\"\n                },\n                \"SuccessTransactions\": {\n                    \"$addToSet\": {\n                        \"$cond\": [\n                            \"$isSuccess\",\n                            \"$_id\",\n                            \"$$REMOVE\"\n                        ]\n                    }\n                }\n            }\n        },\n        {\n            \"$project\": {\n                \"_id\": 0,\n                \"Date\": \"$_id.date\",\n                \"TotalUsers\": {\n                    \"$size\": \"$TotalUsers\"\n                },\n                \"TotalTransactions\": {\n                    \"$size\": \"$TotalTransactions\"\n                },\n                \"SuccessTransactions\": {\n                    \"$size\": \"$SuccessTransactions\"\n                }\n            }\n        }\n    ]\n}",
+    "data": {
+      "columns": [
+        {
+          "name": "Date",
+          "friendly_name": "Date",
+          "type": "string"
+        },
+        {
+          "name": "TotalUsers",
+          "friendly_name": "TotalUsers",
+          "type": "integer"
+        },
+        {
+          "name": "TotalTransactions",
+          "friendly_name": "TotalTransactions",
+          "type": "integer"
+        },
+        {
+          "name": "SuccessTransactions",
+          "friendly_name": "SuccessTransactions",
+          "type": "integer"
+        }
+      ],
+      "rows": [
+        {
+          "Date": "2026-02-16 00:00",
+          "TotalUsers": 206,
+          "TotalTransactions": 293,
+          "SuccessTransactions": 68
+        },
+        {
+          "Date": "2026-03-27 01:00",
+          "TotalUsers": 120,
+          "TotalTransactions": 183,
+          "SuccessTransactions": 38
+        },
+        {
+          "Date": "2026-03-08 00:00",
+          "TotalUsers": 273,
+          "TotalTransactions": 419,
+          "SuccessTransactions": 79
+        },
+        {
+          "Date": "2026-02-20 15:00",
+          "TotalUsers": 815,
+          "TotalTransactions": 1254,
+          "SuccessTransactions": 263
+        },
+        {
+          "Date": "2026-03-16 19:00",
+          "TotalUsers": 1411,
+          "TotalTransactions": 2088,
+          "SuccessTransactions": 412
+        },
+        {
+          "Date": "2026-03-24 03:00",
+          "TotalUsers": 49,
+          "TotalTransactions": 74,
+          "SuccessTransactions": 13
+        },
+        {
+          "Date": "2026-03-30 00:00",
+          "TotalUsers": 176,
+          "TotalTransactions": 254,
+          "SuccessTransactions": 54
+        },
+        {
+          "Date": "2026-03-06 05:00",
+          "TotalUsers": 131,
+          "TotalTransactions": 170,
+          "SuccessTransactions": 41
+        },
+        {
+          "Date": "2026-03-27 14:00",
+          "TotalUsers": 737,
+          "TotalTransactions": 1108,
+          "SuccessTransactions": 194
+        },
+        {
+          "Date": "2026-02-16 10:00",
+          "TotalUsers": 895,
+          "TotalTransactions": 1337,
+          "SuccessTransactions": 324
+        },
+        {
+          "Date": "2026-03-28 05:00",
+          "TotalUsers": 79,
+          "TotalTransactions": 123,
+          "SuccessTransactions": 20
+        },
+        {
+          "Date": "2026-02-20 04:00",
+          "TotalUsers": 66,
+          "TotalTransactions": 90,
+          "SuccessTransactions": 28
+        },
+        {
+          "Date": "2026-02-14 11:00",
+          "TotalUsers": 1113,
+          "TotalTransactions": 1669,
+          "SuccessTransactions": 353
+        },
+        {
+          "Date": "2026-03-30 09:00",
+          "TotalUsers": 598,
+          "TotalTransactions": 971,
+          "SuccessTransactions": 169
+        },
+        {
+          "Date": "2026-02-20 10:00",
+          "TotalUsers": 812,
+          "TotalTransactions": 1229,
+          "SuccessTransactions": 276
+        },
+        {
+          "Date": "2026-03-27 21:00",
+          "TotalUsers": 1024,
+          "TotalTransactions": 1594,
+          "SuccessTransactions": 289
+        },
+        {
+          "Date": "2026-02-22 11:00",
+          "TotalUsers": 913,
+          "TotalTransactions": 1364,
+          "SuccessTransactions": 341
+        },
+        {
+          "Date": "2026-02-14 13:00",
+          "TotalUsers": 950,
+          "TotalTransactions": 1435,
+          "SuccessTransactions": 302
+        },
+        {
+          "Date": "2026-02-15 04:00",
+          "TotalUsers": 65,
+          "TotalTransactions": 87,
+          "SuccessTransactions": 21
+        },
+        {
+          "Date": "2026-02-19 14:00",
+          "TotalUsers": 713,
+          "TotalTransactions": 1081,
+          "SuccessTransactions": 236
+        },
+        {
+          "Date": "2026-03-08 01:00",
+          "TotalUsers": 181,
+          "TotalTransactions": 264,
+          "SuccessTransactions": 48
+        },
+        {
+          "Date": "2026-03-04 00:00",
+          "TotalUsers": 230,
+          "TotalTransactions": 339,
+          "SuccessTransactions": 58
+        },
+        {
+          "Date": "2026-03-04 13:00",
+          "TotalUsers": 446,
+          "TotalTransactions": 593,
+          "SuccessTransactions": 165
+        },
+        {
+          "Date": "2026-03-15 03:00",
+          "TotalUsers": 57,
+          "TotalTransactions": 78,
+          "SuccessTransactions": 21
+        },
+        {
+          "Date": "2026-03-23 15:00",
+          "TotalUsers": 933,
+          "TotalTransactions": 1444,
+          "SuccessTransactions": 261
+        },
+        {
+          "Date": "2026-02-15 18:00",
+          "TotalUsers": 649,
+          "TotalTransactions": 940,
+          "SuccessTransactions": 174
+        },
+        {
+          "Date": "2026-03-09 05:00",
+          "TotalUsers": 108,
+          "TotalTransactions": 140,
+          "SuccessTransactions": 29
+        },
+        {
+          "Date": "2026-02-25 05:00",
+          "TotalUsers": 146,
+          "TotalTransactions": 188,
+          "SuccessTransactions": 63
+        },
+        {
+          "Date": "2026-03-10 17:00",
+          "TotalUsers": 771,
+          "TotalTransactions": 1070,
+          "SuccessTransactions": 223
+        },
+        {
+          "Date": "2026-03-03 07:00",
+          "TotalUsers": 477,
+          "TotalTransactions": 663,
+          "SuccessTransactions": 159
+        },
+        {
+          "Date": "2026-03-03 13:00",
+          "TotalUsers": 597,
+          "TotalTransactions": 887,
+          "SuccessTransactions": 174
+        },
+        {
+          "Date": "2026-03-20 21:00",
+          "TotalUsers": 1226,
+          "TotalTransactions": 1850,
+          "SuccessTransactions": 355
+        },
+        {
+          "Date": "2026-02-26 18:00",
+          "TotalUsers": 711,
+          "TotalTransactions": 1016,
+          "SuccessTransactions": 204
+        },
+        {
+          "Date": "2026-02-19 08:00",
+          "TotalUsers": 659,
+          "TotalTransactions": 951,
+          "SuccessTransactions": 248
+        },
+        {
+          "Date": "2026-03-17 04:00",
+          "TotalUsers": 81,
+          "TotalTransactions": 114,
+          "SuccessTransactions": 25
+        },
+        {
+          "Date": "2026-03-23 12:00",
+          "TotalUsers": 1119,
+          "TotalTransactions": 1752,
+          "SuccessTransactions": 325
+        },
+        {
+          "Date": "2026-03-24 19:00",
+          "TotalUsers": 1106,
+          "TotalTransactions": 1578,
+          "SuccessTransactions": 293
+        },
+        {
+          "Date": "2026-02-14 05:00",
+          "TotalUsers": 138,
+          "TotalTransactions": 209,
+          "SuccessTransactions": 46
+        },
+        {
+          "Date": "2026-03-13 18:00",
+          "TotalUsers": 833,
+          "TotalTransactions": 1217,
+          "SuccessTransactions": 223
+        },
+        {
+          "Date": "2026-03-22 00:00",
+          "TotalUsers": 279,
+          "TotalTransactions": 453,
+          "SuccessTransactions": 84
+        },
+        {
+          "Date": "2026-02-17 15:00",
+          "TotalUsers": 972,
+          "TotalTransactions": 1498,
+          "SuccessTransactions": 291
+        },
+        {
+          "Date": "2026-03-12 21:00",
+          "TotalUsers": 1260,
+          "TotalTransactions": 1919,
+          "SuccessTransactions": 379
+        },
+        {
+          "Date": "2026-03-30 12:00",
+          "TotalUsers": 719,
+          "TotalTransactions": 1136,
+          "SuccessTransactions": 210
+        },
+        {
+          "Date": "2026-03-16 10:00",
+          "TotalUsers": 1000,
+          "TotalTransactions": 1533,
+          "SuccessTransactions": 304
+        },
+        {
+          "Date": "2026-02-23 23:00",
+          "TotalUsers": 497,
+          "TotalTransactions": 706,
+          "SuccessTransactions": 155
+        },
+        {
+          "Date": "2026-02-25 09:00",
+          "TotalUsers": 849,
+          "TotalTransactions": 1282,
+          "SuccessTransactions": 282
+        },
+        {
+          "Date": "2026-02-17 22:00",
+          "TotalUsers": 990,
+          "TotalTransactions": 1417,
+          "SuccessTransactions": 268
+        },
+        {
+          "Date": "2026-02-24 11:00",
+          "TotalUsers": 1139,
+          "TotalTransactions": 1603,
+          "SuccessTransactions": 409
+        },
+        {
+          "Date": "2026-03-19 00:00",
+          "TotalUsers": 265,
+          "TotalTransactions": 362,
+          "SuccessTransactions": 83
+        },
+        {
+          "Date": "2026-03-20 05:00",
+          "TotalUsers": 163,
+          "TotalTransactions": 231,
+          "SuccessTransactions": 46
+        },
+        {
+          "Date": "2026-02-18 02:00",
+          "TotalUsers": 76,
+          "TotalTransactions": 116,
+          "SuccessTransactions": 28
+        },
+        {
+          "Date": "2026-03-03 19:00",
+          "TotalUsers": 819,
+          "TotalTransactions": 1168,
+          "SuccessTransactions": 214
+        },
+        {
+          "Date": "2026-03-29 11:00",
+          "TotalUsers": 700,
+          "TotalTransactions": 1140,
+          "SuccessTransactions": 221
+        },
+        {
+          "Date": "2026-03-12 13:00",
+          "TotalUsers": 954,
+          "TotalTransactions": 1440,
+          "SuccessTransactions": 284
+        },
+        {
+          "Date": "2026-03-10 19:00",
+          "TotalUsers": 1110,
+          "TotalTransactions": 1623,
+          "SuccessTransactions": 304
+        },
+        {
+          "Date": "2026-02-18 01:00",
+          "TotalUsers": 144,
+          "TotalTransactions": 239,
+          "SuccessTransactions": 38
+        },
+        {
+          "Date": "2026-02-19 22:00",
+          "TotalUsers": 609,
+          "TotalTransactions": 919,
+          "SuccessTransactions": 205
+        },
+        {
+          "Date": "2026-03-19 19:00",
+          "TotalUsers": 1052,
+          "TotalTransactions": 1567,
+          "SuccessTransactions": 327
+        },
+        {
+          "Date": "2026-03-12 19:00",
+          "TotalUsers": 1086,
+          "TotalTransactions": 1659,
+          "SuccessTransactions": 301
+        },
+        {
+          "Date": "2026-03-14 00:00",
+          "TotalUsers": 284,
+          "TotalTransactions": 389,
+          "SuccessTransactions": 82
+        },
+        {
+          "Date": "2026-02-25 11:00",
+          "TotalUsers": 1068,
+          "TotalTransactions": 1483,
+          "SuccessTransactions": 361
+        },
+        {
+          "Date": "2026-03-14 17:00",
+          "TotalUsers": 706,
+          "TotalTransactions": 1019,
+          "SuccessTransactions": 215
+        },
+        {
+          "Date": "2026-03-21 12:00",
+          "TotalUsers": 1178,
+          "TotalTransactions": 1785,
+          "SuccessTransactions": 364
+        },
+        {
+          "Date": "2026-03-22 06:00",
+          "TotalUsers": 376,
+          "TotalTransactions": 526,
+          "SuccessTransactions": 115
+        },
+        {
+          "Date": "2026-03-02 17:00",
+          "TotalUsers": 678,
+          "TotalTransactions": 1000,
+          "SuccessTransactions": 203
+        },
+        {
+          "Date": "2026-02-22 09:00",
+          "TotalUsers": 817,
+          "TotalTransactions": 1143,
+          "SuccessTransactions": 300
+        },
+        {
+          "Date": "2026-02-20 12:00",
+          "TotalUsers": 833,
+          "TotalTransactions": 1246,
+          "SuccessTransactions": 277
+        },
+        {
+          "Date": "2026-02-16 22:00",
+          "TotalUsers": 797,
+          "TotalTransactions": 1155,
+          "SuccessTransactions": 224
+        },
+        {
+          "Date": "2026-02-17 20:00",
+          "TotalUsers": 1349,
+          "TotalTransactions": 1937,
+          "SuccessTransactions": 421
+        },
+        {
+          "Date": "2026-03-11 06:00",
+          "TotalUsers": 362,
+          "TotalTransactions": 501,
+          "SuccessTransactions": 123
+        },
+        {
+          "Date": "2026-03-16 07:00",
+          "TotalUsers": 526,
+          "TotalTransactions": 765,
+          "SuccessTransactions": 166
+        },
+        {
+          "Date": "2026-03-09 00:00",
+          "TotalUsers": 240,
+          "TotalTransactions": 324,
+          "SuccessTransactions": 66
+        },
+        {
+          "Date": "2026-02-14 19:00",
+          "TotalUsers": 1090,
+          "TotalTransactions": 1644,
+          "SuccessTransactions": 339
+        },
+        {
+          "Date": "2026-02-20 00:00",
+          "TotalUsers": 210,
+          "TotalTransactions": 284,
+          "SuccessTransactions": 65
+        },
+        {
+          "Date": "2026-03-01 18:00",
+          "TotalUsers": 716,
+          "TotalTransactions": 984,
+          "SuccessTransactions": 221
+        },
+        {
+          "Date": "2026-03-25 17:00",
+          "TotalUsers": 654,
+          "TotalTransactions": 909,
+          "SuccessTransactions": 175
+        },
+        {
+          "Date": "2026-02-19 05:00",
+          "TotalUsers": 135,
+          "TotalTransactions": 176,
+          "SuccessTransactions": 43
+        },
+        {
+          "Date": "2026-02-18 08:00",
+          "TotalUsers": 824,
+          "TotalTransactions": 1153,
+          "SuccessTransactions": 288
+        },
+        {
+          "Date": "2026-03-04 16:00",
+          "TotalUsers": 457,
+          "TotalTransactions": 642,
+          "SuccessTransactions": 140
+        },
+        {
+          "Date": "2026-03-28 11:00",
+          "TotalUsers": 779,
+          "TotalTransactions": 1222,
+          "SuccessTransactions": 231
+        },
+        {
+          "Date": "2026-02-25 23:00",
+          "TotalUsers": 418,
+          "TotalTransactions": 598,
+          "SuccessTransactions": 128
+        },
+        {
+          "Date": "2026-03-18 08:00",
+          "TotalUsers": 641,
+          "TotalTransactions": 937,
+          "SuccessTransactions": 215
+        },
+        {
+          "Date": "2026-03-26 07:00",
+          "TotalUsers": 549,
+          "TotalTransactions": 766,
+          "SuccessTransactions": 153
+        },
+        {
+          "Date": "2026-02-23 02:00",
+          "TotalUsers": 79,
+          "TotalTransactions": 101,
+          "SuccessTransactions": 28
+        },
+        {
+          "Date": "2026-03-07 10:00",
+          "TotalUsers": 1030,
+          "TotalTransactions": 1457,
+          "SuccessTransactions": 340
+        },
+        {
+          "Date": "2026-02-24 20:00",
+          "TotalUsers": 1280,
+          "TotalTransactions": 1894,
+          "SuccessTransactions": 389
+        },
+        {
+          "Date": "2026-03-09 06:00",
+          "TotalUsers": 251,
+          "TotalTransactions": 337,
+          "SuccessTransactions": 69
+        },
+        {
+          "Date": "2026-03-15 14:00",
+          "TotalUsers": 859,
+          "TotalTransactions": 1246,
+          "SuccessTransactions": 273
+        },
+        {
+          "Date": "2026-03-20 00:00",
+          "TotalUsers": 296,
+          "TotalTransactions": 399,
+          "SuccessTransactions": 86
+        },
+        {
+          "Date": "2026-03-07 18:00",
+          "TotalUsers": 805,
+          "TotalTransactions": 1136,
+          "SuccessTransactions": 217
+        },
+        {
+          "Date": "2026-03-07 20:00",
+          "TotalUsers": 1334,
+          "TotalTransactions": 1903,
+          "SuccessTransactions": 367
+        },
+        {
+          "Date": "2026-02-20 06:00",
+          "TotalUsers": 266,
+          "TotalTransactions": 400,
+          "SuccessTransactions": 97
+        },
+        {
+          "Date": "2026-03-03 09:00",
+          "TotalUsers": 795,
+          "TotalTransactions": 1248,
+          "SuccessTransactions": 253
+        },
+        {
+          "Date": "2026-03-06 20:00",
+          "TotalUsers": 1671,
+          "TotalTransactions": 2405,
+          "SuccessTransactions": 446
+        },
+        {
+          "Date": "2026-03-13 06:00",
+          "TotalUsers": 316,
+          "TotalTransactions": 407,
+          "SuccessTransactions": 89
+        },
+        {
+          "Date": "2026-02-21 21:00",
+          "TotalUsers": 1057,
+          "TotalTransactions": 1453,
+          "SuccessTransactions": 285
+        },
+        {
+          "Date": "2026-02-27 17:00",
+          "TotalUsers": 666,
+          "TotalTransactions": 999,
+          "SuccessTransactions": 210
+        },
+        {
+          "Date": "2026-02-17 11:00",
+          "TotalUsers": 1151,
+          "TotalTransactions": 1674,
+          "SuccessTransactions": 368
+        },
+        {
+          "Date": "2026-03-12 11:00",
+          "TotalUsers": 1048,
+          "TotalTransactions": 1533,
+          "SuccessTransactions": 317
+        },
+        {
+          "Date": "2026-03-20 04:00",
+          "TotalUsers": 79,
+          "TotalTransactions": 105,
+          "SuccessTransactions": 19
+        },
+        {
+          "Date": "2026-02-15 14:00",
+          "TotalUsers": 697,
+          "TotalTransactions": 1004,
+          "SuccessTransactions": 224
+        },
+        {
+          "Date": "2026-03-04 07:00",
+          "TotalUsers": 372,
+          "TotalTransactions": 539,
+          "SuccessTransactions": 119
+        },
+        {
+          "Date": "2026-03-04 22:00",
+          "TotalUsers": 485,
+          "TotalTransactions": 735,
+          "SuccessTransactions": 139
+        },
+        {
+          "Date": "2026-03-25 04:00",
+          "TotalUsers": 65,
+          "TotalTransactions": 88,
+          "SuccessTransactions": 20
+        },
+        {
+          "Date": "2026-02-26 05:00",
+          "TotalUsers": 136,
+          "TotalTransactions": 189,
+          "SuccessTransactions": 51
+        },
+        {
+          "Date": "2026-03-27 09:00",
+          "TotalUsers": 825,
+          "TotalTransactions": 1349,
+          "SuccessTransactions": 260
+        },
+        {
+          "Date": "2026-02-15 00:00",
+          "TotalUsers": 260,
+          "TotalTransactions": 377,
+          "SuccessTransactions": 81
+        },
+        {
+          "Date": "2026-03-26 20:00",
+          "TotalUsers": 1433,
+          "TotalTransactions": 2069,
+          "SuccessTransactions": 371
+        },
+        {
+          "Date": "2026-03-03 05:00",
+          "TotalUsers": 134,
+          "TotalTransactions": 198,
+          "SuccessTransactions": 35
+        },
+        {
+          "Date": "2026-03-11 07:00",
+          "TotalUsers": 568,
+          "TotalTransactions": 808,
+          "SuccessTransactions": 210
+        },
+        {
+          "Date": "2026-03-13 12:00",
+          "TotalUsers": 1105,
+          "TotalTransactions": 1699,
+          "SuccessTransactions": 327
+        },
+        {
+          "Date": "2026-03-20 17:00",
+          "TotalUsers": 811,
+          "TotalTransactions": 1162,
+          "SuccessTransactions": 234
+        },
+        {
+          "Date": "2026-02-21 03:00",
+          "TotalUsers": 67,
+          "TotalTransactions": 89,
+          "SuccessTransactions": 27
+        },
+        {
+          "Date": "2026-02-26 17:00",
+          "TotalUsers": 712,
+          "TotalTransactions": 1053,
+          "SuccessTransactions": 227
+        },
+        {
+          "Date": "2026-03-15 10:00",
+          "TotalUsers": 970,
+          "TotalTransactions": 1458,
+          "SuccessTransactions": 298
+        },
+        {
+          "Date": "2026-03-08 09:00",
+          "TotalUsers": 887,
+          "TotalTransactions": 1328,
+          "SuccessTransactions": 288
+        },
+        {
+          "Date": "2026-03-22 15:00",
+          "TotalUsers": 875,
+          "TotalTransactions": 1317,
+          "SuccessTransactions": 286
+        },
+        {
+          "Date": "2026-03-19 22:00",
+          "TotalUsers": 841,
+          "TotalTransactions": 1272,
+          "SuccessTransactions": 248
+        },
+        {
+          "Date": "2026-03-01 09:00",
+          "TotalUsers": 829,
+          "TotalTransactions": 1211,
+          "SuccessTransactions": 283
+        },
+        {
+          "Date": "2026-03-04 15:00",
+          "TotalUsers": 468,
+          "TotalTransactions": 650,
+          "SuccessTransactions": 135
+        },
+        {
+          "Date": "2026-03-15 17:00",
+          "TotalUsers": 701,
+          "TotalTransactions": 1070,
+          "SuccessTransactions": 197
+        },
+        {
+          "Date": "2026-02-20 07:00",
+          "TotalUsers": 423,
+          "TotalTransactions": 651,
+          "SuccessTransactions": 144
+        },
+        {
+          "Date": "2026-03-17 12:00",
+          "TotalUsers": 1226,
+          "TotalTransactions": 1888,
+          "SuccessTransactions": 326
+        },
+        {
+          "Date": "2026-03-30 04:00",
+          "TotalUsers": 42,
+          "TotalTransactions": 66,
+          "SuccessTransactions": 8
+        },
+        {
+          "Date": "2026-03-04 03:00",
+          "TotalUsers": 51,
+          "TotalTransactions": 71,
+          "SuccessTransactions": 15
+        },
+        {
+          "Date": "2026-02-16 01:00",
+          "TotalUsers": 134,
+          "TotalTransactions": 177,
+          "SuccessTransactions": 47
+        },
+        {
+          "Date": "2026-02-18 17:00",
+          "TotalUsers": 846,
+          "TotalTransactions": 1212,
+          "SuccessTransactions": 235
+        },
+        {
+          "Date": "2026-02-28 15:00",
+          "TotalUsers": 948,
+          "TotalTransactions": 1410,
+          "SuccessTransactions": 295
+        },
+        {
+          "Date": "2026-03-11 20:00",
+          "TotalUsers": 1215,
+          "TotalTransactions": 1768,
+          "SuccessTransactions": 356
+        },
+        {
+          "Date": "2026-03-12 02:00",
+          "TotalUsers": 90,
+          "TotalTransactions": 122,
+          "SuccessTransactions": 24
+        },
+        {
+          "Date": "2026-03-11 04:00",
+          "TotalUsers": 85,
+          "TotalTransactions": 104,
+          "SuccessTransactions": 25
+        },
+        {
+          "Date": "2026-02-22 18:00",
+          "TotalUsers": 762,
+          "TotalTransactions": 1086,
+          "SuccessTransactions": 247
+        },
+        {
+          "Date": "2026-03-25 05:00",
+          "TotalUsers": 145,
+          "TotalTransactions": 206,
+          "SuccessTransactions": 40
+        },
+        {
+          "Date": "2026-02-19 23:00",
+          "TotalUsers": 367,
+          "TotalTransactions": 517,
+          "SuccessTransactions": 117
+        },
+        {
+          "Date": "2026-03-22 07:00",
+          "TotalUsers": 605,
+          "TotalTransactions": 901,
+          "SuccessTransactions": 196
+        },
+        {
+          "Date": "2026-02-16 23:00",
+          "TotalUsers": 475,
+          "TotalTransactions": 656,
+          "SuccessTransactions": 118
+        },
+        {
+          "Date": "2026-02-18 19:00",
+          "TotalUsers": 1192,
+          "TotalTransactions": 1682,
+          "SuccessTransactions": 382
+        },
+        {
+          "Date": "2026-02-20 16:00",
+          "TotalUsers": 725,
+          "TotalTransactions": 1108,
+          "SuccessTransactions": 242
+        },
+        {
+          "Date": "2026-03-16 05:00",
+          "TotalUsers": 148,
+          "TotalTransactions": 227,
+          "SuccessTransactions": 61
+        },
+        {
+          "Date": "2026-03-16 11:00",
+          "TotalUsers": 1175,
+          "TotalTransactions": 1757,
+          "SuccessTransactions": 353
+        },
+        {
+          "Date": "2026-02-15 05:00",
+          "TotalUsers": 131,
+          "TotalTransactions": 186,
+          "SuccessTransactions": 36
+        },
+        {
+          "Date": "2026-03-09 21:00",
+          "TotalUsers": 1281,
+          "TotalTransactions": 1812,
+          "SuccessTransactions": 373
+        },
+        {
+          "Date": "2026-03-14 10:00",
+          "TotalUsers": 984,
+          "TotalTransactions": 1471,
+          "SuccessTransactions": 307
+        },
+        {
+          "Date": "2026-02-14 21:00",
+          "TotalUsers": 1006,
+          "TotalTransactions": 1550,
+          "SuccessTransactions": 268
+        },
+        {
+          "Date": "2026-03-11 02:00",
+          "TotalUsers": 80,
+          "TotalTransactions": 112,
+          "SuccessTransactions": 20
+        },
+        {
+          "Date": "2026-02-19 06:00",
+          "TotalUsers": 261,
+          "TotalTransactions": 357,
+          "SuccessTransactions": 105
+        },
+        {
+          "Date": "2026-03-26 09:00",
+          "TotalUsers": 866,
+          "TotalTransactions": 1230,
+          "SuccessTransactions": 231
+        },
+        {
+          "Date": "2026-03-22 04:00",
+          "TotalUsers": 48,
+          "TotalTransactions": 68,
+          "SuccessTransactions": 15
+        },
+        {
+          "Date": "2026-02-27 22:00",
+          "TotalUsers": 858,
+          "TotalTransactions": 1310,
+          "SuccessTransactions": 251
+        },
+        {
+          "Date": "2026-03-19 20:00",
+          "TotalUsers": 1332,
+          "TotalTransactions": 1968,
+          "SuccessTransactions": 387
+        },
+        {
+          "Date": "2026-03-19 03:00",
+          "TotalUsers": 53,
+          "TotalTransactions": 65,
+          "SuccessTransactions": 18
+        },
+        {
+          "Date": "2026-02-21 06:00",
+          "TotalUsers": 337,
+          "TotalTransactions": 504,
+          "SuccessTransactions": 91
+        },
+        {
+          "Date": "2026-03-03 08:00",
+          "TotalUsers": 668,
+          "TotalTransactions": 1012,
+          "SuccessTransactions": 208
+        },
+        {
+          "Date": "2026-03-23 06:00",
+          "TotalUsers": 281,
+          "TotalTransactions": 419,
+          "SuccessTransactions": 95
+        },
+        {
+          "Date": "2026-02-21 08:00",
+          "TotalUsers": 705,
+          "TotalTransactions": 966,
+          "SuccessTransactions": 256
+        },
+        {
+          "Date": "2026-03-27 22:00",
+          "TotalUsers": 770,
+          "TotalTransactions": 1114,
+          "SuccessTransactions": 173
+        },
+        {
+          "Date": "2026-03-27 18:00",
+          "TotalUsers": 690,
+          "TotalTransactions": 1041,
+          "SuccessTransactions": 179
+        },
+        {
+          "Date": "2026-02-28 00:00",
+          "TotalUsers": 290,
+          "TotalTransactions": 439,
+          "SuccessTransactions": 101
+        },
+        {
+          "Date": "2026-03-30 13:00",
+          "TotalUsers": 660,
+          "TotalTransactions": 1038,
+          "SuccessTransactions": 175
+        },
+        {
+          "Date": "2026-03-02 12:00",
+          "TotalUsers": 990,
+          "TotalTransactions": 1351,
+          "SuccessTransactions": 312
+        },
+        {
+          "Date": "2026-03-20 03:00",
+          "TotalUsers": 54,
+          "TotalTransactions": 69,
+          "SuccessTransactions": 22
+        },
+        {
+          "Date": "2026-02-15 13:00",
+          "TotalUsers": 759,
+          "TotalTransactions": 1184,
+          "SuccessTransactions": 242
+        },
+        {
+          "Date": "2026-02-16 06:00",
+          "TotalUsers": 240,
+          "TotalTransactions": 345,
+          "SuccessTransactions": 75
+        },
+        {
+          "Date": "2026-03-03 18:00",
+          "TotalUsers": 616,
+          "TotalTransactions": 883,
+          "SuccessTransactions": 208
+        },
+        {
+          "Date": "2026-02-21 15:00",
+          "TotalUsers": 876,
+          "TotalTransactions": 1259,
+          "SuccessTransactions": 275
+        },
+        {
+          "Date": "2026-03-25 20:00",
+          "TotalUsers": 1367,
+          "TotalTransactions": 1931,
+          "SuccessTransactions": 355
+        },
+        {
+          "Date": "2026-02-28 19:00",
+          "TotalUsers": 1095,
+          "TotalTransactions": 1593,
+          "SuccessTransactions": 348
+        },
+        {
+          "Date": "2026-03-12 12:00",
+          "TotalUsers": 1065,
+          "TotalTransactions": 1702,
+          "SuccessTransactions": 342
+        },
+        {
+          "Date": "2026-03-22 22:00",
+          "TotalUsers": 717,
+          "TotalTransactions": 1028,
+          "SuccessTransactions": 222
+        },
+        {
+          "Date": "2026-03-21 18:00",
+          "TotalUsers": 988,
+          "TotalTransactions": 1465,
+          "SuccessTransactions": 283
+        },
+        {
+          "Date": "2026-02-17 09:00",
+          "TotalUsers": 940,
+          "TotalTransactions": 1378,
+          "SuccessTransactions": 290
+        },
+        {
+          "Date": "2026-03-08 03:00",
+          "TotalUsers": 57,
+          "TotalTransactions": 90,
+          "SuccessTransactions": 19
+        },
+        {
+          "Date": "2026-03-22 03:00",
+          "TotalUsers": 66,
+          "TotalTransactions": 81,
+          "SuccessTransactions": 21
+        },
+        {
+          "Date": "2026-03-22 19:00",
+          "TotalUsers": 1001,
+          "TotalTransactions": 1468,
+          "SuccessTransactions": 329
+        },
+        {
+          "Date": "2026-02-27 15:00",
+          "TotalUsers": 888,
+          "TotalTransactions": 1281,
+          "SuccessTransactions": 293
+        },
+        {
+          "Date": "2026-03-24 04:00",
+          "TotalUsers": 73,
+          "TotalTransactions": 108,
+          "SuccessTransactions": 18
+        },
+        {
+          "Date": "2026-03-19 12:00",
+          "TotalUsers": 1070,
+          "TotalTransactions": 1608,
+          "SuccessTransactions": 328
+        },
+        {
+          "Date": "2026-03-24 15:00",
+          "TotalUsers": 1064,
+          "TotalTransactions": 1587,
+          "SuccessTransactions": 274
+        },
+        {
+          "Date": "2026-03-22 09:00",
+          "TotalUsers": 989,
+          "TotalTransactions": 1402,
+          "SuccessTransactions": 338
+        },
+        {
+          "Date": "2026-03-25 01:00",
+          "TotalUsers": 137,
+          "TotalTransactions": 231,
+          "SuccessTransactions": 38
+        },
+        {
+          "Date": "2026-03-28 19:00",
+          "TotalUsers": 587,
+          "TotalTransactions": 945,
+          "SuccessTransactions": 151
+        },
+        {
+          "Date": "2026-02-28 02:00",
+          "TotalUsers": 92,
+          "TotalTransactions": 156,
+          "SuccessTransactions": 35
+        },
+        {
+          "Date": "2026-03-04 14:00",
+          "TotalUsers": 430,
+          "TotalTransactions": 657,
+          "SuccessTransactions": 137
+        },
+        {
+          "Date": "2026-03-01 23:00",
+          "TotalUsers": 431,
+          "TotalTransactions": 600,
+          "SuccessTransactions": 139
+        },
+        {
+          "Date": "2026-03-07 08:00",
+          "TotalUsers": 719,
+          "TotalTransactions": 1053,
+          "SuccessTransactions": 243
+        },
+        {
+          "Date": "2026-03-22 18:00",
+          "TotalUsers": 864,
+          "TotalTransactions": 1302,
+          "SuccessTransactions": 245
+        },
+        {
+          "Date": "2026-03-15 09:00",
+          "TotalUsers": 951,
+          "TotalTransactions": 1410,
+          "SuccessTransactions": 299
+        },
+        {
+          "Date": "2026-03-26 13:00",
+          "TotalUsers": 905,
+          "TotalTransactions": 1410,
+          "SuccessTransactions": 295
+        },
+        {
+          "Date": "2026-03-16 12:00",
+          "TotalUsers": 1174,
+          "TotalTransactions": 1683,
+          "SuccessTransactions": 353
+        },
+        {
+          "Date": "2026-03-19 14:00",
+          "TotalUsers": 991,
+          "TotalTransactions": 1469,
+          "SuccessTransactions": 314
+        },
+        {
+          "Date": "2026-02-24 09:00",
+          "TotalUsers": 915,
+          "TotalTransactions": 1300,
+          "SuccessTransactions": 313
+        },
+        {
+          "Date": "2026-02-25 01:00",
+          "TotalUsers": 135,
+          "TotalTransactions": 194,
+          "SuccessTransactions": 50
+        },
+        {
+          "Date": "2026-03-27 23:00",
+          "TotalUsers": 683,
+          "TotalTransactions": 970,
+          "SuccessTransactions": 150
+        },
+        {
+          "Date": "2026-02-26 04:00",
+          "TotalUsers": 71,
+          "TotalTransactions": 100,
+          "SuccessTransactions": 23
+        },
+        {
+          "Date": "2026-03-19 09:00",
+          "TotalUsers": 904,
+          "TotalTransactions": 1270,
+          "SuccessTransactions": 301
+        },
+        {
+          "Date": "2026-03-04 06:00",
+          "TotalUsers": 214,
+          "TotalTransactions": 307,
+          "SuccessTransactions": 64
+        },
+        {
+          "Date": "2026-03-20 06:00",
+          "TotalUsers": 339,
+          "TotalTransactions": 484,
+          "SuccessTransactions": 119
+        },
+        {
+          "Date": "2026-03-03 04:00",
+          "TotalUsers": 87,
+          "TotalTransactions": 123,
+          "SuccessTransactions": 30
+        },
+        {
+          "Date": "2026-03-19 06:00",
+          "TotalUsers": 306,
+          "TotalTransactions": 426,
+          "SuccessTransactions": 91
+        },
+        {
+          "Date": "2026-02-21 05:00",
+          "TotalUsers": 173,
+          "TotalTransactions": 242,
+          "SuccessTransactions": 54
+        },
+        {
+          "Date": "2026-02-23 09:00",
+          "TotalUsers": 839,
+          "TotalTransactions": 1258,
+          "SuccessTransactions": 272
+        },
+        {
+          "Date": "2026-03-09 23:00",
+          "TotalUsers": 544,
+          "TotalTransactions": 763,
+          "SuccessTransactions": 157
+        },
+        {
+          "Date": "2026-03-13 14:00",
+          "TotalUsers": 889,
+          "TotalTransactions": 1313,
+          "SuccessTransactions": 250
+        },
+        {
+          "Date": "2026-03-02 21:00",
+          "TotalUsers": 1052,
+          "TotalTransactions": 1519,
+          "SuccessTransactions": 308
+        },
+        {
+          "Date": "2026-03-17 11:00",
+          "TotalUsers": 1265,
+          "TotalTransactions": 2018,
+          "SuccessTransactions": 378
+        },
+        {
+          "Date": "2026-02-16 16:00",
+          "TotalUsers": 799,
+          "TotalTransactions": 1244,
+          "SuccessTransactions": 253
+        },
+        {
+          "Date": "2026-02-25 12:00",
+          "TotalUsers": 925,
+          "TotalTransactions": 1325,
+          "SuccessTransactions": 305
+        },
+        {
+          "Date": "2026-02-27 20:00",
+          "TotalUsers": 1189,
+          "TotalTransactions": 1700,
+          "SuccessTransactions": 349
+        },
+        {
+          "Date": "2026-03-30 08:00",
+          "TotalUsers": 457,
+          "TotalTransactions": 688,
+          "SuccessTransactions": 154
+        },
+        {
+          "Date": "2026-03-13 13:00",
+          "TotalUsers": 941,
+          "TotalTransactions": 1420,
+          "SuccessTransactions": 266
+        },
+        {
+          "Date": "2026-03-23 17:00",
+          "TotalUsers": 861,
+          "TotalTransactions": 1288,
+          "SuccessTransactions": 251
+        },
+        {
+          "Date": "2026-03-04 23:00",
+          "TotalUsers": 273,
+          "TotalTransactions": 396,
+          "SuccessTransactions": 82
+        },
+        {
+          "Date": "2026-03-25 09:00",
+          "TotalUsers": 920,
+          "TotalTransactions": 1352,
+          "SuccessTransactions": 274
+        },
+        {
+          "Date": "2026-02-22 21:00",
+          "TotalUsers": 642,
+          "TotalTransactions": 899,
+          "SuccessTransactions": 184
+        },
+        {
+          "Date": "2026-03-16 17:00",
+          "TotalUsers": 789,
+          "TotalTransactions": 1181,
+          "SuccessTransactions": 215
+        },
+        {
+          "Date": "2026-02-14 16:00",
+          "TotalUsers": 826,
+          "TotalTransactions": 1235,
+          "SuccessTransactions": 267
+        },
+        {
+          "Date": "2026-03-15 05:00",
+          "TotalUsers": 142,
+          "TotalTransactions": 196,
+          "SuccessTransactions": 43
+        },
+        {
+          "Date": "2026-03-07 17:00",
+          "TotalUsers": 749,
+          "TotalTransactions": 1046,
+          "SuccessTransactions": 213
+        },
+        {
+          "Date": "2026-03-28 03:00",
+          "TotalUsers": 35,
+          "TotalTransactions": 61,
+          "SuccessTransactions": 7
+        },
+        {
+          "Date": "2026-02-25 19:00",
+          "TotalUsers": 1059,
+          "TotalTransactions": 1462,
+          "SuccessTransactions": 327
+        },
+        {
+          "Date": "2026-03-10 04:00",
+          "TotalUsers": 69,
+          "TotalTransactions": 97,
+          "SuccessTransactions": 25
+        },
+        {
+          "Date": "2026-03-08 14:00",
+          "TotalUsers": 756,
+          "TotalTransactions": 1035,
+          "SuccessTransactions": 242
+        },
+        {
+          "Date": "2026-03-12 17:00",
+          "TotalUsers": 728,
+          "TotalTransactions": 1071,
+          "SuccessTransactions": 212
+        },
+        {
+          "Date": "2026-02-21 07:00",
+          "TotalUsers": 586,
+          "TotalTransactions": 799,
+          "SuccessTransactions": 185
+        },
+        {
+          "Date": "2026-03-29 00:00",
+          "TotalUsers": 209,
+          "TotalTransactions": 275,
+          "SuccessTransactions": 72
+        },
+        {
+          "Date": "2026-03-06 02:00",
+          "TotalUsers": 64,
+          "TotalTransactions": 100,
+          "SuccessTransactions": 21
+        },
+        {
+          "Date": "2026-03-12 06:00",
+          "TotalUsers": 294,
+          "TotalTransactions": 423,
+          "SuccessTransactions": 83
+        },
+        {
+          "Date": "2026-03-05 17:00",
+          "TotalUsers": 463,
+          "TotalTransactions": 676,
+          "SuccessTransactions": 150
+        },
+        {
+          "Date": "2026-03-01 14:00",
+          "TotalUsers": 758,
+          "TotalTransactions": 1076,
+          "SuccessTransactions": 221
+        },
+        {
+          "Date": "2026-02-22 17:00",
+          "TotalUsers": 671,
+          "TotalTransactions": 996,
+          "SuccessTransactions": 192
+        },
+        {
+          "Date": "2026-03-08 16:00",
+          "TotalUsers": 686,
+          "TotalTransactions": 952,
+          "SuccessTransactions": 197
+        },
+        {
+          "Date": "2026-03-26 22:00",
+          "TotalUsers": 823,
+          "TotalTransactions": 1225,
+          "SuccessTransactions": 211
+        },
+        {
+          "Date": "2026-03-12 14:00",
+          "TotalUsers": 859,
+          "TotalTransactions": 1229,
+          "SuccessTransactions": 266
+        },
+        {
+          "Date": "2026-03-21 14:00",
+          "TotalUsers": 914,
+          "TotalTransactions": 1364,
+          "SuccessTransactions": 273
+        },
+        {
+          "Date": "2026-02-24 17:00",
+          "TotalUsers": 779,
+          "TotalTransactions": 1120,
+          "SuccessTransactions": 252
+        },
+        {
+          "Date": "2026-03-02 08:00",
+          "TotalUsers": 567,
+          "TotalTransactions": 823,
+          "SuccessTransactions": 165
+        },
+        {
+          "Date": "2026-03-28 17:00",
+          "TotalUsers": 527,
+          "TotalTransactions": 822,
+          "SuccessTransactions": 143
+        },
+        {
+          "Date": "2026-03-11 18:00",
+          "TotalUsers": 779,
+          "TotalTransactions": 1179,
+          "SuccessTransactions": 193
+        },
+        {
+          "Date": "2026-02-27 01:00",
+          "TotalUsers": 165,
+          "TotalTransactions": 254,
+          "SuccessTransactions": 59
+        },
+        {
+          "Date": "2026-02-23 07:00",
+          "TotalUsers": 462,
+          "TotalTransactions": 647,
+          "SuccessTransactions": 160
+        },
+        {
+          "Date": "2026-03-12 00:00",
+          "TotalUsers": 304,
+          "TotalTransactions": 462,
+          "SuccessTransactions": 105
+        },
+        {
+          "Date": "2026-03-14 19:00",
+          "TotalUsers": 1052,
+          "TotalTransactions": 1577,
+          "SuccessTransactions": 293
+        },
+        {
+          "Date": "2026-02-14 00:00",
+          "TotalUsers": 325,
+          "TotalTransactions": 469,
+          "SuccessTransactions": 104
+        },
+        {
+          "Date": "2026-03-23 13:00",
+          "TotalUsers": 1013,
+          "TotalTransactions": 1585,
+          "SuccessTransactions": 275
+        },
+        {
+          "Date": "2026-03-25 03:00",
+          "TotalUsers": 50,
+          "TotalTransactions": 75,
+          "SuccessTransactions": 16
+        },
+        {
+          "Date": "2026-03-17 21:00",
+          "TotalUsers": 1286,
+          "TotalTransactions": 1978,
+          "SuccessTransactions": 363
+        },
+        {
+          "Date": "2026-03-14 08:00",
+          "TotalUsers": 688,
+          "TotalTransactions": 980,
+          "SuccessTransactions": 209
+        },
+        {
+          "Date": "2026-03-28 16:00",
+          "TotalUsers": 593,
+          "TotalTransactions": 936,
+          "SuccessTransactions": 153
+        },
+        {
+          "Date": "2026-03-28 18:00",
+          "TotalUsers": 583,
+          "TotalTransactions": 856,
+          "SuccessTransactions": 155
+        },
+        {
+          "Date": "2026-03-18 20:00",
+          "TotalUsers": 1260,
+          "TotalTransactions": 1923,
+          "SuccessTransactions": 393
+        },
+        {
+          "Date": "2026-03-07 13:00",
+          "TotalUsers": 894,
+          "TotalTransactions": 1281,
+          "SuccessTransactions": 266
+        },
+        {
+          "Date": "2026-03-05 01:00",
+          "TotalUsers": 86,
+          "TotalTransactions": 109,
+          "SuccessTransactions": 30
+        },
+        {
+          "Date": "2026-02-21 14:00",
+          "TotalUsers": 845,
+          "TotalTransactions": 1237,
+          "SuccessTransactions": 289
+        },
+        {
+          "Date": "2026-03-12 15:00",
+          "TotalUsers": 893,
+          "TotalTransactions": 1345,
+          "SuccessTransactions": 279
+        },
+        {
+          "Date": "2026-03-12 16:00",
+          "TotalUsers": 819,
+          "TotalTransactions": 1162,
+          "SuccessTransactions": 243
+        },
+        {
+          "Date": "2026-03-17 10:00",
+          "TotalUsers": 1201,
+          "TotalTransactions": 1887,
+          "SuccessTransactions": 375
+        },
+        {
+          "Date": "2026-03-06 10:00",
+          "TotalUsers": 863,
+          "TotalTransactions": 1305,
+          "SuccessTransactions": 242
+        },
+        {
+          "Date": "2026-03-30 10:00",
+          "TotalUsers": 686,
+          "TotalTransactions": 1111,
+          "SuccessTransactions": 193
+        },
+        {
+          "Date": "2026-02-25 13:00",
+          "TotalUsers": 878,
+          "TotalTransactions": 1345,
+          "SuccessTransactions": 282
+        },
+        {
+          "Date": "2026-03-24 16:00",
+          "TotalUsers": 942,
+          "TotalTransactions": 1362,
+          "SuccessTransactions": 261
+        },
+        {
+          "Date": "2026-03-30 15:00",
+          "TotalUsers": 371,
+          "TotalTransactions": 596,
+          "SuccessTransactions": 94
+        },
+        {
+          "Date": "2026-02-23 15:00",
+          "TotalUsers": 905,
+          "TotalTransactions": 1279,
+          "SuccessTransactions": 268
+        },
+        {
+          "Date": "2026-02-22 16:00",
+          "TotalUsers": 750,
+          "TotalTransactions": 1070,
+          "SuccessTransactions": 230
+        },
+        {
+          "Date": "2026-03-13 08:00",
+          "TotalUsers": 775,
+          "TotalTransactions": 1113,
+          "SuccessTransactions": 257
+        },
+        {
+          "Date": "2026-03-18 06:00",
+          "TotalUsers": 276,
+          "TotalTransactions": 392,
+          "SuccessTransactions": 97
+        },
+        {
+          "Date": "2026-03-18 10:00",
+          "TotalUsers": 941,
+          "TotalTransactions": 1369,
+          "SuccessTransactions": 310
+        },
+        {
+          "Date": "2026-02-17 21:00",
+          "TotalUsers": 1239,
+          "TotalTransactions": 1743,
+          "SuccessTransactions": 358
+        },
+        {
+          "Date": "2026-03-18 11:00",
+          "TotalUsers": 1057,
+          "TotalTransactions": 1543,
+          "SuccessTransactions": 341
+        },
+        {
+          "Date": "2026-02-25 17:00",
+          "TotalUsers": 752,
+          "TotalTransactions": 1049,
+          "SuccessTransactions": 219
+        },
+        {
+          "Date": "2026-03-02 16:00",
+          "TotalUsers": 734,
+          "TotalTransactions": 1074,
+          "SuccessTransactions": 208
+        },
+        {
+          "Date": "2026-03-08 05:00",
+          "TotalUsers": 143,
+          "TotalTransactions": 221,
+          "SuccessTransactions": 56
+        },
+        {
+          "Date": "2026-02-14 09:00",
+          "TotalUsers": 926,
+          "TotalTransactions": 1402,
+          "SuccessTransactions": 300
+        },
+        {
+          "Date": "2026-03-29 23:00",
+          "TotalUsers": 301,
+          "TotalTransactions": 444,
+          "SuccessTransactions": 79
+        },
+        {
+          "Date": "2026-02-23 20:00",
+          "TotalUsers": 1415,
+          "TotalTransactions": 1994,
+          "SuccessTransactions": 432
+        },
+        {
+          "Date": "2026-03-03 00:00",
+          "TotalUsers": 708,
+          "TotalTransactions": 1058,
+          "SuccessTransactions": 165
+        },
+        {
+          "Date": "2026-03-15 02:00",
+          "TotalUsers": 61,
+          "TotalTransactions": 103,
+          "SuccessTransactions": 17
+        },
+        {
+          "Date": "2026-03-21 08:00",
+          "TotalUsers": 799,
+          "TotalTransactions": 1183,
+          "SuccessTransactions": 301
+        },
+        {
+          "Date": "2026-03-10 18:00",
+          "TotalUsers": 796,
+          "TotalTransactions": 1171,
+          "SuccessTransactions": 209
+        },
+        {
+          "Date": "2026-03-17 03:00",
+          "TotalUsers": 67,
+          "TotalTransactions": 90,
+          "SuccessTransactions": 17
+        },
+        {
+          "Date": "2026-03-22 02:00",
+          "TotalUsers": 85,
+          "TotalTransactions": 111,
+          "SuccessTransactions": 32
+        },
+        {
+          "Date": "2026-03-03 03:00",
+          "TotalUsers": 49,
+          "TotalTransactions": 62,
+          "SuccessTransactions": 19
+        },
+        {
+          "Date": "2026-03-21 07:00",
+          "TotalUsers": 622,
+          "TotalTransactions": 905,
+          "SuccessTransactions": 219
+        },
+        {
+          "Date": "2026-03-02 18:00",
+          "TotalUsers": 839,
+          "TotalTransactions": 1195,
+          "SuccessTransactions": 234
+        },
+        {
+          "Date": "2026-03-05 21:00",
+          "TotalUsers": 634,
+          "TotalTransactions": 953,
+          "SuccessTransactions": 174
+        },
+        {
+          "Date": "2026-02-14 20:00",
+          "TotalUsers": 1091,
+          "TotalTransactions": 1604,
+          "SuccessTransactions": 321
+        },
+        {
+          "Date": "2026-02-22 08:00",
+          "TotalUsers": 681,
+          "TotalTransactions": 999,
+          "SuccessTransactions": 247
+        },
+        {
+          "Date": "2026-03-19 08:00",
+          "TotalUsers": 731,
+          "TotalTransactions": 1119,
+          "SuccessTransactions": 230
+        },
+        {
+          "Date": "2026-03-04 17:00",
+          "TotalUsers": 434,
+          "TotalTransactions": 631,
+          "SuccessTransactions": 134
+        },
+        {
+          "Date": "2026-03-18 02:00",
+          "TotalUsers": 52,
+          "TotalTransactions": 72,
+          "SuccessTransactions": 11
+        },
+        {
+          "Date": "2026-03-29 15:00",
+          "TotalUsers": 569,
+          "TotalTransactions": 902,
+          "SuccessTransactions": 158
+        },
+        {
+          "Date": "2026-02-22 13:00",
+          "TotalUsers": 832,
+          "TotalTransactions": 1249,
+          "SuccessTransactions": 267
+        },
+        {
+          "Date": "2026-03-11 21:00",
+          "TotalUsers": 1249,
+          "TotalTransactions": 1838,
+          "SuccessTransactions": 356
+        },
+        {
+          "Date": "2026-02-25 18:00",
+          "TotalUsers": 781,
+          "TotalTransactions": 1098,
+          "SuccessTransactions": 235
+        },
+        {
+          "Date": "2026-03-14 05:00",
+          "TotalUsers": 134,
+          "TotalTransactions": 173,
+          "SuccessTransactions": 29
+        },
+        {
+          "Date": "2026-02-18 16:00",
+          "TotalUsers": 838,
+          "TotalTransactions": 1164,
+          "SuccessTransactions": 263
+        },
+        {
+          "Date": "2026-02-22 23:00",
+          "TotalUsers": 425,
+          "TotalTransactions": 610,
+          "SuccessTransactions": 124
+        },
+        {
+          "Date": "2026-03-06 21:00",
+          "TotalUsers": 1129,
+          "TotalTransactions": 1565,
+          "SuccessTransactions": 308
+        },
+        {
+          "Date": "2026-03-15 20:00",
+          "TotalUsers": 1050,
+          "TotalTransactions": 1548,
+          "SuccessTransactions": 297
+        },
+        {
+          "Date": "2026-03-13 21:00",
+          "TotalUsers": 1162,
+          "TotalTransactions": 1723,
+          "SuccessTransactions": 343
+        },
+        {
+          "Date": "2026-02-24 22:00",
+          "TotalUsers": 727,
+          "TotalTransactions": 998,
+          "SuccessTransactions": 212
+        },
+        {
+          "Date": "2026-02-14 12:00",
+          "TotalUsers": 1061,
+          "TotalTransactions": 1604,
+          "SuccessTransactions": 329
+        },
+        {
+          "Date": "2026-03-21 10:00",
+          "TotalUsers": 1054,
+          "TotalTransactions": 1532,
+          "SuccessTransactions": 357
+        },
+        {
+          "Date": "2026-02-22 07:00",
+          "TotalUsers": 495,
+          "TotalTransactions": 669,
+          "SuccessTransactions": 147
+        },
+        {
+          "Date": "2026-03-14 23:00",
+          "TotalUsers": 446,
+          "TotalTransactions": 675,
+          "SuccessTransactions": 120
+        },
+        {
+          "Date": "2026-03-17 22:00",
+          "TotalUsers": 923,
+          "TotalTransactions": 1359,
+          "SuccessTransactions": 275
+        },
+        {
+          "Date": "2026-02-24 05:00",
+          "TotalUsers": 186,
+          "TotalTransactions": 246,
+          "SuccessTransactions": 52
+        },
+        {
+          "Date": "2026-03-03 06:00",
+          "TotalUsers": 318,
+          "TotalTransactions": 472,
+          "SuccessTransactions": 98
+        },
+        {
+          "Date": "2026-03-14 15:00",
+          "TotalUsers": 871,
+          "TotalTransactions": 1305,
+          "SuccessTransactions": 239
+        },
+        {
+          "Date": "2026-03-21 16:00",
+          "TotalUsers": 932,
+          "TotalTransactions": 1375,
+          "SuccessTransactions": 285
+        },
+        {
+          "Date": "2026-03-24 11:00",
+          "TotalUsers": 1153,
+          "TotalTransactions": 1770,
+          "SuccessTransactions": 345
+        },
+        {
+          "Date": "2026-02-26 21:00",
+          "TotalUsers": 1112,
+          "TotalTransactions": 1524,
+          "SuccessTransactions": 316
+        },
+        {
+          "Date": "2026-02-23 06:00",
+          "TotalUsers": 290,
+          "TotalTransactions": 413,
+          "SuccessTransactions": 98
+        },
+        {
+          "Date": "2026-03-17 05:00",
+          "TotalUsers": 150,
+          "TotalTransactions": 206,
+          "SuccessTransactions": 45
+        },
+        {
+          "Date": "2026-03-06 14:00",
+          "TotalUsers": 714,
+          "TotalTransactions": 962,
+          "SuccessTransactions": 215
+        },
+        {
+          "Date": "2026-03-07 03:00",
+          "TotalUsers": 58,
+          "TotalTransactions": 75,
+          "SuccessTransactions": 20
+        },
+        {
+          "Date": "2026-03-04 19:00",
+          "TotalUsers": 524,
+          "TotalTransactions": 769,
+          "SuccessTransactions": 180
+        },
+        {
+          "Date": "2026-03-10 20:00",
+          "TotalUsers": 1203,
+          "TotalTransactions": 1724,
+          "SuccessTransactions": 323
+        },
+        {
+          "Date": "2026-02-19 01:00",
+          "TotalUsers": 118,
+          "TotalTransactions": 177,
+          "SuccessTransactions": 34
+        },
+        {
+          "Date": "2026-02-24 02:00",
+          "TotalUsers": 70,
+          "TotalTransactions": 83,
+          "SuccessTransactions": 18
+        },
+        {
+          "Date": "2026-02-19 20:00",
+          "TotalUsers": 840,
+          "TotalTransactions": 1243,
+          "SuccessTransactions": 266
+        },
+        {
+          "Date": "2026-02-19 04:00",
+          "TotalUsers": 63,
+          "TotalTransactions": 104,
+          "SuccessTransactions": 18
+        },
+        {
+          "Date": "2026-03-26 16:00",
+          "TotalUsers": 805,
+          "TotalTransactions": 1209,
+          "SuccessTransactions": 204
+        },
+        {
+          "Date": "2026-03-21 19:00",
+          "TotalUsers": 1310,
+          "TotalTransactions": 1909,
+          "SuccessTransactions": 419
+        },
+        {
+          "Date": "2026-02-22 19:00",
+          "TotalUsers": 796,
+          "TotalTransactions": 1186,
+          "SuccessTransactions": 246
+        },
+        {
+          "Date": "2026-03-25 14:00",
+          "TotalUsers": 832,
+          "TotalTransactions": 1227,
+          "SuccessTransactions": 235
+        },
+        {
+          "Date": "2026-02-14 14:00",
+          "TotalUsers": 875,
+          "TotalTransactions": 1285,
+          "SuccessTransactions": 269
+        },
+        {
+          "Date": "2026-03-28 06:00",
+          "TotalUsers": 267,
+          "TotalTransactions": 389,
+          "SuccessTransactions": 71
+        },
+        {
+          "Date": "2026-03-25 21:00",
+          "TotalUsers": 1056,
+          "TotalTransactions": 1470,
+          "SuccessTransactions": 263
+        },
+        {
+          "Date": "2026-03-07 19:00",
+          "TotalUsers": 1076,
+          "TotalTransactions": 1527,
+          "SuccessTransactions": 316
+        },
+        {
+          "Date": "2026-03-26 17:00",
+          "TotalUsers": 719,
+          "TotalTransactions": 1088,
+          "SuccessTransactions": 183
+        },
+        {
+          "Date": "2026-02-15 12:00",
+          "TotalUsers": 783,
+          "TotalTransactions": 1143,
+          "SuccessTransactions": 222
+        },
+        {
+          "Date": "2026-03-29 07:00",
+          "TotalUsers": 395,
+          "TotalTransactions": 589,
+          "SuccessTransactions": 120
+        },
+        {
+          "Date": "2026-02-20 17:00",
+          "TotalUsers": 587,
+          "TotalTransactions": 904,
+          "SuccessTransactions": 193
+        },
+        {
+          "Date": "2026-02-21 00:00",
+          "TotalUsers": 279,
+          "TotalTransactions": 408,
+          "SuccessTransactions": 83
+        },
+        {
+          "Date": "2026-03-05 18:00",
+          "TotalUsers": 530,
+          "TotalTransactions": 787,
+          "SuccessTransactions": 162
+        },
+        {
+          "Date": "2026-03-21 04:00",
+          "TotalUsers": 68,
+          "TotalTransactions": 114,
+          "SuccessTransactions": 17
+        },
+        {
+          "Date": "2026-02-16 09:00",
+          "TotalUsers": 720,
+          "TotalTransactions": 998,
+          "SuccessTransactions": 216
+        },
+        {
+          "Date": "2026-03-10 09:00",
+          "TotalUsers": 889,
+          "TotalTransactions": 1257,
+          "SuccessTransactions": 289
+        },
+        {
+          "Date": "2026-03-21 22:00",
+          "TotalUsers": 870,
+          "TotalTransactions": 1281,
+          "SuccessTransactions": 277
+        },
+        {
+          "Date": "2026-03-04 02:00",
+          "TotalUsers": 64,
+          "TotalTransactions": 82,
+          "SuccessTransactions": 24
+        },
+        {
+          "Date": "2026-02-20 08:00",
+          "TotalUsers": 592,
+          "TotalTransactions": 868,
+          "SuccessTransactions": 194
+        },
+        {
+          "Date": "2026-02-25 20:00",
+          "TotalUsers": 1422,
+          "TotalTransactions": 1968,
+          "SuccessTransactions": 383
+        },
+        {
+          "Date": "2026-02-27 11:00",
+          "TotalUsers": 1079,
+          "TotalTransactions": 1582,
+          "SuccessTransactions": 384
+        },
+        {
+          "Date": "2026-03-06 12:00",
+          "TotalUsers": 918,
+          "TotalTransactions": 1309,
+          "SuccessTransactions": 285
+        },
+        {
+          "Date": "2026-02-28 09:00",
+          "TotalUsers": 930,
+          "TotalTransactions": 1351,
+          "SuccessTransactions": 329
+        },
+        {
+          "Date": "2026-02-17 07:00",
+          "TotalUsers": 580,
+          "TotalTransactions": 809,
+          "SuccessTransactions": 196
+        },
+        {
+          "Date": "2026-03-06 22:00",
+          "TotalUsers": 863,
+          "TotalTransactions": 1209,
+          "SuccessTransactions": 250
+        },
+        {
+          "Date": "2026-03-14 01:00",
+          "TotalUsers": 120,
+          "TotalTransactions": 181,
+          "SuccessTransactions": 40
+        },
+        {
+          "Date": "2026-03-25 22:00",
+          "TotalUsers": 722,
+          "TotalTransactions": 1027,
+          "SuccessTransactions": 189
+        },
+        {
+          "Date": "2026-03-16 14:00",
+          "TotalUsers": 937,
+          "TotalTransactions": 1415,
+          "SuccessTransactions": 289
+        },
+        {
+          "Date": "2026-03-24 09:00",
+          "TotalUsers": 1002,
+          "TotalTransactions": 1640,
+          "SuccessTransactions": 290
+        },
+        {
+          "Date": "2026-03-19 07:00",
+          "TotalUsers": 515,
+          "TotalTransactions": 762,
+          "SuccessTransactions": 186
+        },
+        {
+          "Date": "2026-02-28 04:00",
+          "TotalUsers": 94,
+          "TotalTransactions": 133,
+          "SuccessTransactions": 28
+        },
+        {
+          "Date": "2026-03-27 20:00",
+          "TotalUsers": 1021,
+          "TotalTransactions": 1636,
+          "SuccessTransactions": 277
+        },
+        {
+          "Date": "2026-03-05 07:00",
+          "TotalUsers": 325,
+          "TotalTransactions": 471,
+          "SuccessTransactions": 104
+        },
+        {
+          "Date": "2026-03-29 20:00",
+          "TotalUsers": 751,
+          "TotalTransactions": 1147,
+          "SuccessTransactions": 204
+        },
+        {
+          "Date": "2026-03-26 05:00",
+          "TotalUsers": 135,
+          "TotalTransactions": 191,
+          "SuccessTransactions": 29
+        },
+        {
+          "Date": "2026-03-30 06:00",
+          "TotalUsers": 180,
+          "TotalTransactions": 278,
+          "SuccessTransactions": 55
+        },
+        {
+          "Date": "2026-03-05 10:00",
+          "TotalUsers": 710,
+          "TotalTransactions": 1021,
+          "SuccessTransactions": 259
+        },
+        {
+          "Date": "2026-03-14 03:00",
+          "TotalUsers": 61,
+          "TotalTransactions": 86,
+          "SuccessTransactions": 19
+        },
+        {
+          "Date": "2026-03-22 08:00",
+          "TotalUsers": 772,
+          "TotalTransactions": 1122,
+          "SuccessTransactions": 259
+        },
+        {
+          "Date": "2026-03-12 23:00",
+          "TotalUsers": 532,
+          "TotalTransactions": 733,
+          "SuccessTransactions": 162
+        },
+        {
+          "Date": "2026-02-26 01:00",
+          "TotalUsers": 109,
+          "TotalTransactions": 142,
+          "SuccessTransactions": 30
+        },
+        {
+          "Date": "2026-02-21 23:00",
+          "TotalUsers": 492,
+          "TotalTransactions": 693,
+          "SuccessTransactions": 119
+        },
+        {
+          "Date": "2026-02-21 09:00",
+          "TotalUsers": 920,
+          "TotalTransactions": 1359,
+          "SuccessTransactions": 301
+        },
+        {
+          "Date": "2026-03-17 06:00",
+          "TotalUsers": 332,
+          "TotalTransactions": 467,
+          "SuccessTransactions": 108
+        },
+        {
+          "Date": "2026-02-18 04:00",
+          "TotalUsers": 71,
+          "TotalTransactions": 94,
+          "SuccessTransactions": 25
+        },
+        {
+          "Date": "2026-02-20 03:00",
+          "TotalUsers": 53,
+          "TotalTransactions": 79,
+          "SuccessTransactions": 20
+        },
+        {
+          "Date": "2026-03-13 20:00",
+          "TotalUsers": 1220,
+          "TotalTransactions": 1855,
+          "SuccessTransactions": 357
+        },
+        {
+          "Date": "2026-02-26 14:00",
+          "TotalUsers": 816,
+          "TotalTransactions": 1200,
+          "SuccessTransactions": 257
+        },
+        {
+          "Date": "2026-02-20 11:00",
+          "TotalUsers": 810,
+          "TotalTransactions": 1271,
+          "SuccessTransactions": 296
+        },
+        {
+          "Date": "2026-03-12 20:00",
+          "TotalUsers": 1291,
+          "TotalTransactions": 1895,
+          "SuccessTransactions": 362
+        },
+        {
+          "Date": "2026-03-20 10:00",
+          "TotalUsers": 1132,
+          "TotalTransactions": 1666,
+          "SuccessTransactions": 378
+        },
+        {
+          "Date": "2026-02-17 02:00",
+          "TotalUsers": 75,
+          "TotalTransactions": 124,
+          "SuccessTransactions": 29
+        },
+        {
+          "Date": "2026-02-18 06:00",
+          "TotalUsers": 367,
+          "TotalTransactions": 499,
+          "SuccessTransactions": 125
+        },
+        {
+          "Date": "2026-03-30 14:00",
+          "TotalUsers": 576,
+          "TotalTransactions": 931,
+          "SuccessTransactions": 145
+        },
+        {
+          "Date": "2026-02-26 10:00",
+          "TotalUsers": 964,
+          "TotalTransactions": 1403,
+          "SuccessTransactions": 332
+        },
+        {
+          "Date": "2026-03-26 02:00",
+          "TotalUsers": 56,
+          "TotalTransactions": 93,
+          "SuccessTransactions": 23
+        },
+        {
+          "Date": "2026-02-20 21:00",
+          "TotalUsers": 766,
+          "TotalTransactions": 1164,
+          "SuccessTransactions": 212
+        },
+        {
+          "Date": "2026-03-29 04:00",
+          "TotalUsers": 41,
+          "TotalTransactions": 60,
+          "SuccessTransactions": 13
+        },
+        {
+          "Date": "2026-03-30 02:00",
+          "TotalUsers": 43,
+          "TotalTransactions": 81,
+          "SuccessTransactions": 8
+        },
+        {
+          "Date": "2026-03-15 19:00",
+          "TotalUsers": 992,
+          "TotalTransactions": 1511,
+          "SuccessTransactions": 277
+        },
+        {
+          "Date": "2026-02-17 16:00",
+          "TotalUsers": 847,
+          "TotalTransactions": 1263,
+          "SuccessTransactions": 257
+        },
+        {
+          "Date": "2026-03-18 22:00",
+          "TotalUsers": 811,
+          "TotalTransactions": 1192,
+          "SuccessTransactions": 232
+        },
+        {
+          "Date": "2026-02-28 17:00",
+          "TotalUsers": 719,
+          "TotalTransactions": 1057,
+          "SuccessTransactions": 207
+        },
+        {
+          "Date": "2026-03-14 21:00",
+          "TotalUsers": 1049,
+          "TotalTransactions": 1594,
+          "SuccessTransactions": 294
+        },
+        {
+          "Date": "2026-03-05 00:00",
+          "TotalUsers": 167,
+          "TotalTransactions": 238,
+          "SuccessTransactions": 59
+        },
+        {
+          "Date": "2026-03-11 05:00",
+          "TotalUsers": 139,
+          "TotalTransactions": 199,
+          "SuccessTransactions": 47
+        },
+        {
+          "Date": "2026-02-15 23:00",
+          "TotalUsers": 347,
+          "TotalTransactions": 471,
+          "SuccessTransactions": 97
+        },
+        {
+          "Date": "2026-02-27 10:00",
+          "TotalUsers": 986,
+          "TotalTransactions": 1439,
+          "SuccessTransactions": 353
+        },
+        {
+          "Date": "2026-02-22 00:00",
+          "TotalUsers": 266,
+          "TotalTransactions": 356,
+          "SuccessTransactions": 76
+        },
+        {
+          "Date": "2026-03-05 13:00",
+          "TotalUsers": 599,
+          "TotalTransactions": 886,
+          "SuccessTransactions": 192
+        },
+        {
+          "Date": "2026-02-16 05:00",
+          "TotalUsers": 102,
+          "TotalTransactions": 142,
+          "SuccessTransactions": 27
+        },
+        {
+          "Date": "2026-03-12 08:00",
+          "TotalUsers": 716,
+          "TotalTransactions": 1045,
+          "SuccessTransactions": 236
+        },
+        {
+          "Date": "2026-03-04 08:00",
+          "TotalUsers": 417,
+          "TotalTransactions": 584,
+          "SuccessTransactions": 155
+        },
+        {
+          "Date": "2026-03-24 13:00",
+          "TotalUsers": 945,
+          "TotalTransactions": 1449,
+          "SuccessTransactions": 251
+        },
+        {
+          "Date": "2026-03-28 13:00",
+          "TotalUsers": 584,
+          "TotalTransactions": 972,
+          "SuccessTransactions": 167
+        },
+        {
+          "Date": "2026-02-15 06:00",
+          "TotalUsers": 253,
+          "TotalTransactions": 357,
+          "SuccessTransactions": 82
+        },
+        {
+          "Date": "2026-02-23 16:00",
+          "TotalUsers": 758,
+          "TotalTransactions": 1056,
+          "SuccessTransactions": 225
+        },
+        {
+          "Date": "2026-02-26 12:00",
+          "TotalUsers": 1060,
+          "TotalTransactions": 1505,
+          "SuccessTransactions": 359
+        },
+        {
+          "Date": "2026-03-08 18:00",
+          "TotalUsers": 615,
+          "TotalTransactions": 863,
+          "SuccessTransactions": 167
+        },
+        {
+          "Date": "2026-03-12 05:00",
+          "TotalUsers": 159,
+          "TotalTransactions": 221,
+          "SuccessTransactions": 55
+        },
+        {
+          "Date": "2026-03-02 09:00",
+          "TotalUsers": 781,
+          "TotalTransactions": 1104,
+          "SuccessTransactions": 257
+        },
+        {
+          "Date": "2026-03-29 05:00",
+          "TotalUsers": 88,
+          "TotalTransactions": 131,
+          "SuccessTransactions": 27
+        },
+        {
+          "Date": "2026-02-25 10:00",
+          "TotalUsers": 958,
+          "TotalTransactions": 1382,
+          "SuccessTransactions": 332
+        },
+        {
+          "Date": "2026-02-17 13:00",
+          "TotalUsers": 975,
+          "TotalTransactions": 1725,
+          "SuccessTransactions": 299
+        },
+        {
+          "Date": "2026-03-08 15:00",
+          "TotalUsers": 787,
+          "TotalTransactions": 1136,
+          "SuccessTransactions": 237
+        },
+        {
+          "Date": "2026-03-19 02:00",
+          "TotalUsers": 87,
+          "TotalTransactions": 126,
+          "SuccessTransactions": 31
+        },
+        {
+          "Date": "2026-03-07 15:00",
+          "TotalUsers": 857,
+          "TotalTransactions": 1239,
+          "SuccessTransactions": 252
+        },
+        {
+          "Date": "2026-03-11 11:00",
+          "TotalUsers": 1094,
+          "TotalTransactions": 1562,
+          "SuccessTransactions": 319
+        },
+        {
+          "Date": "2026-03-08 17:00",
+          "TotalUsers": 673,
+          "TotalTransactions": 919,
+          "SuccessTransactions": 181
+        },
+        {
+          "Date": "2026-02-23 19:00",
+          "TotalUsers": 1170,
+          "TotalTransactions": 1697,
+          "SuccessTransactions": 356
+        },
+        {
+          "Date": "2026-03-01 16:00",
+          "TotalUsers": 654,
+          "TotalTransactions": 959,
+          "SuccessTransactions": 198
+        },
+        {
+          "Date": "2026-03-15 13:00",
+          "TotalUsers": 962,
+          "TotalTransactions": 1396,
+          "SuccessTransactions": 293
+        },
+        {
+          "Date": "2026-03-15 16:00",
+          "TotalUsers": 809,
+          "TotalTransactions": 1245,
+          "SuccessTransactions": 232
+        },
+        {
+          "Date": "2026-02-14 23:00",
+          "TotalUsers": 452,
+          "TotalTransactions": 616,
+          "SuccessTransactions": 130
+        },
+        {
+          "Date": "2026-02-27 23:00",
+          "TotalUsers": 528,
+          "TotalTransactions": 763,
+          "SuccessTransactions": 177
+        },
+        {
+          "Date": "2026-03-02 05:00",
+          "TotalUsers": 136,
+          "TotalTransactions": 183,
+          "SuccessTransactions": 47
+        },
+        {
+          "Date": "2026-03-22 10:00",
+          "TotalUsers": 962,
+          "TotalTransactions": 1463,
+          "SuccessTransactions": 328
+        },
+        {
+          "Date": "2026-03-28 09:00",
+          "TotalUsers": 806,
+          "TotalTransactions": 1245,
+          "SuccessTransactions": 239
+        },
+        {
+          "Date": "2026-03-08 22:00",
+          "TotalUsers": 468,
+          "TotalTransactions": 657,
+          "SuccessTransactions": 121
+        },
+        {
+          "Date": "2026-03-01 01:00",
+          "TotalUsers": 161,
+          "TotalTransactions": 214,
+          "SuccessTransactions": 53
+        },
+        {
+          "Date": "2026-03-10 08:00",
+          "TotalUsers": 717,
+          "TotalTransactions": 1002,
+          "SuccessTransactions": 245
+        },
+        {
+          "Date": "2026-03-17 19:00",
+          "TotalUsers": 1153,
+          "TotalTransactions": 1726,
+          "SuccessTransactions": 378
+        },
+        {
+          "Date": "2026-03-27 04:00",
+          "TotalUsers": 59,
+          "TotalTransactions": 84,
+          "SuccessTransactions": 15
+        },
+        {
+          "Date": "2026-03-10 11:00",
+          "TotalUsers": 1053,
+          "TotalTransactions": 1479,
+          "SuccessTransactions": 323
+        },
+        {
+          "Date": "2026-02-25 15:00",
+          "TotalUsers": 860,
+          "TotalTransactions": 1241,
+          "SuccessTransactions": 259
+        },
+        {
+          "Date": "2026-03-09 12:00",
+          "TotalUsers": 966,
+          "TotalTransactions": 1408,
+          "SuccessTransactions": 305
+        },
+        {
+          "Date": "2026-03-03 14:00",
+          "TotalUsers": 680,
+          "TotalTransactions": 968,
+          "SuccessTransactions": 228
+        },
+        {
+          "Date": "2026-03-24 02:00",
+          "TotalUsers": 72,
+          "TotalTransactions": 115,
+          "SuccessTransactions": 19
+        },
+        {
+          "Date": "2026-03-25 15:00",
+          "TotalUsers": 878,
+          "TotalTransactions": 1218,
+          "SuccessTransactions": 243
+        },
+        {
+          "Date": "2026-03-01 00:00",
+          "TotalUsers": 274,
+          "TotalTransactions": 394,
+          "SuccessTransactions": 94
+        },
+        {
+          "Date": "2026-03-17 02:00",
+          "TotalUsers": 59,
+          "TotalTransactions": 77,
+          "SuccessTransactions": 13
+        },
+        {
+          "Date": "2026-03-10 15:00",
+          "TotalUsers": 848,
+          "TotalTransactions": 1205,
+          "SuccessTransactions": 235
+        },
+        {
+          "Date": "2026-03-12 10:00",
+          "TotalUsers": 1087,
+          "TotalTransactions": 1615,
+          "SuccessTransactions": 363
+        },
+        {
+          "Date": "2026-03-20 07:00",
+          "TotalUsers": 573,
+          "TotalTransactions": 841,
+          "SuccessTransactions": 205
+        },
+        {
+          "Date": "2026-03-23 09:00",
+          "TotalUsers": 927,
+          "TotalTransactions": 1388,
+          "SuccessTransactions": 304
+        },
+        {
+          "Date": "2026-03-27 16:00",
+          "TotalUsers": 726,
+          "TotalTransactions": 1055,
+          "SuccessTransactions": 179
+        },
+        {
+          "Date": "2026-03-15 07:00",
+          "TotalUsers": 548,
+          "TotalTransactions": 784,
+          "SuccessTransactions": 172
+        },
+        {
+          "Date": "2026-03-30 07:00",
+          "TotalUsers": 326,
+          "TotalTransactions": 477,
+          "SuccessTransactions": 102
+        },
+        {
+          "Date": "2026-02-14 08:00",
+          "TotalUsers": 714,
+          "TotalTransactions": 1070,
+          "SuccessTransactions": 225
+        },
+        {
+          "Date": "2026-02-23 22:00",
+          "TotalUsers": 841,
+          "TotalTransactions": 1220,
+          "SuccessTransactions": 263
+        },
+        {
+          "Date": "2026-02-26 00:00",
+          "TotalUsers": 279,
+          "TotalTransactions": 394,
+          "SuccessTransactions": 97
+        },
+        {
+          "Date": "2026-03-15 00:00",
+          "TotalUsers": 281,
+          "TotalTransactions": 414,
+          "SuccessTransactions": 95
+        },
+        {
+          "Date": "2026-02-25 02:00",
+          "TotalUsers": 78,
+          "TotalTransactions": 102,
+          "SuccessTransactions": 25
+        },
+        {
+          "Date": "2026-03-01 15:00",
+          "TotalUsers": 774,
+          "TotalTransactions": 1160,
+          "SuccessTransactions": 219
+        },
+        {
+          "Date": "2026-02-18 14:00",
+          "TotalUsers": 927,
+          "TotalTransactions": 1343,
+          "SuccessTransactions": 278
+        },
+        {
+          "Date": "2026-03-07 12:00",
+          "TotalUsers": 1077,
+          "TotalTransactions": 1592,
+          "SuccessTransactions": 349
+        },
+        {
+          "Date": "2026-03-26 04:00",
+          "TotalUsers": 59,
+          "TotalTransactions": 91,
+          "SuccessTransactions": 10
+        },
+        {
+          "Date": "2026-02-22 02:00",
+          "TotalUsers": 93,
+          "TotalTransactions": 125,
+          "SuccessTransactions": 35
+        },
+        {
+          "Date": "2026-03-27 08:00",
+          "TotalUsers": 628,
+          "TotalTransactions": 987,
+          "SuccessTransactions": 171
+        },
+        {
+          "Date": "2026-03-21 06:00",
+          "TotalUsers": 347,
+          "TotalTransactions": 509,
+          "SuccessTransactions": 106
+        },
+        {
+          "Date": "2026-02-14 02:00",
+          "TotalUsers": 94,
+          "TotalTransactions": 140,
+          "SuccessTransactions": 27
+        },
+        {
+          "Date": "2026-02-18 00:00",
+          "TotalUsers": 309,
+          "TotalTransactions": 462,
+          "SuccessTransactions": 91
+        },
+        {
+          "Date": "2026-03-11 14:00",
+          "TotalUsers": 893,
+          "TotalTransactions": 1243,
+          "SuccessTransactions": 257
+        },
+        {
+          "Date": "2026-02-21 01:00",
+          "TotalUsers": 126,
+          "TotalTransactions": 193,
+          "SuccessTransactions": 43
+        },
+        {
+          "Date": "2026-02-22 06:00",
+          "TotalUsers": 281,
+          "TotalTransactions": 389,
+          "SuccessTransactions": 99
+        },
+        {
+          "Date": "2026-03-14 07:00",
+          "TotalUsers": 470,
+          "TotalTransactions": 698,
+          "SuccessTransactions": 143
+        },
+        {
+          "Date": "2026-03-14 12:00",
+          "TotalUsers": 980,
+          "TotalTransactions": 1372,
+          "SuccessTransactions": 314
+        },
+        {
+          "Date": "2026-03-06 04:00",
+          "TotalUsers": 69,
+          "TotalTransactions": 92,
+          "SuccessTransactions": 15
+        },
+        {
+          "Date": "2026-03-07 00:00",
+          "TotalUsers": 275,
+          "TotalTransactions": 384,
+          "SuccessTransactions": 78
+        },
+        {
+          "Date": "2026-03-17 17:00",
+          "TotalUsers": 800,
+          "TotalTransactions": 1222,
+          "SuccessTransactions": 220
+        },
+        {
+          "Date": "2026-03-18 07:00",
+          "TotalUsers": 510,
+          "TotalTransactions": 713,
+          "SuccessTransactions": 191
+        },
+        {
+          "Date": "2026-03-28 07:00",
+          "TotalUsers": 434,
+          "TotalTransactions": 627,
+          "SuccessTransactions": 101
+        },
+        {
+          "Date": "2026-03-23 00:00",
+          "TotalUsers": 265,
+          "TotalTransactions": 398,
+          "SuccessTransactions": 82
+        },
+        {
+          "Date": "2026-02-28 03:00",
+          "TotalUsers": 57,
+          "TotalTransactions": 79,
+          "SuccessTransactions": 18
+        },
+        {
+          "Date": "2026-03-09 01:00",
+          "TotalUsers": 128,
+          "TotalTransactions": 173,
+          "SuccessTransactions": 50
+        },
+        {
+          "Date": "2026-03-27 13:00",
+          "TotalUsers": 835,
+          "TotalTransactions": 1186,
+          "SuccessTransactions": 241
+        },
+        {
+          "Date": "2026-02-21 10:00",
+          "TotalUsers": 1038,
+          "TotalTransactions": 1483,
+          "SuccessTransactions": 327
+        },
+        {
+          "Date": "2026-03-06 07:00",
+          "TotalUsers": 455,
+          "TotalTransactions": 672,
+          "SuccessTransactions": 145
+        },
+        {
+          "Date": "2026-02-26 22:00",
+          "TotalUsers": 798,
+          "TotalTransactions": 1161,
+          "SuccessTransactions": 255
+        },
+        {
+          "Date": "2026-02-18 15:00",
+          "TotalUsers": 950,
+          "TotalTransactions": 1400,
+          "SuccessTransactions": 312
+        },
+        {
+          "Date": "2026-03-20 16:00",
+          "TotalUsers": 864,
+          "TotalTransactions": 1317,
+          "SuccessTransactions": 258
+        },
+        {
+          "Date": "2026-03-02 20:00",
+          "TotalUsers": 1093,
+          "TotalTransactions": 1591,
+          "SuccessTransactions": 313
+        },
+        {
+          "Date": "2026-02-16 04:00",
+          "TotalUsers": 53,
+          "TotalTransactions": 87,
+          "SuccessTransactions": 16
+        },
+        {
+          "Date": "2026-02-15 03:00",
+          "TotalUsers": 45,
+          "TotalTransactions": 54,
+          "SuccessTransactions": 14
+        },
+        {
+          "Date": "2026-03-17 14:00",
+          "TotalUsers": 984,
+          "TotalTransactions": 1570,
+          "SuccessTransactions": 281
+        },
+        {
+          "Date": "2026-03-25 10:00",
+          "TotalUsers": 948,
+          "TotalTransactions": 1364,
+          "SuccessTransactions": 290
+        },
+        {
+          "Date": "2026-02-27 19:00",
+          "TotalUsers": 1055,
+          "TotalTransactions": 1574,
+          "SuccessTransactions": 355
+        },
+        {
+          "Date": "2026-02-16 19:00",
+          "TotalUsers": 1213,
+          "TotalTransactions": 1685,
+          "SuccessTransactions": 361
+        },
+        {
+          "Date": "2026-02-28 10:00",
+          "TotalUsers": 1051,
+          "TotalTransactions": 1523,
+          "SuccessTransactions": 342
+        },
+        {
+          "Date": "2026-02-22 05:00",
+          "TotalUsers": 137,
+          "TotalTransactions": 170,
+          "SuccessTransactions": 47
+        },
+        {
+          "Date": "2026-03-21 13:00",
+          "TotalUsers": 1046,
+          "TotalTransactions": 1622,
+          "SuccessTransactions": 366
+        },
+        {
+          "Date": "2026-03-24 06:00",
+          "TotalUsers": 329,
+          "TotalTransactions": 451,
+          "SuccessTransactions": 89
+        },
+        {
+          "Date": "2026-03-28 21:00",
+          "TotalUsers": 701,
+          "TotalTransactions": 1125,
+          "SuccessTransactions": 174
+        },
+        {
+          "Date": "2026-03-29 02:00",
+          "TotalUsers": 38,
+          "TotalTransactions": 72,
+          "SuccessTransactions": 16
+        },
+        {
+          "Date": "2026-03-26 23:00",
+          "TotalUsers": 495,
+          "TotalTransactions": 724,
+          "SuccessTransactions": 109
+        },
+        {
+          "Date": "2026-03-08 02:00",
+          "TotalUsers": 75,
+          "TotalTransactions": 123,
+          "SuccessTransactions": 13
+        },
+        {
+          "Date": "2026-02-20 22:00",
+          "TotalUsers": 605,
+          "TotalTransactions": 896,
+          "SuccessTransactions": 177
+        },
+        {
+          "Date": "2026-02-24 15:00",
+          "TotalUsers": 910,
+          "TotalTransactions": 1317,
+          "SuccessTransactions": 284
+        },
+        {
+          "Date": "2026-03-25 16:00",
+          "TotalUsers": 738,
+          "TotalTransactions": 1050,
+          "SuccessTransactions": 202
+        },
+        {
+          "Date": "2026-03-12 07:00",
+          "TotalUsers": 524,
+          "TotalTransactions": 737,
+          "SuccessTransactions": 167
+        },
+        {
+          "Date": "2026-03-05 22:00",
+          "TotalUsers": 372,
+          "TotalTransactions": 535,
+          "SuccessTransactions": 126
+        },
+        {
+          "Date": "2026-03-01 11:00",
+          "TotalUsers": 881,
+          "TotalTransactions": 1280,
+          "SuccessTransactions": 262
+        },
+        {
+          "Date": "2026-03-02 01:00",
+          "TotalUsers": 116,
+          "TotalTransactions": 168,
+          "SuccessTransactions": 44
+        },
+        {
+          "Date": "2026-03-02 10:00",
+          "TotalUsers": 855,
+          "TotalTransactions": 1225,
+          "SuccessTransactions": 290
+        },
+        {
+          "Date": "2026-02-26 16:00",
+          "TotalUsers": 722,
+          "TotalTransactions": 1040,
+          "SuccessTransactions": 236
+        },
+        {
+          "Date": "2026-02-15 16:00",
+          "TotalUsers": 707,
+          "TotalTransactions": 974,
+          "SuccessTransactions": 212
+        },
+        {
+          "Date": "2026-03-01 10:00",
+          "TotalUsers": 895,
+          "TotalTransactions": 1362,
+          "SuccessTransactions": 273
+        },
+        {
+          "Date": "2026-02-19 02:00",
+          "TotalUsers": 53,
+          "TotalTransactions": 79,
+          "SuccessTransactions": 23
+        },
+        {
+          "Date": "2026-03-21 21:00",
+          "TotalUsers": 1175,
+          "TotalTransactions": 1723,
+          "SuccessTransactions": 353
+        },
+        {
+          "Date": "2026-03-10 23:00",
+          "TotalUsers": 544,
+          "TotalTransactions": 784,
+          "SuccessTransactions": 155
+        },
+        {
+          "Date": "2026-02-28 11:00",
+          "TotalUsers": 1141,
+          "TotalTransactions": 1728,
+          "SuccessTransactions": 381
+        },
+        {
+          "Date": "2026-03-11 10:00",
+          "TotalUsers": 1073,
+          "TotalTransactions": 1595,
+          "SuccessTransactions": 358
+        },
+        {
+          "Date": "2026-03-26 11:00",
+          "TotalUsers": 940,
+          "TotalTransactions": 1362,
+          "SuccessTransactions": 253
+        },
+        {
+          "Date": "2026-03-12 04:00",
+          "TotalUsers": 81,
+          "TotalTransactions": 105,
+          "SuccessTransactions": 26
+        },
+        {
+          "Date": "2026-03-06 18:00",
+          "TotalUsers": 789,
+          "TotalTransactions": 1120,
+          "SuccessTransactions": 241
+        },
+        {
+          "Date": "2026-03-16 06:00",
+          "TotalUsers": 290,
+          "TotalTransactions": 396,
+          "SuccessTransactions": 97
+        },
+        {
+          "Date": "2026-03-08 08:00",
+          "TotalUsers": 685,
+          "TotalTransactions": 944,
+          "SuccessTransactions": 216
+        },
+        {
+          "Date": "2026-03-25 19:00",
+          "TotalUsers": 961,
+          "TotalTransactions": 1383,
+          "SuccessTransactions": 242
+        },
+        {
+          "Date": "2026-02-22 22:00",
+          "TotalUsers": 599,
+          "TotalTransactions": 886,
+          "SuccessTransactions": 168
+        },
+        {
+          "Date": "2026-03-20 18:00",
+          "TotalUsers": 917,
+          "TotalTransactions": 1320,
+          "SuccessTransactions": 265
+        },
+        {
+          "Date": "2026-03-03 23:00",
+          "TotalUsers": 384,
+          "TotalTransactions": 525,
+          "SuccessTransactions": 92
+        },
+        {
+          "Date": "2026-02-21 02:00",
+          "TotalUsers": 76,
+          "TotalTransactions": 105,
+          "SuccessTransactions": 22
+        },
+        {
+          "Date": "2026-02-27 21:00",
+          "TotalUsers": 1113,
+          "TotalTransactions": 1596,
+          "SuccessTransactions": 358
+        },
+        {
+          "Date": "2026-03-09 11:00",
+          "TotalUsers": 1046,
+          "TotalTransactions": 1523,
+          "SuccessTransactions": 325
+        },
+        {
+          "Date": "2026-02-15 08:00",
+          "TotalUsers": 609,
+          "TotalTransactions": 915,
+          "SuccessTransactions": 209
+        },
+        {
+          "Date": "2026-02-17 03:00",
+          "TotalUsers": 60,
+          "TotalTransactions": 99,
+          "SuccessTransactions": 19
+        },
+        {
+          "Date": "2026-02-26 06:00",
+          "TotalUsers": 283,
+          "TotalTransactions": 396,
+          "SuccessTransactions": 91
+        },
+        {
+          "Date": "2026-03-20 12:00",
+          "TotalUsers": 1045,
+          "TotalTransactions": 1520,
+          "SuccessTransactions": 345
+        },
+        {
+          "Date": "2026-03-09 20:00",
+          "TotalUsers": 1217,
+          "TotalTransactions": 1598,
+          "SuccessTransactions": 344
+        },
+        {
+          "Date": "2026-03-25 07:00",
+          "TotalUsers": 488,
+          "TotalTransactions": 673,
+          "SuccessTransactions": 133
+        },
+        {
+          "Date": "2026-03-29 09:00",
+          "TotalUsers": 615,
+          "TotalTransactions": 959,
+          "SuccessTransactions": 191
+        },
+        {
+          "Date": "2026-03-16 09:00",
+          "TotalUsers": 869,
+          "TotalTransactions": 1314,
+          "SuccessTransactions": 285
+        },
+        {
+          "Date": "2026-03-26 12:00",
+          "TotalUsers": 1036,
+          "TotalTransactions": 1567,
+          "SuccessTransactions": 296
+        },
+        {
+          "Date": "2026-03-13 01:00",
+          "TotalUsers": 130,
+          "TotalTransactions": 189,
+          "SuccessTransactions": 39
+        },
+        {
+          "Date": "2026-03-09 13:00",
+          "TotalUsers": 852,
+          "TotalTransactions": 1221,
+          "SuccessTransactions": 243
+        },
+        {
+          "Date": "2026-02-23 08:00",
+          "TotalUsers": 640,
+          "TotalTransactions": 946,
+          "SuccessTransactions": 229
+        },
+        {
+          "Date": "2026-03-01 05:00",
+          "TotalUsers": 123,
+          "TotalTransactions": 186,
+          "SuccessTransactions": 44
+        },
+        {
+          "Date": "2026-02-17 23:00",
+          "TotalUsers": 577,
+          "TotalTransactions": 837,
+          "SuccessTransactions": 180
+        },
+        {
+          "Date": "2026-03-24 22:00",
+          "TotalUsers": 746,
+          "TotalTransactions": 1057,
+          "SuccessTransactions": 203
+        },
+        {
+          "Date": "2026-02-23 00:00",
+          "TotalUsers": 285,
+          "TotalTransactions": 397,
+          "SuccessTransactions": 80
+        },
+        {
+          "Date": "2026-03-17 15:00",
+          "TotalUsers": 939,
+          "TotalTransactions": 1439,
+          "SuccessTransactions": 242
+        },
+        {
+          "Date": "2026-03-21 02:00",
+          "TotalUsers": 76,
+          "TotalTransactions": 101,
+          "SuccessTransactions": 21
+        },
+        {
+          "Date": "2026-03-23 03:00",
+          "TotalUsers": 52,
+          "TotalTransactions": 71,
+          "SuccessTransactions": 15
+        },
+        {
+          "Date": "2026-03-19 11:00",
+          "TotalUsers": 1091,
+          "TotalTransactions": 1650,
+          "SuccessTransactions": 362
+        },
+        {
+          "Date": "2026-03-27 10:00",
+          "TotalUsers": 960,
+          "TotalTransactions": 1558,
+          "SuccessTransactions": 292
+        },
+        {
+          "Date": "2026-02-25 03:00",
+          "TotalUsers": 55,
+          "TotalTransactions": 78,
+          "SuccessTransactions": 21
+        },
+        {
+          "Date": "2026-02-20 19:00",
+          "TotalUsers": 893,
+          "TotalTransactions": 1357,
+          "SuccessTransactions": 286
+        },
+        {
+          "Date": "2026-02-28 14:00",
+          "TotalUsers": 867,
+          "TotalTransactions": 1211,
+          "SuccessTransactions": 295
+        },
+        {
+          "Date": "2026-02-20 02:00",
+          "TotalUsers": 89,
+          "TotalTransactions": 114,
+          "SuccessTransactions": 31
+        },
+        {
+          "Date": "2026-03-09 08:00",
+          "TotalUsers": 649,
+          "TotalTransactions": 934,
+          "SuccessTransactions": 228
+        },
+        {
+          "Date": "2026-03-19 13:00",
+          "TotalUsers": 956,
+          "TotalTransactions": 1406,
+          "SuccessTransactions": 332
+        },
+        {
+          "Date": "2026-03-02 15:00",
+          "TotalUsers": 870,
+          "TotalTransactions": 1223,
+          "SuccessTransactions": 252
+        },
+        {
+          "Date": "2026-03-17 13:00",
+          "TotalUsers": 1059,
+          "TotalTransactions": 1681,
+          "SuccessTransactions": 312
+        },
+        {
+          "Date": "2026-02-27 00:00",
+          "TotalUsers": 304,
+          "TotalTransactions": 445,
+          "SuccessTransactions": 137
+        },
+        {
+          "Date": "2026-02-24 12:00",
+          "TotalUsers": 1085,
+          "TotalTransactions": 1514,
+          "SuccessTransactions": 373
+        },
+        {
+          "Date": "2026-03-13 07:00",
+          "TotalUsers": 556,
+          "TotalTransactions": 802,
+          "SuccessTransactions": 184
+        },
+        {
+          "Date": "2026-02-21 12:00",
+          "TotalUsers": 1047,
+          "TotalTransactions": 1533,
+          "SuccessTransactions": 303
+        },
+        {
+          "Date": "2026-03-13 17:00",
+          "TotalUsers": 781,
+          "TotalTransactions": 1131,
+          "SuccessTransactions": 219
+        },
+        {
+          "Date": "2026-03-16 04:00",
+          "TotalUsers": 76,
+          "TotalTransactions": 99,
+          "SuccessTransactions": 19
+        },
+        {
+          "Date": "2026-03-27 02:00",
+          "TotalUsers": 62,
+          "TotalTransactions": 103,
+          "SuccessTransactions": 20
+        },
+        {
+          "Date": "2026-02-15 11:00",
+          "TotalUsers": 825,
+          "TotalTransactions": 1168,
+          "SuccessTransactions": 277
+        },
+        {
+          "Date": "2026-03-06 08:00",
+          "TotalUsers": 619,
+          "TotalTransactions": 904,
+          "SuccessTransactions": 196
+        },
+        {
+          "Date": "2026-03-01 21:00",
+          "TotalUsers": 794,
+          "TotalTransactions": 1105,
+          "SuccessTransactions": 217
+        },
+        {
+          "Date": "2026-03-10 16:00",
+          "TotalUsers": 837,
+          "TotalTransactions": 1225,
+          "SuccessTransactions": 239
+        },
+        {
+          "Date": "2026-03-13 22:00",
+          "TotalUsers": 819,
+          "TotalTransactions": 1149,
+          "SuccessTransactions": 210
+        },
+        {
+          "Date": "2026-02-20 01:00",
+          "TotalUsers": 114,
+          "TotalTransactions": 162,
+          "SuccessTransactions": 33
+        },
+        {
+          "Date": "2026-03-08 07:00",
+          "TotalUsers": 503,
+          "TotalTransactions": 738,
+          "SuccessTransactions": 185
+        },
+        {
+          "Date": "2026-03-05 03:00",
+          "TotalUsers": 50,
+          "TotalTransactions": 60,
+          "SuccessTransactions": 13
+        },
+        {
+          "Date": "2026-03-19 01:00",
+          "TotalUsers": 143,
+          "TotalTransactions": 215,
+          "SuccessTransactions": 45
+        },
+        {
+          "Date": "2026-03-24 07:00",
+          "TotalUsers": 545,
+          "TotalTransactions": 772,
+          "SuccessTransactions": 173
+        },
+        {
+          "Date": "2026-02-16 02:00",
+          "TotalUsers": 60,
+          "TotalTransactions": 78,
+          "SuccessTransactions": 16
+        },
+        {
+          "Date": "2026-03-29 06:00",
+          "TotalUsers": 214,
+          "TotalTransactions": 307,
+          "SuccessTransactions": 61
+        },
+        {
+          "Date": "2026-02-17 14:00",
+          "TotalUsers": 939,
+          "TotalTransactions": 1350,
+          "SuccessTransactions": 318
+        },
+        {
+          "Date": "2026-02-22 04:00",
+          "TotalUsers": 65,
+          "TotalTransactions": 84,
+          "SuccessTransactions": 23
+        },
+        {
+          "Date": "2026-02-26 13:00",
+          "TotalUsers": 906,
+          "TotalTransactions": 1329,
+          "SuccessTransactions": 313
+        },
+        {
+          "Date": "2026-02-28 18:00",
+          "TotalUsers": 858,
+          "TotalTransactions": 1291,
+          "SuccessTransactions": 263
+        },
+        {
+          "Date": "2026-03-21 01:00",
+          "TotalUsers": 128,
+          "TotalTransactions": 196,
+          "SuccessTransactions": 47
+        },
+        {
+          "Date": "2026-03-16 01:00",
+          "TotalUsers": 137,
+          "TotalTransactions": 180,
+          "SuccessTransactions": 36
+        },
+        {
+          "Date": "2026-03-11 01:00",
+          "TotalUsers": 139,
+          "TotalTransactions": 185,
+          "SuccessTransactions": 46
+        },
+        {
+          "Date": "2026-03-08 13:00",
+          "TotalUsers": 841,
+          "TotalTransactions": 1214,
+          "SuccessTransactions": 271
+        },
+        {
+          "Date": "2026-03-21 05:00",
+          "TotalUsers": 156,
+          "TotalTransactions": 230,
+          "SuccessTransactions": 56
+        },
+        {
+          "Date": "2026-02-16 13:00",
+          "TotalUsers": 886,
+          "TotalTransactions": 1256,
+          "SuccessTransactions": 267
+        },
+        {
+          "Date": "2026-03-18 15:00",
+          "TotalUsers": 801,
+          "TotalTransactions": 1201,
+          "SuccessTransactions": 244
+        },
+        {
+          "Date": "2026-03-03 21:00",
+          "TotalUsers": 862,
+          "TotalTransactions": 1229,
+          "SuccessTransactions": 246
+        },
+        {
+          "Date": "2026-03-06 01:00",
+          "TotalUsers": 122,
+          "TotalTransactions": 170,
+          "SuccessTransactions": 46
+        },
+        {
+          "Date": "2026-02-28 20:00",
+          "TotalUsers": 1169,
+          "TotalTransactions": 1694,
+          "SuccessTransactions": 336
+        },
+        {
+          "Date": "2026-03-28 04:00",
+          "TotalUsers": 48,
+          "TotalTransactions": 71,
+          "SuccessTransactions": 10
+        },
+        {
+          "Date": "2026-02-24 06:00",
+          "TotalUsers": 277,
+          "TotalTransactions": 372,
+          "SuccessTransactions": 94
+        },
+        {
+          "Date": "2026-03-01 08:00",
+          "TotalUsers": 610,
+          "TotalTransactions": 853,
+          "SuccessTransactions": 206
+        },
+        {
+          "Date": "2026-03-07 02:00",
+          "TotalUsers": 63,
+          "TotalTransactions": 86,
+          "SuccessTransactions": 19
+        },
+        {
+          "Date": "2026-02-18 07:00",
+          "TotalUsers": 571,
+          "TotalTransactions": 832,
+          "SuccessTransactions": 193
+        },
+        {
+          "Date": "2026-02-25 21:00",
+          "TotalUsers": 1015,
+          "TotalTransactions": 1460,
+          "SuccessTransactions": 302
+        },
+        {
+          "Date": "2026-02-23 05:00",
+          "TotalUsers": 108,
+          "TotalTransactions": 140,
+          "SuccessTransactions": 44
+        },
+        {
+          "Date": "2026-03-13 19:00",
+          "TotalUsers": 1005,
+          "TotalTransactions": 1471,
+          "SuccessTransactions": 277
+        },
+        {
+          "Date": "2026-03-22 13:00",
+          "TotalUsers": 988,
+          "TotalTransactions": 1496,
+          "SuccessTransactions": 312
+        },
+        {
+          "Date": "2026-03-29 08:00",
+          "TotalUsers": 531,
+          "TotalTransactions": 848,
+          "SuccessTransactions": 146
+        },
+        {
+          "Date": "2026-03-02 14:00",
+          "TotalUsers": 822,
+          "TotalTransactions": 1180,
+          "SuccessTransactions": 215
+        },
+        {
+          "Date": "2026-02-21 19:00",
+          "TotalUsers": 1026,
+          "TotalTransactions": 1513,
+          "SuccessTransactions": 304
+        },
+        {
+          "Date": "2026-03-28 12:00",
+          "TotalUsers": 807,
+          "TotalTransactions": 1237,
+          "SuccessTransactions": 236
+        },
+        {
+          "Date": "2026-03-20 14:00",
+          "TotalUsers": 897,
+          "TotalTransactions": 1353,
+          "SuccessTransactions": 278
+        },
+        {
+          "Date": "2026-03-27 11:00",
+          "TotalUsers": 920,
+          "TotalTransactions": 1430,
+          "SuccessTransactions": 261
+        },
+        {
+          "Date": "2026-03-05 05:00",
+          "TotalUsers": 113,
+          "TotalTransactions": 150,
+          "SuccessTransactions": 33
+        },
+        {
+          "Date": "2026-03-09 02:00",
+          "TotalUsers": 66,
+          "TotalTransactions": 97,
+          "SuccessTransactions": 23
+        },
+        {
+          "Date": "2026-03-11 19:00",
+          "TotalUsers": 1087,
+          "TotalTransactions": 1652,
+          "SuccessTransactions": 321
+        },
+        {
+          "Date": "2026-03-28 01:00",
+          "TotalUsers": 141,
+          "TotalTransactions": 203,
+          "SuccessTransactions": 34
+        },
+        {
+          "Date": "2026-03-04 10:00",
+          "TotalUsers": 575,
+          "TotalTransactions": 921,
+          "SuccessTransactions": 192
+        },
+        {
+          "Date": "2026-03-08 20:00",
+          "TotalUsers": 772,
+          "TotalTransactions": 1099,
+          "SuccessTransactions": 215
+        },
+        {
+          "Date": "2026-02-28 06:00",
+          "TotalUsers": 342,
+          "TotalTransactions": 488,
+          "SuccessTransactions": 125
+        },
+        {
+          "Date": "2026-02-15 01:00",
+          "TotalUsers": 145,
+          "TotalTransactions": 228,
+          "SuccessTransactions": 41
+        },
+        {
+          "Date": "2026-03-17 07:00",
+          "TotalUsers": 595,
+          "TotalTransactions": 891,
+          "SuccessTransactions": 175
+        },
+        {
+          "Date": "2026-03-20 15:00",
+          "TotalUsers": 899,
+          "TotalTransactions": 1282,
+          "SuccessTransactions": 266
+        },
+        {
+          "Date": "2026-03-01 07:00",
+          "TotalUsers": 463,
+          "TotalTransactions": 655,
+          "SuccessTransactions": 153
+        },
+        {
+          "Date": "2026-03-22 01:00",
+          "TotalUsers": 149,
+          "TotalTransactions": 237,
+          "SuccessTransactions": 51
+        },
+        {
+          "Date": "2026-03-13 00:00",
+          "TotalUsers": 285,
+          "TotalTransactions": 445,
+          "SuccessTransactions": 83
+        },
+        {
+          "Date": "2026-03-19 05:00",
+          "TotalUsers": 153,
+          "TotalTransactions": 204,
+          "SuccessTransactions": 44
+        },
+        {
+          "Date": "2026-03-24 00:00",
+          "TotalUsers": 292,
+          "TotalTransactions": 416,
+          "SuccessTransactions": 94
+        },
+        {
+          "Date": "2026-02-16 17:00",
+          "TotalUsers": 733,
+          "TotalTransactions": 1012,
+          "SuccessTransactions": 206
+        },
+        {
+          "Date": "2026-02-28 16:00",
+          "TotalUsers": 766,
+          "TotalTransactions": 1111,
+          "SuccessTransactions": 237
+        },
+        {
+          "Date": "2026-03-30 11:00",
+          "TotalUsers": 703,
+          "TotalTransactions": 1103,
+          "SuccessTransactions": 200
+        },
+        {
+          "Date": "2026-03-07 09:00",
+          "TotalUsers": 928,
+          "TotalTransactions": 1329,
+          "SuccessTransactions": 300
+        },
+        {
+          "Date": "2026-03-17 00:00",
+          "TotalUsers": 274,
+          "TotalTransactions": 411,
+          "SuccessTransactions": 94
+        },
+        {
+          "Date": "2026-03-25 06:00",
+          "TotalUsers": 341,
+          "TotalTransactions": 482,
+          "SuccessTransactions": 108
+        },
+        {
+          "Date": "2026-02-21 22:00",
+          "TotalUsers": 813,
+          "TotalTransactions": 1102,
+          "SuccessTransactions": 240
+        },
+        {
+          "Date": "2026-03-21 00:00",
+          "TotalUsers": 271,
+          "TotalTransactions": 404,
+          "SuccessTransactions": 94
+        },
+        {
+          "Date": "2026-03-27 06:00",
+          "TotalUsers": 312,
+          "TotalTransactions": 447,
+          "SuccessTransactions": 80
+        },
+        {
+          "Date": "2026-02-24 19:00",
+          "TotalUsers": 1159,
+          "TotalTransactions": 1736,
+          "SuccessTransactions": 357
+        },
+        {
+          "Date": "2026-03-03 20:00",
+          "TotalUsers": 995,
+          "TotalTransactions": 1402,
+          "SuccessTransactions": 305
+        },
+        {
+          "Date": "2026-02-25 00:00",
+          "TotalUsers": 294,
+          "TotalTransactions": 418,
+          "SuccessTransactions": 105
+        },
+        {
+          "Date": "2026-03-14 18:00",
+          "TotalUsers": 815,
+          "TotalTransactions": 1193,
+          "SuccessTransactions": 223
+        },
+        {
+          "Date": "2026-03-26 08:00",
+          "TotalUsers": 659,
+          "TotalTransactions": 941,
+          "SuccessTransactions": 184
+        },
+        {
+          "Date": "2026-02-15 09:00",
+          "TotalUsers": 761,
+          "TotalTransactions": 1112,
+          "SuccessTransactions": 254
+        },
+        {
+          "Date": "2026-03-10 21:00",
+          "TotalUsers": 1254,
+          "TotalTransactions": 1747,
+          "SuccessTransactions": 347
+        },
+        {
+          "Date": "2026-02-15 15:00",
+          "TotalUsers": 756,
+          "TotalTransactions": 1143,
+          "SuccessTransactions": 218
+        },
+        {
+          "Date": "2026-03-09 19:00",
+          "TotalUsers": 1055,
+          "TotalTransactions": 1544,
+          "SuccessTransactions": 310
+        },
+        {
+          "Date": "2026-02-16 03:00",
+          "TotalUsers": 62,
+          "TotalTransactions": 90,
+          "SuccessTransactions": 14
+        },
+        {
+          "Date": "2026-03-19 17:00",
+          "TotalUsers": 838,
+          "TotalTransactions": 1191,
+          "SuccessTransactions": 263
+        },
+        {
+          "Date": "2026-03-24 14:00",
+          "TotalUsers": 972,
+          "TotalTransactions": 1571,
+          "SuccessTransactions": 267
+        },
+        {
+          "Date": "2026-02-24 13:00",
+          "TotalUsers": 907,
+          "TotalTransactions": 1312,
+          "SuccessTransactions": 287
+        },
+        {
+          "Date": "2026-03-08 21:00",
+          "TotalUsers": 647,
+          "TotalTransactions": 948,
+          "SuccessTransactions": 193
+        },
+        {
+          "Date": "2026-03-19 21:00",
+          "TotalUsers": 1127,
+          "TotalTransactions": 1720,
+          "SuccessTransactions": 340
+        },
+        {
+          "Date": "2026-02-25 16:00",
+          "TotalUsers": 754,
+          "TotalTransactions": 1074,
+          "SuccessTransactions": 230
+        },
+        {
+          "Date": "2026-02-18 22:00",
+          "TotalUsers": 728,
+          "TotalTransactions": 1037,
+          "SuccessTransactions": 219
+        },
+        {
+          "Date": "2026-03-29 17:00",
+          "TotalUsers": 493,
+          "TotalTransactions": 803,
+          "SuccessTransactions": 157
+        },
+        {
+          "Date": "2026-03-08 10:00",
+          "TotalUsers": 904,
+          "TotalTransactions": 1355,
+          "SuccessTransactions": 294
+        },
+        {
+          "Date": "2026-02-19 03:00",
+          "TotalUsers": 36,
+          "TotalTransactions": 44,
+          "SuccessTransactions": 13
+        },
+        {
+          "Date": "2026-03-26 18:00",
+          "TotalUsers": 824,
+          "TotalTransactions": 1207,
+          "SuccessTransactions": 216
+        },
+        {
+          "Date": "2026-03-01 13:00",
+          "TotalUsers": 786,
+          "TotalTransactions": 1158,
+          "SuccessTransactions": 228
+        },
+        {
+          "Date": "2026-03-21 03:00",
+          "TotalUsers": 48,
+          "TotalTransactions": 68,
+          "SuccessTransactions": 15
+        },
+        {
+          "Date": "2026-03-24 17:00",
+          "TotalUsers": 767,
+          "TotalTransactions": 1107,
+          "SuccessTransactions": 221
+        },
+        {
+          "Date": "2026-03-12 22:00",
+          "TotalUsers": 886,
+          "TotalTransactions": 1275,
+          "SuccessTransactions": 250
+        },
+        {
+          "Date": "2026-03-05 08:00",
+          "TotalUsers": 473,
+          "TotalTransactions": 699,
+          "SuccessTransactions": 154
+        },
+        {
+          "Date": "2026-02-26 03:00",
+          "TotalUsers": 55,
+          "TotalTransactions": 71,
+          "SuccessTransactions": 17
+        },
+        {
+          "Date": "2026-03-11 22:00",
+          "TotalUsers": 843,
+          "TotalTransactions": 1212,
+          "SuccessTransactions": 254
+        },
+        {
+          "Date": "2026-03-23 21:00",
+          "TotalUsers": 1058,
+          "TotalTransactions": 1631,
+          "SuccessTransactions": 281
+        },
+        {
+          "Date": "2026-02-24 07:00",
+          "TotalUsers": 566,
+          "TotalTransactions": 799,
+          "SuccessTransactions": 190
+        },
+        {
+          "Date": "2026-03-11 15:00",
+          "TotalUsers": 865,
+          "TotalTransactions": 1240,
+          "SuccessTransactions": 249
+        },
+        {
+          "Date": "2026-03-20 13:00",
+          "TotalUsers": 1061,
+          "TotalTransactions": 1576,
+          "SuccessTransactions": 311
+        },
+        {
+          "Date": "2026-03-14 09:00",
+          "TotalUsers": 829,
+          "TotalTransactions": 1303,
+          "SuccessTransactions": 256
+        },
+        {
+          "Date": "2026-03-19 15:00",
+          "TotalUsers": 928,
+          "TotalTransactions": 1337,
+          "SuccessTransactions": 280
+        },
+        {
+          "Date": "2026-02-24 08:00",
+          "TotalUsers": 724,
+          "TotalTransactions": 1023,
+          "SuccessTransactions": 236
+        },
+        {
+          "Date": "2026-03-01 02:00",
+          "TotalUsers": 90,
+          "TotalTransactions": 135,
+          "SuccessTransactions": 30
+        },
+        {
+          "Date": "2026-03-08 11:00",
+          "TotalUsers": 969,
+          "TotalTransactions": 1468,
+          "SuccessTransactions": 316
+        },
+        {
+          "Date": "2026-02-15 17:00",
+          "TotalUsers": 667,
+          "TotalTransactions": 1017,
+          "SuccessTransactions": 203
+        },
+        {
+          "Date": "2026-03-26 19:00",
+          "TotalUsers": 1025,
+          "TotalTransactions": 1547,
+          "SuccessTransactions": 278
+        },
+        {
+          "Date": "2026-03-06 13:00",
+          "TotalUsers": 796,
+          "TotalTransactions": 1135,
+          "SuccessTransactions": 243
+        },
+        {
+          "Date": "2026-03-03 12:00",
+          "TotalUsers": 795,
+          "TotalTransactions": 1138,
+          "SuccessTransactions": 254
+        },
+        {
+          "Date": "2026-03-14 22:00",
+          "TotalUsers": 769,
+          "TotalTransactions": 1099,
+          "SuccessTransactions": 226
+        },
+        {
+          "Date": "2026-03-28 02:00",
+          "TotalUsers": 64,
+          "TotalTransactions": 103,
+          "SuccessTransactions": 12
+        },
+        {
+          "Date": "2026-03-17 08:00",
+          "TotalUsers": 824,
+          "TotalTransactions": 1247,
+          "SuccessTransactions": 264
+        },
+        {
+          "Date": "2026-03-14 20:00",
+          "TotalUsers": 1135,
+          "TotalTransactions": 1696,
+          "SuccessTransactions": 334
+        },
+        {
+          "Date": "2026-03-18 21:00",
+          "TotalUsers": 1284,
+          "TotalTransactions": 1953,
+          "SuccessTransactions": 352
+        },
+        {
+          "Date": "2026-02-19 12:00",
+          "TotalUsers": 890,
+          "TotalTransactions": 1328,
+          "SuccessTransactions": 291
+        },
+        {
+          "Date": "2026-03-04 09:00",
+          "TotalUsers": 500,
+          "TotalTransactions": 762,
+          "SuccessTransactions": 154
+        },
+        {
+          "Date": "2026-03-04 18:00",
+          "TotalUsers": 484,
+          "TotalTransactions": 673,
+          "SuccessTransactions": 142
+        },
+        {
+          "Date": "2026-03-09 10:00",
+          "TotalUsers": 870,
+          "TotalTransactions": 1300,
+          "SuccessTransactions": 282
+        },
+        {
+          "Date": "2026-03-25 23:00",
+          "TotalUsers": 426,
+          "TotalTransactions": 600,
+          "SuccessTransactions": 107
+        },
+        {
+          "Date": "2026-03-29 14:00",
+          "TotalUsers": 557,
+          "TotalTransactions": 838,
+          "SuccessTransactions": 139
+        },
+        {
+          "Date": "2026-02-21 04:00",
+          "TotalUsers": 77,
+          "TotalTransactions": 109,
+          "SuccessTransactions": 19
+        },
+        {
+          "Date": "2026-03-13 10:00",
+          "TotalUsers": 1069,
+          "TotalTransactions": 1691,
+          "SuccessTransactions": 354
+        },
+        {
+          "Date": "2026-02-24 18:00",
+          "TotalUsers": 874,
+          "TotalTransactions": 1266,
+          "SuccessTransactions": 292
+        },
+        {
+          "Date": "2026-03-21 17:00",
+          "TotalUsers": 859,
+          "TotalTransactions": 1262,
+          "SuccessTransactions": 295
+        },
+        {
+          "Date": "2026-03-07 07:00",
+          "TotalUsers": 574,
+          "TotalTransactions": 805,
+          "SuccessTransactions": 191
+        },
+        {
+          "Date": "2026-02-16 07:00",
+          "TotalUsers": 442,
+          "TotalTransactions": 632,
+          "SuccessTransactions": 143
+        },
+        {
+          "Date": "2026-03-03 17:00",
+          "TotalUsers": 594,
+          "TotalTransactions": 847,
+          "SuccessTransactions": 188
+        },
+        {
+          "Date": "2026-03-10 02:00",
+          "TotalUsers": 83,
+          "TotalTransactions": 126,
+          "SuccessTransactions": 25
+        },
+        {
+          "Date": "2026-03-11 16:00",
+          "TotalUsers": 840,
+          "TotalTransactions": 1203,
+          "SuccessTransactions": 242
+        },
+        {
+          "Date": "2026-02-23 17:00",
+          "TotalUsers": 667,
+          "TotalTransactions": 959,
+          "SuccessTransactions": 199
+        },
+        {
+          "Date": "2026-03-18 09:00",
+          "TotalUsers": 784,
+          "TotalTransactions": 1177,
+          "SuccessTransactions": 247
+        },
+        {
+          "Date": "2026-02-18 13:00",
+          "TotalUsers": 987,
+          "TotalTransactions": 1376,
+          "SuccessTransactions": 295
+        },
+        {
+          "Date": "2026-03-10 22:00",
+          "TotalUsers": 946,
+          "TotalTransactions": 1381,
+          "SuccessTransactions": 257
+        },
+        {
+          "Date": "2026-03-23 02:00",
+          "TotalUsers": 77,
+          "TotalTransactions": 107,
+          "SuccessTransactions": 27
+        },
+        {
+          "Date": "2026-02-22 01:00",
+          "TotalUsers": 152,
+          "TotalTransactions": 224,
+          "SuccessTransactions": 47
+        },
+        {
+          "Date": "2026-03-18 04:00",
+          "TotalUsers": 60,
+          "TotalTransactions": 75,
+          "SuccessTransactions": 24
+        },
+        {
+          "Date": "2026-03-24 21:00",
+          "TotalUsers": 1111,
+          "TotalTransactions": 1567,
+          "SuccessTransactions": 335
+        },
+        {
+          "Date": "2026-02-14 07:00",
+          "TotalUsers": 517,
+          "TotalTransactions": 735,
+          "SuccessTransactions": 175
+        },
+        {
+          "Date": "2026-03-18 03:00",
+          "TotalUsers": 52,
+          "TotalTransactions": 79,
+          "SuccessTransactions": 17
+        },
+        {
+          "Date": "2026-03-03 16:00",
+          "TotalUsers": 571,
+          "TotalTransactions": 867,
+          "SuccessTransactions": 164
+        },
+        {
+          "Date": "2026-03-25 08:00",
+          "TotalUsers": 681,
+          "TotalTransactions": 954,
+          "SuccessTransactions": 221
+        },
+        {
+          "Date": "2026-03-08 19:00",
+          "TotalUsers": 542,
+          "TotalTransactions": 854,
+          "SuccessTransactions": 161
+        },
+        {
+          "Date": "2026-03-22 14:00",
+          "TotalUsers": 858,
+          "TotalTransactions": 1313,
+          "SuccessTransactions": 262
+        },
+        {
+          "Date": "2026-03-28 20:00",
+          "TotalUsers": 840,
+          "TotalTransactions": 1290,
+          "SuccessTransactions": 208
+        },
+        {
+          "Date": "2026-02-17 04:00",
+          "TotalUsers": 68,
+          "TotalTransactions": 93,
+          "SuccessTransactions": 12
+        },
+        {
+          "Date": "2026-02-24 00:00",
+          "TotalUsers": 276,
+          "TotalTransactions": 409,
+          "SuccessTransactions": 89
+        },
+        {
+          "Date": "2026-03-16 08:00",
+          "TotalUsers": 632,
+          "TotalTransactions": 930,
+          "SuccessTransactions": 190
+        },
+        {
+          "Date": "2026-02-18 23:00",
+          "TotalUsers": 539,
+          "TotalTransactions": 736,
+          "SuccessTransactions": 131
+        },
+        {
+          "Date": "2026-03-16 16:00",
+          "TotalUsers": 829,
+          "TotalTransactions": 1265,
+          "SuccessTransactions": 241
+        },
+        {
+          "Date": "2026-02-16 18:00",
+          "TotalUsers": 888,
+          "TotalTransactions": 1250,
+          "SuccessTransactions": 269
+        },
+        {
+          "Date": "2026-03-17 16:00",
+          "TotalUsers": 930,
+          "TotalTransactions": 1428,
+          "SuccessTransactions": 268
+        },
+        {
+          "Date": "2026-02-26 19:00",
+          "TotalUsers": 767,
+          "TotalTransactions": 1123,
+          "SuccessTransactions": 240
+        },
+        {
+          "Date": "2026-03-09 07:00",
+          "TotalUsers": 446,
+          "TotalTransactions": 614,
+          "SuccessTransactions": 133
+        },
+        {
+          "Date": "2026-03-13 15:00",
+          "TotalUsers": 918,
+          "TotalTransactions": 1322,
+          "SuccessTransactions": 282
+        },
+        {
+          "Date": "2026-02-24 10:00",
+          "TotalUsers": 1004,
+          "TotalTransactions": 1470,
+          "SuccessTransactions": 359
+        },
+        {
+          "Date": "2026-02-19 11:00",
+          "TotalUsers": 886,
+          "TotalTransactions": 1362,
+          "SuccessTransactions": 296
+        },
+        {
+          "Date": "2026-02-23 21:00",
+          "TotalUsers": 1145,
+          "TotalTransactions": 1590,
+          "SuccessTransactions": 331
+        },
+        {
+          "Date": "2026-03-10 01:00",
+          "TotalUsers": 120,
+          "TotalTransactions": 180,
+          "SuccessTransactions": 35
+        },
+        {
+          "Date": "2026-02-19 13:00",
+          "TotalUsers": 804,
+          "TotalTransactions": 1180,
+          "SuccessTransactions": 272
+        },
+        {
+          "Date": "2026-03-29 10:00",
+          "TotalUsers": 684,
+          "TotalTransactions": 1111,
+          "SuccessTransactions": 213
+        },
+        {
+          "Date": "2026-03-10 13:00",
+          "TotalUsers": 961,
+          "TotalTransactions": 1435,
+          "SuccessTransactions": 301
+        },
+        {
+          "Date": "2026-03-06 11:00",
+          "TotalUsers": 946,
+          "TotalTransactions": 1373,
+          "SuccessTransactions": 253
+        },
+        {
+          "Date": "2026-03-09 22:00",
+          "TotalUsers": 876,
+          "TotalTransactions": 1204,
+          "SuccessTransactions": 250
+        },
+        {
+          "Date": "2026-03-01 19:00",
+          "TotalUsers": 711,
+          "TotalTransactions": 1047,
+          "SuccessTransactions": 184
+        },
+        {
+          "Date": "2026-03-02 22:00",
+          "TotalUsers": 764,
+          "TotalTransactions": 1160,
+          "SuccessTransactions": 173
+        },
+        {
+          "Date": "2026-03-14 04:00",
+          "TotalUsers": 68,
+          "TotalTransactions": 87,
+          "SuccessTransactions": 17
+        },
+        {
+          "Date": "2026-03-25 18:00",
+          "TotalUsers": 857,
+          "TotalTransactions": 1216,
+          "SuccessTransactions": 204
+        },
+        {
+          "Date": "2026-03-19 04:00",
+          "TotalUsers": 85,
+          "TotalTransactions": 116,
+          "SuccessTransactions": 32
+        },
+        {
+          "Date": "2026-03-01 03:00",
+          "TotalUsers": 49,
+          "TotalTransactions": 69,
+          "SuccessTransactions": 16
+        },
+        {
+          "Date": "2026-03-07 16:00",
+          "TotalUsers": 791,
+          "TotalTransactions": 1159,
+          "SuccessTransactions": 235
+        },
+        {
+          "Date": "2026-03-18 18:00",
+          "TotalUsers": 814,
+          "TotalTransactions": 1162,
+          "SuccessTransactions": 252
+        },
+        {
+          "Date": "2026-03-15 15:00",
+          "TotalUsers": 891,
+          "TotalTransactions": 1402,
+          "SuccessTransactions": 288
+        },
+        {
+          "Date": "2026-03-15 12:00",
+          "TotalUsers": 1051,
+          "TotalTransactions": 1574,
+          "SuccessTransactions": 318
+        },
+        {
+          "Date": "2026-02-24 16:00",
+          "TotalUsers": 858,
+          "TotalTransactions": 1192,
+          "SuccessTransactions": 246
+        },
+        {
+          "Date": "2026-03-28 14:00",
+          "TotalUsers": 648,
+          "TotalTransactions": 973,
+          "SuccessTransactions": 197
+        },
+        {
+          "Date": "2026-03-18 17:00",
+          "TotalUsers": 653,
+          "TotalTransactions": 967,
+          "SuccessTransactions": 212
+        },
+        {
+          "Date": "2026-03-24 18:00",
+          "TotalUsers": 872,
+          "TotalTransactions": 1275,
+          "SuccessTransactions": 250
+        },
+        {
+          "Date": "2026-03-26 03:00",
+          "TotalUsers": 27,
+          "TotalTransactions": 36,
+          "SuccessTransactions": 8
+        },
+        {
+          "Date": "2026-03-18 01:00",
+          "TotalUsers": 128,
+          "TotalTransactions": 219,
+          "SuccessTransactions": 35
+        },
+        {
+          "Date": "2026-03-02 03:00",
+          "TotalUsers": 50,
+          "TotalTransactions": 87,
+          "SuccessTransactions": 25
+        },
+        {
+          "Date": "2026-03-14 16:00",
+          "TotalUsers": 843,
+          "TotalTransactions": 1225,
+          "SuccessTransactions": 234
+        },
+        {
+          "Date": "2026-02-27 07:00",
+          "TotalUsers": 510,
+          "TotalTransactions": 776,
+          "SuccessTransactions": 189
+        },
+        {
+          "Date": "2026-02-28 23:00",
+          "TotalUsers": 493,
+          "TotalTransactions": 706,
+          "SuccessTransactions": 146
+        },
+        {
+          "Date": "2026-02-28 01:00",
+          "TotalUsers": 184,
+          "TotalTransactions": 253,
+          "SuccessTransactions": 57
+        },
+        {
+          "Date": "2026-03-08 04:00",
+          "TotalUsers": 83,
+          "TotalTransactions": 101,
+          "SuccessTransactions": 12
+        },
+        {
+          "Date": "2026-03-10 07:00",
+          "TotalUsers": 538,
+          "TotalTransactions": 738,
+          "SuccessTransactions": 172
+        },
+        {
+          "Date": "2026-03-17 01:00",
+          "TotalUsers": 154,
+          "TotalTransactions": 251,
+          "SuccessTransactions": 49
+        },
+        {
+          "Date": "2026-03-11 00:00",
+          "TotalUsers": 272,
+          "TotalTransactions": 400,
+          "SuccessTransactions": 79
+        },
+        {
+          "Date": "2026-02-17 17:00",
+          "TotalUsers": 774,
+          "TotalTransactions": 1138,
+          "SuccessTransactions": 224
+        },
+        {
+          "Date": "2026-03-15 01:00",
+          "TotalUsers": 143,
+          "TotalTransactions": 196,
+          "SuccessTransactions": 41
+        },
+        {
+          "Date": "2026-02-14 01:00",
+          "TotalUsers": 170,
+          "TotalTransactions": 238,
+          "SuccessTransactions": 44
+        },
+        {
+          "Date": "2026-03-13 04:00",
+          "TotalUsers": 82,
+          "TotalTransactions": 115,
+          "SuccessTransactions": 18
+        },
+        {
+          "Date": "2026-03-23 11:00",
+          "TotalUsers": 1132,
+          "TotalTransactions": 1729,
+          "SuccessTransactions": 341
+        },
+        {
+          "Date": "2026-02-26 20:00",
+          "TotalUsers": 1145,
+          "TotalTransactions": 1666,
+          "SuccessTransactions": 338
+        },
+        {
+          "Date": "2026-03-30 03:00",
+          "TotalUsers": 26,
+          "TotalTransactions": 44,
+          "SuccessTransactions": 6
+        },
+        {
+          "Date": "2026-03-05 06:00",
+          "TotalUsers": 226,
+          "TotalTransactions": 307,
+          "SuccessTransactions": 76
+        },
+        {
+          "Date": "2026-02-20 20:00",
+          "TotalUsers": 858,
+          "TotalTransactions": 1315,
+          "SuccessTransactions": 296
+        },
+        {
+          "Date": "2026-03-13 16:00",
+          "TotalUsers": 898,
+          "TotalTransactions": 1275,
+          "SuccessTransactions": 253
+        },
+        {
+          "Date": "2026-03-13 11:00",
+          "TotalUsers": 1081,
+          "TotalTransactions": 1716,
+          "SuccessTransactions": 300
+        },
+        {
+          "Date": "2026-03-09 17:00",
+          "TotalUsers": 726,
+          "TotalTransactions": 1025,
+          "SuccessTransactions": 195
+        },
+        {
+          "Date": "2026-02-17 19:00",
+          "TotalUsers": 1394,
+          "TotalTransactions": 1997,
+          "SuccessTransactions": 409
+        },
+        {
+          "Date": "2026-03-07 14:00",
+          "TotalUsers": 867,
+          "TotalTransactions": 1285,
+          "SuccessTransactions": 300
+        },
+        {
+          "Date": "2026-03-05 02:00",
+          "TotalUsers": 59,
+          "TotalTransactions": 79,
+          "SuccessTransactions": 22
+        },
+        {
+          "Date": "2026-02-15 10:00",
+          "TotalUsers": 747,
+          "TotalTransactions": 1062,
+          "SuccessTransactions": 227
+        },
+        {
+          "Date": "2026-02-16 14:00",
+          "TotalUsers": 780,
+          "TotalTransactions": 1189,
+          "SuccessTransactions": 239
+        },
+        {
+          "Date": "2026-02-24 14:00",
+          "TotalUsers": 868,
+          "TotalTransactions": 1241,
+          "SuccessTransactions": 279
+        },
+        {
+          "Date": "2026-03-09 15:00",
+          "TotalUsers": 827,
+          "TotalTransactions": 1176,
+          "SuccessTransactions": 230
+        },
+        {
+          "Date": "2026-02-20 09:00",
+          "TotalUsers": 769,
+          "TotalTransactions": 1159,
+          "SuccessTransactions": 286
+        },
+        {
+          "Date": "2026-02-27 06:00",
+          "TotalUsers": 271,
+          "TotalTransactions": 383,
+          "SuccessTransactions": 102
+        },
+        {
+          "Date": "2026-02-19 00:00",
+          "TotalUsers": 277,
+          "TotalTransactions": 396,
+          "SuccessTransactions": 87
+        },
+        {
+          "Date": "2026-03-08 23:00",
+          "TotalUsers": 357,
+          "TotalTransactions": 474,
+          "SuccessTransactions": 100
+        },
+        {
+          "Date": "2026-03-13 09:00",
+          "TotalUsers": 976,
+          "TotalTransactions": 1456,
+          "SuccessTransactions": 305
+        },
+        {
+          "Date": "2026-03-05 04:00",
+          "TotalUsers": 52,
+          "TotalTransactions": 79,
+          "SuccessTransactions": 16
+        },
+        {
+          "Date": "2026-02-18 09:00",
+          "TotalUsers": 1064,
+          "TotalTransactions": 1562,
+          "SuccessTransactions": 354
+        },
+        {
+          "Date": "2026-02-21 20:00",
+          "TotalUsers": 1468,
+          "TotalTransactions": 2098,
+          "SuccessTransactions": 421
+        },
+        {
+          "Date": "2026-02-16 20:00",
+          "TotalUsers": 1256,
+          "TotalTransactions": 1871,
+          "SuccessTransactions": 365
+        },
+        {
+          "Date": "2026-02-19 15:00",
+          "TotalUsers": 732,
+          "TotalTransactions": 1090,
+          "SuccessTransactions": 237
+        },
+        {
+          "Date": "2026-02-27 02:00",
+          "TotalUsers": 77,
+          "TotalTransactions": 96,
+          "SuccessTransactions": 18
+        },
+        {
+          "Date": "2026-03-25 00:00",
+          "TotalUsers": 249,
+          "TotalTransactions": 379,
+          "SuccessTransactions": 76
+        },
+        {
+          "Date": "2026-03-16 23:00",
+          "TotalUsers": 545,
+          "TotalTransactions": 838,
+          "SuccessTransactions": 152
+        },
+        {
+          "Date": "2026-03-15 08:00",
+          "TotalUsers": 696,
+          "TotalTransactions": 1049,
+          "SuccessTransactions": 218
+        },
+        {
+          "Date": "2026-03-06 09:00",
+          "TotalUsers": 731,
+          "TotalTransactions": 1090,
+          "SuccessTransactions": 257
+        },
+        {
+          "Date": "2026-03-23 20:00",
+          "TotalUsers": 1491,
+          "TotalTransactions": 2200,
+          "SuccessTransactions": 374
+        },
+        {
+          "Date": "2026-02-24 23:00",
+          "TotalUsers": 466,
+          "TotalTransactions": 629,
+          "SuccessTransactions": 146
+        },
+        {
+          "Date": "2026-02-27 09:00",
+          "TotalUsers": 972,
+          "TotalTransactions": 1460,
+          "SuccessTransactions": 332
+        },
+        {
+          "Date": "2026-03-06 00:00",
+          "TotalUsers": 242,
+          "TotalTransactions": 373,
+          "SuccessTransactions": 74
+        },
+        {
+          "Date": "2026-03-04 01:00",
+          "TotalUsers": 99,
+          "TotalTransactions": 142,
+          "SuccessTransactions": 32
+        },
+        {
+          "Date": "2026-03-06 06:00",
+          "TotalUsers": 297,
+          "TotalTransactions": 397,
+          "SuccessTransactions": 84
+        },
+        {
+          "Date": "2026-02-28 21:00",
+          "TotalUsers": 1090,
+          "TotalTransactions": 1562,
+          "SuccessTransactions": 331
+        },
+        {
+          "Date": "2026-03-25 12:00",
+          "TotalUsers": 959,
+          "TotalTransactions": 1380,
+          "SuccessTransactions": 273
+        },
+        {
+          "Date": "2026-02-20 13:00",
+          "TotalUsers": 762,
+          "TotalTransactions": 1130,
+          "SuccessTransactions": 231
+        },
+        {
+          "Date": "2026-03-29 03:00",
+          "TotalUsers": 39,
+          "TotalTransactions": 51,
+          "SuccessTransactions": 7
+        },
+        {
+          "Date": "2026-02-25 07:00",
+          "TotalUsers": 481,
+          "TotalTransactions": 668,
+          "SuccessTransactions": 158
+        },
+        {
+          "Date": "2026-02-17 10:00",
+          "TotalUsers": 1075,
+          "TotalTransactions": 1635,
+          "SuccessTransactions": 388
+        },
+        {
+          "Date": "2026-03-23 01:00",
+          "TotalUsers": 119,
+          "TotalTransactions": 165,
+          "SuccessTransactions": 38
+        },
+        {
+          "Date": "2026-03-22 05:00",
+          "TotalUsers": 154,
+          "TotalTransactions": 215,
+          "SuccessTransactions": 37
+        },
+        {
+          "Date": "2026-03-05 16:00",
+          "TotalUsers": 488,
+          "TotalTransactions": 760,
+          "SuccessTransactions": 146
+        },
+        {
+          "Date": "2026-03-18 05:00",
+          "TotalUsers": 135,
+          "TotalTransactions": 184,
+          "SuccessTransactions": 40
+        },
+        {
+          "Date": "2026-03-02 11:00",
+          "TotalUsers": 1235,
+          "TotalTransactions": 1714,
+          "SuccessTransactions": 407
+        },
+        {
+          "Date": "2026-03-10 05:00",
+          "TotalUsers": 135,
+          "TotalTransactions": 178,
+          "SuccessTransactions": 45
+        },
+        {
+          "Date": "2026-03-22 23:00",
+          "TotalUsers": 389,
+          "TotalTransactions": 586,
+          "SuccessTransactions": 95
+        },
+        {
+          "Date": "2026-02-23 13:00",
+          "TotalUsers": 907,
+          "TotalTransactions": 1315,
+          "SuccessTransactions": 297
+        },
+        {
+          "Date": "2026-02-27 12:00",
+          "TotalUsers": 1049,
+          "TotalTransactions": 1545,
+          "SuccessTransactions": 345
+        },
+        {
+          "Date": "2026-03-10 06:00",
+          "TotalUsers": 323,
+          "TotalTransactions": 440,
+          "SuccessTransactions": 93
+        },
+        {
+          "Date": "2026-03-15 06:00",
+          "TotalUsers": 309,
+          "TotalTransactions": 454,
+          "SuccessTransactions": 101
+        },
+        {
+          "Date": "2026-02-17 12:00",
+          "TotalUsers": 1080,
+          "TotalTransactions": 1654,
+          "SuccessTransactions": 336
+        },
+        {
+          "Date": "2026-03-20 20:00",
+          "TotalUsers": 1817,
+          "TotalTransactions": 2636,
+          "SuccessTransactions": 497
+        },
+        {
+          "Date": "2026-02-18 12:00",
+          "TotalUsers": 1216,
+          "TotalTransactions": 1681,
+          "SuccessTransactions": 364
+        },
+        {
+          "Date": "2026-02-21 11:00",
+          "TotalUsers": 1205,
+          "TotalTransactions": 1708,
+          "SuccessTransactions": 357
+        },
+        {
+          "Date": "2026-03-25 02:00",
+          "TotalUsers": 76,
+          "TotalTransactions": 100,
+          "SuccessTransactions": 20
+        },
+        {
+          "Date": "2026-03-23 10:00",
+          "TotalUsers": 1106,
+          "TotalTransactions": 1733,
+          "SuccessTransactions": 364
+        },
+        {
+          "Date": "2026-03-05 20:00",
+          "TotalUsers": 755,
+          "TotalTransactions": 1128,
+          "SuccessTransactions": 231
+        },
+        {
+          "Date": "2026-03-26 21:00",
+          "TotalUsers": 1076,
+          "TotalTransactions": 1624,
+          "SuccessTransactions": 293
+        },
+        {
+          "Date": "2026-02-14 15:00",
+          "TotalUsers": 968,
+          "TotalTransactions": 1430,
+          "SuccessTransactions": 303
+        },
+        {
+          "Date": "2026-02-16 12:00",
+          "TotalUsers": 980,
+          "TotalTransactions": 1439,
+          "SuccessTransactions": 339
+        },
+        {
+          "Date": "2026-02-24 01:00",
+          "TotalUsers": 142,
+          "TotalTransactions": 192,
+          "SuccessTransactions": 50
+        },
+        {
+          "Date": "2026-03-04 04:00",
+          "TotalUsers": 59,
+          "TotalTransactions": 78,
+          "SuccessTransactions": 18
+        },
+        {
+          "Date": "2026-03-13 05:00",
+          "TotalUsers": 136,
+          "TotalTransactions": 188,
+          "SuccessTransactions": 40
+        },
+        {
+          "Date": "2026-02-25 22:00",
+          "TotalUsers": 760,
+          "TotalTransactions": 1066,
+          "SuccessTransactions": 224
+        },
+        {
+          "Date": "2026-02-27 13:00",
+          "TotalUsers": 895,
+          "TotalTransactions": 1363,
+          "SuccessTransactions": 295
+        },
+        {
+          "Date": "2026-02-21 13:00",
+          "TotalUsers": 949,
+          "TotalTransactions": 1327,
+          "SuccessTransactions": 288
+        },
+        {
+          "Date": "2026-03-01 20:00",
+          "TotalUsers": 935,
+          "TotalTransactions": 1342,
+          "SuccessTransactions": 283
+        },
+        {
+          "Date": "2026-03-04 21:00",
+          "TotalUsers": 697,
+          "TotalTransactions": 1027,
+          "SuccessTransactions": 206
+        },
+        {
+          "Date": "2026-03-24 01:00",
+          "TotalUsers": 142,
+          "TotalTransactions": 235,
+          "SuccessTransactions": 42
+        },
+        {
+          "Date": "2026-03-26 10:00",
+          "TotalUsers": 946,
+          "TotalTransactions": 1412,
+          "SuccessTransactions": 286
+        },
+        {
+          "Date": "2026-03-07 05:00",
+          "TotalUsers": 128,
+          "TotalTransactions": 161,
+          "SuccessTransactions": 40
+        },
+        {
+          "Date": "2026-03-18 16:00",
+          "TotalUsers": 720,
+          "TotalTransactions": 976,
+          "SuccessTransactions": 203
+        },
+        {
+          "Date": "2026-02-28 07:00",
+          "TotalUsers": 463,
+          "TotalTransactions": 648,
+          "SuccessTransactions": 158
+        },
+        {
+          "Date": "2026-03-03 01:00",
+          "TotalUsers": 151,
+          "TotalTransactions": 235,
+          "SuccessTransactions": 35
+        },
+        {
+          "Date": "2026-02-14 10:00",
+          "TotalUsers": 1034,
+          "TotalTransactions": 1510,
+          "SuccessTransactions": 355
+        },
+        {
+          "Date": "2026-03-06 17:00",
+          "TotalUsers": 626,
+          "TotalTransactions": 871,
+          "SuccessTransactions": 182
+        },
+        {
+          "Date": "2026-03-05 19:00",
+          "TotalUsers": 487,
+          "TotalTransactions": 763,
+          "SuccessTransactions": 128
+        },
+        {
+          "Date": "2026-03-28 08:00",
+          "TotalUsers": 590,
+          "TotalTransactions": 859,
+          "SuccessTransactions": 173
+        },
+        {
+          "Date": "2026-02-26 08:00",
+          "TotalUsers": 676,
+          "TotalTransactions": 993,
+          "SuccessTransactions": 238
+        },
+        {
+          "Date": "2026-02-23 11:00",
+          "TotalUsers": 1074,
+          "TotalTransactions": 1612,
+          "SuccessTransactions": 364
+        },
+        {
+          "Date": "2026-02-27 16:00",
+          "TotalUsers": 897,
+          "TotalTransactions": 1337,
+          "SuccessTransactions": 320
+        },
+        {
+          "Date": "2026-03-20 08:00",
+          "TotalUsers": 779,
+          "TotalTransactions": 1116,
+          "SuccessTransactions": 245
+        },
+        {
+          "Date": "2026-03-11 13:00",
+          "TotalUsers": 915,
+          "TotalTransactions": 1362,
+          "SuccessTransactions": 293
+        },
+        {
+          "Date": "2026-02-22 10:00",
+          "TotalUsers": 895,
+          "TotalTransactions": 1325,
+          "SuccessTransactions": 329
+        },
+        {
+          "Date": "2026-03-01 04:00",
+          "TotalUsers": 69,
+          "TotalTransactions": 101,
+          "SuccessTransactions": 26
+        },
+        {
+          "Date": "2026-02-22 20:00",
+          "TotalUsers": 721,
+          "TotalTransactions": 1034,
+          "SuccessTransactions": 208
+        },
+        {
+          "Date": "2026-03-01 22:00",
+          "TotalUsers": 528,
+          "TotalTransactions": 765,
+          "SuccessTransactions": 167
+        },
+        {
+          "Date": "2026-03-07 22:00",
+          "TotalUsers": 818,
+          "TotalTransactions": 1160,
+          "SuccessTransactions": 223
+        },
+        {
+          "Date": "2026-03-07 23:00",
+          "TotalUsers": 478,
+          "TotalTransactions": 682,
+          "SuccessTransactions": 142
+        },
+        {
+          "Date": "2026-03-03 02:00",
+          "TotalUsers": 86,
+          "TotalTransactions": 128,
+          "SuccessTransactions": 22
+        },
+        {
+          "Date": "2026-03-04 12:00",
+          "TotalUsers": 579,
+          "TotalTransactions": 892,
+          "SuccessTransactions": 189
+        },
+        {
+          "Date": "2026-03-23 07:00",
+          "TotalUsers": 500,
+          "TotalTransactions": 731,
+          "SuccessTransactions": 180
+        },
+        {
+          "Date": "2026-03-16 02:00",
+          "TotalUsers": 83,
+          "TotalTransactions": 117,
+          "SuccessTransactions": 33
+        },
+        {
+          "Date": "2026-02-23 04:00",
+          "TotalUsers": 74,
+          "TotalTransactions": 95,
+          "SuccessTransactions": 19
+        },
+        {
+          "Date": "2026-03-07 21:00",
+          "TotalUsers": 1138,
+          "TotalTransactions": 1614,
+          "SuccessTransactions": 303
+        },
+        {
+          "Date": "2026-03-12 01:00",
+          "TotalUsers": 144,
+          "TotalTransactions": 192,
+          "SuccessTransactions": 37
+        },
+        {
+          "Date": "2026-03-11 17:00",
+          "TotalUsers": 785,
+          "TotalTransactions": 1053,
+          "SuccessTransactions": 231
+        },
+        {
+          "Date": "2026-03-19 18:00",
+          "TotalUsers": 927,
+          "TotalTransactions": 1367,
+          "SuccessTransactions": 303
+        },
+        {
+          "Date": "2026-03-29 12:00",
+          "TotalUsers": 710,
+          "TotalTransactions": 1090,
+          "SuccessTransactions": 199
+        },
+        {
+          "Date": "2026-03-05 11:00",
+          "TotalUsers": 834,
+          "TotalTransactions": 1221,
+          "SuccessTransactions": 281
+        },
+        {
+          "Date": "2026-02-14 06:00",
+          "TotalUsers": 356,
+          "TotalTransactions": 491,
+          "SuccessTransactions": 105
+        },
+        {
+          "Date": "2026-03-03 11:00",
+          "TotalUsers": 846,
+          "TotalTransactions": 1256,
+          "SuccessTransactions": 284
+        },
+        {
+          "Date": "2026-02-18 18:00",
+          "TotalUsers": 1019,
+          "TotalTransactions": 1419,
+          "SuccessTransactions": 285
+        },
+        {
+          "Date": "2026-03-18 12:00",
+          "TotalUsers": 957,
+          "TotalTransactions": 1422,
+          "SuccessTransactions": 318
+        },
+        {
+          "Date": "2026-03-21 23:00",
+          "TotalUsers": 568,
+          "TotalTransactions": 832,
+          "SuccessTransactions": 176
+        },
+        {
+          "Date": "2026-03-26 01:00",
+          "TotalUsers": 116,
+          "TotalTransactions": 156,
+          "SuccessTransactions": 30
+        },
+        {
+          "Date": "2026-03-27 19:00",
+          "TotalUsers": 800,
+          "TotalTransactions": 1225,
+          "SuccessTransactions": 196
+        },
+        {
+          "Date": "2026-03-29 22:00",
+          "TotalUsers": 536,
+          "TotalTransactions": 838,
+          "SuccessTransactions": 152
+        },
+        {
+          "Date": "2026-03-29 01:00",
+          "TotalUsers": 92,
+          "TotalTransactions": 146,
+          "SuccessTransactions": 35
+        },
+        {
+          "Date": "2026-03-29 13:00",
+          "TotalUsers": 654,
+          "TotalTransactions": 1022,
+          "SuccessTransactions": 210
+        },
+        {
+          "Date": "2026-02-18 21:00",
+          "TotalUsers": 1025,
+          "TotalTransactions": 1486,
+          "SuccessTransactions": 272
+        },
+        {
+          "Date": "2026-03-16 00:00",
+          "TotalUsers": 272,
+          "TotalTransactions": 386,
+          "SuccessTransactions": 92
+        },
+        {
+          "Date": "2026-02-17 08:00",
+          "TotalUsers": 786,
+          "TotalTransactions": 1165,
+          "SuccessTransactions": 282
+        },
+        {
+          "Date": "2026-03-01 12:00",
+          "TotalUsers": 851,
+          "TotalTransactions": 1198,
+          "SuccessTransactions": 270
+        },
+        {
+          "Date": "2026-03-06 15:00",
+          "TotalUsers": 739,
+          "TotalTransactions": 1075,
+          "SuccessTransactions": 217
+        },
+        {
+          "Date": "2026-02-25 06:00",
+          "TotalUsers": 274,
+          "TotalTransactions": 389,
+          "SuccessTransactions": 86
+        },
+        {
+          "Date": "2026-03-02 07:00",
+          "TotalUsers": 445,
+          "TotalTransactions": 619,
+          "SuccessTransactions": 134
+        },
+        {
+          "Date": "2026-03-07 01:00",
+          "TotalUsers": 138,
+          "TotalTransactions": 203,
+          "SuccessTransactions": 37
+        },
+        {
+          "Date": "2026-03-12 09:00",
+          "TotalUsers": 860,
+          "TotalTransactions": 1271,
+          "SuccessTransactions": 305
+        },
+        {
+          "Date": "2026-03-23 22:00",
+          "TotalUsers": 803,
+          "TotalTransactions": 1233,
+          "SuccessTransactions": 210
+        },
+        {
+          "Date": "2026-02-25 14:00",
+          "TotalUsers": 863,
+          "TotalTransactions": 1264,
+          "SuccessTransactions": 277
+        },
+        {
+          "Date": "2026-03-01 17:00",
+          "TotalUsers": 649,
+          "TotalTransactions": 921,
+          "SuccessTransactions": 202
+        },
+        {
+          "Date": "2026-02-28 05:00",
+          "TotalUsers": 144,
+          "TotalTransactions": 191,
+          "SuccessTransactions": 42
+        },
+        {
+          "Date": "2026-02-16 21:00",
+          "TotalUsers": 1070,
+          "TotalTransactions": 1533,
+          "SuccessTransactions": 315
+        },
+        {
+          "Date": "2026-03-23 08:00",
+          "TotalUsers": 729,
+          "TotalTransactions": 1059,
+          "SuccessTransactions": 224
+        },
+        {
+          "Date": "2026-03-27 07:00",
+          "TotalUsers": 515,
+          "TotalTransactions": 783,
+          "SuccessTransactions": 158
+        },
+        {
+          "Date": "2026-03-22 17:00",
+          "TotalUsers": 799,
+          "TotalTransactions": 1205,
+          "SuccessTransactions": 250
+        },
+        {
+          "Date": "2026-03-29 16:00",
+          "TotalUsers": 565,
+          "TotalTransactions": 908,
+          "SuccessTransactions": 158
+        },
+        {
+          "Date": "2026-02-23 18:00",
+          "TotalUsers": 926,
+          "TotalTransactions": 1337,
+          "SuccessTransactions": 286
+        },
+        {
+          "Date": "2026-03-15 22:00",
+          "TotalUsers": 767,
+          "TotalTransactions": 1159,
+          "SuccessTransactions": 197
+        },
+        {
+          "Date": "2026-02-25 08:00",
+          "TotalUsers": 658,
+          "TotalTransactions": 928,
+          "SuccessTransactions": 219
+        },
+        {
+          "Date": "2026-02-27 14:00",
+          "TotalUsers": 882,
+          "TotalTransactions": 1317,
+          "SuccessTransactions": 286
+        },
+        {
+          "Date": "2026-03-18 13:00",
+          "TotalUsers": 816,
+          "TotalTransactions": 1187,
+          "SuccessTransactions": 256
+        },
+        {
+          "Date": "2026-03-13 02:00",
+          "TotalUsers": 84,
+          "TotalTransactions": 120,
+          "SuccessTransactions": 35
+        },
+        {
+          "Date": "2026-03-28 22:00",
+          "TotalUsers": 505,
+          "TotalTransactions": 772,
+          "SuccessTransactions": 136
+        },
+        {
+          "Date": "2026-03-01 06:00",
+          "TotalUsers": 280,
+          "TotalTransactions": 414,
+          "SuccessTransactions": 97
+        },
+        {
+          "Date": "2026-03-25 13:00",
+          "TotalUsers": 881,
+          "TotalTransactions": 1214,
+          "SuccessTransactions": 231
+        },
+        {
+          "Date": "2026-03-15 18:00",
+          "TotalUsers": 759,
+          "TotalTransactions": 1106,
+          "SuccessTransactions": 203
+        },
+        {
+          "Date": "2026-02-23 03:00",
+          "TotalUsers": 48,
+          "TotalTransactions": 68,
+          "SuccessTransactions": 12
+        },
+        {
+          "Date": "2026-02-19 09:00",
+          "TotalUsers": 799,
+          "TotalTransactions": 1259,
+          "SuccessTransactions": 299
+        },
+        {
+          "Date": "2026-02-18 03:00",
+          "TotalUsers": 67,
+          "TotalTransactions": 96,
+          "SuccessTransactions": 20
+        },
+        {
+          "Date": "2026-03-20 19:00",
+          "TotalUsers": 1146,
+          "TotalTransactions": 1662,
+          "SuccessTransactions": 348
+        },
+        {
+          "Date": "2026-03-26 14:00",
+          "TotalUsers": 906,
+          "TotalTransactions": 1390,
+          "SuccessTransactions": 276
+        },
+        {
+          "Date": "2026-03-10 14:00",
+          "TotalUsers": 853,
+          "TotalTransactions": 1247,
+          "SuccessTransactions": 255
+        },
+        {
+          "Date": "2026-02-26 02:00",
+          "TotalUsers": 90,
+          "TotalTransactions": 125,
+          "SuccessTransactions": 21
+        },
+        {
+          "Date": "2026-03-09 18:00",
+          "TotalUsers": 847,
+          "TotalTransactions": 1224,
+          "SuccessTransactions": 230
+        },
+        {
+          "Date": "2026-02-17 05:00",
+          "TotalUsers": 139,
+          "TotalTransactions": 208,
+          "SuccessTransactions": 44
+        },
+        {
+          "Date": "2026-03-12 18:00",
+          "TotalUsers": 849,
+          "TotalTransactions": 1252,
+          "SuccessTransactions": 239
+        },
+        {
+          "Date": "2026-03-02 13:00",
+          "TotalUsers": 869,
+          "TotalTransactions": 1279,
+          "SuccessTransactions": 281
+        },
+        {
+          "Date": "2026-02-23 14:00",
+          "TotalUsers": 816,
+          "TotalTransactions": 1152,
+          "SuccessTransactions": 266
+        },
+        {
+          "Date": "2026-03-23 16:00",
+          "TotalUsers": 821,
+          "TotalTransactions": 1207,
+          "SuccessTransactions": 243
+        },
+        {
+          "Date": "2026-03-23 05:00",
+          "TotalUsers": 122,
+          "TotalTransactions": 201,
+          "SuccessTransactions": 32
+        },
+        {
+          "Date": "2026-03-23 18:00",
+          "TotalUsers": 966,
+          "TotalTransactions": 1447,
+          "SuccessTransactions": 264
+        },
+        {
+          "Date": "2026-02-14 18:00",
+          "TotalUsers": 903,
+          "TotalTransactions": 1245,
+          "SuccessTransactions": 276
+        },
+        {
+          "Date": "2026-03-27 00:00",
+          "TotalUsers": 258,
+          "TotalTransactions": 384,
+          "SuccessTransactions": 63
+        },
+        {
+          "Date": "2026-02-17 06:00",
+          "TotalUsers": 310,
+          "TotalTransactions": 476,
+          "SuccessTransactions": 89
+        },
+        {
+          "Date": "2026-02-15 07:00",
+          "TotalUsers": 479,
+          "TotalTransactions": 683,
+          "SuccessTransactions": 148
+        },
+        {
+          "Date": "2026-03-09 16:00",
+          "TotalUsers": 784,
+          "TotalTransactions": 1122,
+          "SuccessTransactions": 214
+        },
+        {
+          "Date": "2026-03-09 09:00",
+          "TotalUsers": 771,
+          "TotalTransactions": 1184,
+          "SuccessTransactions": 256
+        },
+        {
+          "Date": "2026-02-21 18:00",
+          "TotalUsers": 855,
+          "TotalTransactions": 1264,
+          "SuccessTransactions": 241
+        },
+        {
+          "Date": "2026-03-06 03:00",
+          "TotalUsers": 46,
+          "TotalTransactions": 55,
+          "SuccessTransactions": 16
+        },
+        {
+          "Date": "2026-02-23 12:00",
+          "TotalUsers": 1005,
+          "TotalTransactions": 1446,
+          "SuccessTransactions": 302
+        },
+        {
+          "Date": "2026-03-20 09:00",
+          "TotalUsers": 1011,
+          "TotalTransactions": 1563,
+          "SuccessTransactions": 347
+        },
+        {
+          "Date": "2026-02-28 13:00",
+          "TotalUsers": 881,
+          "TotalTransactions": 1355,
+          "SuccessTransactions": 285
+        },
+        {
+          "Date": "2026-03-16 21:00",
+          "TotalUsers": 1454,
+          "TotalTransactions": 2225,
+          "SuccessTransactions": 394
+        },
+        {
+          "Date": "2026-03-14 02:00",
+          "TotalUsers": 85,
+          "TotalTransactions": 111,
+          "SuccessTransactions": 26
+        },
+        {
+          "Date": "2026-02-26 09:00",
+          "TotalUsers": 863,
+          "TotalTransactions": 1266,
+          "SuccessTransactions": 304
+        },
+        {
+          "Date": "2026-02-28 08:00",
+          "TotalUsers": 689,
+          "TotalTransactions": 987,
+          "SuccessTransactions": 229
+        },
+        {
+          "Date": "2026-03-20 02:00",
+          "TotalUsers": 90,
+          "TotalTransactions": 140,
+          "SuccessTransactions": 23
+        },
+        {
+          "Date": "2026-02-19 17:00",
+          "TotalUsers": 648,
+          "TotalTransactions": 1026,
+          "SuccessTransactions": 195
+        },
+        {
+          "Date": "2026-02-20 14:00",
+          "TotalUsers": 700,
+          "TotalTransactions": 1102,
+          "SuccessTransactions": 241
+        },
+        {
+          "Date": "2026-03-28 10:00",
+          "TotalUsers": 788,
+          "TotalTransactions": 1226,
+          "SuccessTransactions": 206
+        },
+        {
+          "Date": "2026-03-06 16:00",
+          "TotalUsers": 633,
+          "TotalTransactions": 894,
+          "SuccessTransactions": 193
+        },
+        {
+          "Date": "2026-02-14 22:00",
+          "TotalUsers": 708,
+          "TotalTransactions": 1066,
+          "SuccessTransactions": 204
+        },
+        {
+          "Date": "2026-03-03 15:00",
+          "TotalUsers": 682,
+          "TotalTransactions": 1040,
+          "SuccessTransactions": 212
+        },
+        {
+          "Date": "2026-03-03 22:00",
+          "TotalUsers": 632,
+          "TotalTransactions": 935,
+          "SuccessTransactions": 200
+        },
+        {
+          "Date": "2026-03-11 09:00",
+          "TotalUsers": 934,
+          "TotalTransactions": 1364,
+          "SuccessTransactions": 297
+        },
+        {
+          "Date": "2026-03-10 00:00",
+          "TotalUsers": 282,
+          "TotalTransactions": 403,
+          "SuccessTransactions": 80
+        },
+        {
+          "Date": "2026-03-05 14:00",
+          "TotalUsers": 541,
+          "TotalTransactions": 742,
+          "SuccessTransactions": 175
+        },
+        {
+          "Date": "2026-02-17 18:00",
+          "TotalUsers": 972,
+          "TotalTransactions": 1337,
+          "SuccessTransactions": 308
+        },
+        {
+          "Date": "2026-02-20 18:00",
+          "TotalUsers": 731,
+          "TotalTransactions": 1096,
+          "SuccessTransactions": 240
+        },
+        {
+          "Date": "2026-03-29 19:00",
+          "TotalUsers": 558,
+          "TotalTransactions": 890,
+          "SuccessTransactions": 162
+        },
+        {
+          "Date": "2026-03-22 11:00",
+          "TotalUsers": 1046,
+          "TotalTransactions": 1593,
+          "SuccessTransactions": 340
+        },
+        {
+          "Date": "2026-03-14 13:00",
+          "TotalUsers": 938,
+          "TotalTransactions": 1432,
+          "SuccessTransactions": 262
+        },
+        {
+          "Date": "2026-03-21 09:00",
+          "TotalUsers": 1051,
+          "TotalTransactions": 1530,
+          "SuccessTransactions": 337
+        },
+        {
+          "Date": "2026-02-19 16:00",
+          "TotalUsers": 668,
+          "TotalTransactions": 1067,
+          "SuccessTransactions": 234
+        },
+        {
+          "Date": "2026-03-26 00:00",
+          "TotalUsers": 234,
+          "TotalTransactions": 322,
+          "SuccessTransactions": 65
+        },
+        {
+          "Date": "2026-02-20 23:00",
+          "TotalUsers": 412,
+          "TotalTransactions": 576,
+          "SuccessTransactions": 146
+        },
+        {
+          "Date": "2026-02-21 17:00",
+          "TotalUsers": 713,
+          "TotalTransactions": 1037,
+          "SuccessTransactions": 222
+        },
+        {
+          "Date": "2026-03-18 00:00",
+          "TotalUsers": 324,
+          "TotalTransactions": 444,
+          "SuccessTransactions": 99
+        },
+        {
+          "Date": "2026-03-04 20:00",
+          "TotalUsers": 719,
+          "TotalTransactions": 1040,
+          "SuccessTransactions": 203
+        },
+        {
+          "Date": "2026-02-16 11:00",
+          "TotalUsers": 1010,
+          "TotalTransactions": 1446,
+          "SuccessTransactions": 312
+        },
+        {
+          "Date": "2026-02-26 23:00",
+          "TotalUsers": 506,
+          "TotalTransactions": 710,
+          "SuccessTransactions": 154
+        },
+        {
+          "Date": "2026-03-02 23:00",
+          "TotalUsers": 712,
+          "TotalTransactions": 991,
+          "SuccessTransactions": 160
+        },
+        {
+          "Date": "2026-03-17 09:00",
+          "TotalUsers": 1000,
+          "TotalTransactions": 1462,
+          "SuccessTransactions": 324
+        },
+        {
+          "Date": "2026-02-15 20:00",
+          "TotalUsers": 593,
+          "TotalTransactions": 868,
+          "SuccessTransactions": 173
+        },
+        {
+          "Date": "2026-03-23 14:00",
+          "TotalUsers": 925,
+          "TotalTransactions": 1404,
+          "SuccessTransactions": 245
+        },
+        {
+          "Date": "2026-02-24 21:00",
+          "TotalUsers": 1027,
+          "TotalTransactions": 1498,
+          "SuccessTransactions": 288
+        },
+        {
+          "Date": "2026-02-27 05:00",
+          "TotalUsers": 147,
+          "TotalTransactions": 201,
+          "SuccessTransactions": 50
+        },
+        {
+          "Date": "2026-02-27 08:00",
+          "TotalUsers": 687,
+          "TotalTransactions": 1030,
+          "SuccessTransactions": 245
+        },
+        {
+          "Date": "2026-02-26 15:00",
+          "TotalUsers": 851,
+          "TotalTransactions": 1240,
+          "SuccessTransactions": 282
+        },
+        {
+          "Date": "2026-03-11 03:00",
+          "TotalUsers": 58,
+          "TotalTransactions": 82,
+          "SuccessTransactions": 16
+        },
+        {
+          "Date": "2026-02-24 04:00",
+          "TotalUsers": 70,
+          "TotalTransactions": 117,
+          "SuccessTransactions": 8
+        },
+        {
+          "Date": "2026-03-21 15:00",
+          "TotalUsers": 1012,
+          "TotalTransactions": 1510,
+          "SuccessTransactions": 314
+        },
+        {
+          "Date": "2026-03-14 11:00",
+          "TotalUsers": 1072,
+          "TotalTransactions": 1509,
+          "SuccessTransactions": 317
+        },
+        {
+          "Date": "2026-02-18 11:00",
+          "TotalUsers": 1265,
+          "TotalTransactions": 1821,
+          "SuccessTransactions": 418
+        },
+        {
+          "Date": "2026-03-15 04:00",
+          "TotalUsers": 81,
+          "TotalTransactions": 104,
+          "SuccessTransactions": 17
+        },
+        {
+          "Date": "2026-02-22 15:00",
+          "TotalUsers": 760,
+          "TotalTransactions": 1085,
+          "SuccessTransactions": 235
+        },
+        {
+          "Date": "2026-03-10 03:00",
+          "TotalUsers": 62,
+          "TotalTransactions": 98,
+          "SuccessTransactions": 21
+        },
+        {
+          "Date": "2026-02-14 03:00",
+          "TotalUsers": 67,
+          "TotalTransactions": 105,
+          "SuccessTransactions": 11
+        },
+        {
+          "Date": "2026-03-28 00:00",
+          "TotalUsers": 680,
+          "TotalTransactions": 959,
+          "SuccessTransactions": 141
+        },
+        {
+          "Date": "2026-03-24 05:00",
+          "TotalUsers": 155,
+          "TotalTransactions": 229,
+          "SuccessTransactions": 48
+        },
+        {
+          "Date": "2026-03-22 21:00",
+          "TotalUsers": 897,
+          "TotalTransactions": 1407,
+          "SuccessTransactions": 284
+        },
+        {
+          "Date": "2026-03-28 15:00",
+          "TotalUsers": 638,
+          "TotalTransactions": 954,
+          "SuccessTransactions": 168
+        },
+        {
+          "Date": "2026-03-11 12:00",
+          "TotalUsers": 1106,
+          "TotalTransactions": 1656,
+          "SuccessTransactions": 314
+        },
+        {
+          "Date": "2026-03-30 01:00",
+          "TotalUsers": 79,
+          "TotalTransactions": 112,
+          "SuccessTransactions": 28
+        },
+        {
+          "Date": "2026-03-18 23:00",
+          "TotalUsers": 474,
+          "TotalTransactions": 690,
+          "SuccessTransactions": 140
+        },
+        {
+          "Date": "2026-02-19 07:00",
+          "TotalUsers": 413,
+          "TotalTransactions": 585,
+          "SuccessTransactions": 133
+        },
+        {
+          "Date": "2026-03-30 05:00",
+          "TotalUsers": 93,
+          "TotalTransactions": 132,
+          "SuccessTransactions": 21
+        },
+        {
+          "Date": "2026-03-04 11:00",
+          "TotalUsers": 543,
+          "TotalTransactions": 758,
+          "SuccessTransactions": 174
+        },
+        {
+          "Date": "2026-03-17 23:00",
+          "TotalUsers": 526,
+          "TotalTransactions": 777,
+          "SuccessTransactions": 148
+        },
+        {
+          "Date": "2026-03-21 20:00",
+          "TotalUsers": 1410,
+          "TotalTransactions": 2070,
+          "SuccessTransactions": 427
+        },
+        {
+          "Date": "2026-03-10 10:00",
+          "TotalUsers": 988,
+          "TotalTransactions": 1623,
+          "SuccessTransactions": 323
+        },
+        {
+          "Date": "2026-03-21 11:00",
+          "TotalUsers": 1246,
+          "TotalTransactions": 1881,
+          "SuccessTransactions": 430
+        },
+        {
+          "Date": "2026-03-16 18:00",
+          "TotalUsers": 900,
+          "TotalTransactions": 1391,
+          "SuccessTransactions": 278
+        },
+        {
+          "Date": "2026-03-15 11:00",
+          "TotalUsers": 1020,
+          "TotalTransactions": 1593,
+          "SuccessTransactions": 324
+        },
+        {
+          "Date": "2026-03-11 23:00",
+          "TotalUsers": 512,
+          "TotalTransactions": 696,
+          "SuccessTransactions": 152
+        },
+        {
+          "Date": "2026-03-16 13:00",
+          "TotalUsers": 937,
+          "TotalTransactions": 1439,
+          "SuccessTransactions": 293
+        },
+        {
+          "Date": "2026-03-16 22:00",
+          "TotalUsers": 821,
+          "TotalTransactions": 1185,
+          "SuccessTransactions": 224
+        },
+        {
+          "Date": "2026-03-05 09:00",
+          "TotalUsers": 652,
+          "TotalTransactions": 951,
+          "SuccessTransactions": 213
+        },
+        {
+          "Date": "2026-02-28 22:00",
+          "TotalUsers": 752,
+          "TotalTransactions": 1191,
+          "SuccessTransactions": 225
+        },
+        {
+          "Date": "2026-03-17 20:00",
+          "TotalUsers": 1533,
+          "TotalTransactions": 2382,
+          "SuccessTransactions": 481
+        },
+        {
+          "Date": "2026-03-15 21:00",
+          "TotalUsers": 977,
+          "TotalTransactions": 1397,
+          "SuccessTransactions": 255
+        },
+        {
+          "Date": "2026-02-15 19:00",
+          "TotalUsers": 587,
+          "TotalTransactions": 879,
+          "SuccessTransactions": 159
+        },
+        {
+          "Date": "2026-02-24 03:00",
+          "TotalUsers": 70,
+          "TotalTransactions": 112,
+          "SuccessTransactions": 25
+        },
+        {
+          "Date": "2026-03-19 10:00",
+          "TotalUsers": 959,
+          "TotalTransactions": 1391,
+          "SuccessTransactions": 285
+        },
+        {
+          "Date": "2026-03-22 12:00",
+          "TotalUsers": 1090,
+          "TotalTransactions": 1629,
+          "SuccessTransactions": 332
+        },
+        {
+          "Date": "2026-02-19 18:00",
+          "TotalUsers": 782,
+          "TotalTransactions": 1153,
+          "SuccessTransactions": 226
+        },
+        {
+          "Date": "2026-03-05 15:00",
+          "TotalUsers": 597,
+          "TotalTransactions": 868,
+          "SuccessTransactions": 199
+        },
+        {
+          "Date": "2026-03-09 04:00",
+          "TotalUsers": 59,
+          "TotalTransactions": 71,
+          "SuccessTransactions": 14
+        },
+        {
+          "Date": "2026-03-09 14:00",
+          "TotalUsers": 779,
+          "TotalTransactions": 1090,
+          "SuccessTransactions": 227
+        },
+        {
+          "Date": "2026-03-20 11:00",
+          "TotalUsers": 1166,
+          "TotalTransactions": 1643,
+          "SuccessTransactions": 367
+        },
+        {
+          "Date": "2026-03-03 10:00",
+          "TotalUsers": 877,
+          "TotalTransactions": 1377,
+          "SuccessTransactions": 288
+        },
+        {
+          "Date": "2026-02-22 12:00",
+          "TotalUsers": 901,
+          "TotalTransactions": 1298,
+          "SuccessTransactions": 293
+        },
+        {
+          "Date": "2026-03-27 12:00",
+          "TotalUsers": 924,
+          "TotalTransactions": 1439,
+          "SuccessTransactions": 269
+        },
+        {
+          "Date": "2026-03-27 15:00",
+          "TotalUsers": 844,
+          "TotalTransactions": 1336,
+          "SuccessTransactions": 238
+        },
+        {
+          "Date": "2026-03-28 23:00",
+          "TotalUsers": 315,
+          "TotalTransactions": 508,
+          "SuccessTransactions": 75
+        },
+        {
+          "Date": "2026-03-29 18:00",
+          "TotalUsers": 516,
+          "TotalTransactions": 841,
+          "SuccessTransactions": 122
+        },
+        {
+          "Date": "2026-03-24 12:00",
+          "TotalUsers": 1131,
+          "TotalTransactions": 1754,
+          "SuccessTransactions": 311
+        },
+        {
+          "Date": "2026-02-19 21:00",
+          "TotalUsers": 775,
+          "TotalTransactions": 1180,
+          "SuccessTransactions": 242
+        },
+        {
+          "Date": "2026-03-15 23:00",
+          "TotalUsers": 508,
+          "TotalTransactions": 694,
+          "SuccessTransactions": 135
+        },
+        {
+          "Date": "2026-03-17 18:00",
+          "TotalUsers": 969,
+          "TotalTransactions": 1415,
+          "SuccessTransactions": 291
+        },
+        {
+          "Date": "2026-02-17 00:00",
+          "TotalUsers": 298,
+          "TotalTransactions": 426,
+          "SuccessTransactions": 102
+        },
+        {
+          "Date": "2026-02-19 10:00",
+          "TotalUsers": 878,
+          "TotalTransactions": 1287,
+          "SuccessTransactions": 317
+        },
+        {
+          "Date": "2026-02-14 17:00",
+          "TotalUsers": 739,
+          "TotalTransactions": 1061,
+          "SuccessTransactions": 234
+        },
+        {
+          "Date": "2026-02-23 10:00",
+          "TotalUsers": 965,
+          "TotalTransactions": 1452,
+          "SuccessTransactions": 345
+        },
+        {
+          "Date": "2026-02-27 03:00",
+          "TotalUsers": 54,
+          "TotalTransactions": 84,
+          "SuccessTransactions": 24
+        },
+        {
+          "Date": "2026-03-07 06:00",
+          "TotalUsers": 334,
+          "TotalTransactions": 435,
+          "SuccessTransactions": 105
+        },
+        {
+          "Date": "2026-03-12 03:00",
+          "TotalUsers": 53,
+          "TotalTransactions": 69,
+          "SuccessTransactions": 22
+        },
+        {
+          "Date": "2026-03-29 21:00",
+          "TotalUsers": 650,
+          "TotalTransactions": 1014,
+          "SuccessTransactions": 175
+        },
+        {
+          "Date": "2026-03-07 04:00",
+          "TotalUsers": 67,
+          "TotalTransactions": 95,
+          "SuccessTransactions": 20
+        },
+        {
+          "Date": "2026-03-20 22:00",
+          "TotalUsers": 744,
+          "TotalTransactions": 1075,
+          "SuccessTransactions": 222
+        },
+        {
+          "Date": "2026-03-06 23:00",
+          "TotalUsers": 477,
+          "TotalTransactions": 627,
+          "SuccessTransactions": 131
+        },
+        {
+          "Date": "2026-03-16 15:00",
+          "TotalUsers": 955,
+          "TotalTransactions": 1459,
+          "SuccessTransactions": 293
+        },
+        {
+          "Date": "2026-02-18 05:00",
+          "TotalUsers": 143,
+          "TotalTransactions": 179,
+          "SuccessTransactions": 43
+        },
+        {
+          "Date": "2026-03-11 08:00",
+          "TotalUsers": 754,
+          "TotalTransactions": 1112,
+          "SuccessTransactions": 223
+        },
+        {
+          "Date": "2026-03-02 06:00",
+          "TotalUsers": 283,
+          "TotalTransactions": 396,
+          "SuccessTransactions": 91
+        },
+        {
+          "Date": "2026-02-15 22:00",
+          "TotalUsers": 548,
+          "TotalTransactions": 775,
+          "SuccessTransactions": 155
+        },
+        {
+          "Date": "2026-02-18 20:00",
+          "TotalUsers": 1156,
+          "TotalTransactions": 1613,
+          "SuccessTransactions": 339
+        },
+        {
+          "Date": "2026-03-24 08:00",
+          "TotalUsers": 738,
+          "TotalTransactions": 1096,
+          "SuccessTransactions": 220
+        },
+        {
+          "Date": "2026-03-26 06:00",
+          "TotalUsers": 315,
+          "TotalTransactions": 422,
+          "SuccessTransactions": 89
+        },
+        {
+          "Date": "2026-03-27 03:00",
+          "TotalUsers": 62,
+          "TotalTransactions": 93,
+          "SuccessTransactions": 19
+        },
+        {
+          "Date": "2026-03-25 11:00",
+          "TotalUsers": 1036,
+          "TotalTransactions": 1496,
+          "SuccessTransactions": 301
+        },
+        {
+          "Date": "2026-03-05 12:00",
+          "TotalUsers": 703,
+          "TotalTransactions": 1022,
+          "SuccessTransactions": 229
+        },
+        {
+          "Date": "2026-03-27 05:00",
+          "TotalUsers": 121,
+          "TotalTransactions": 162,
+          "SuccessTransactions": 33
+        },
+        {
+          "Date": "2026-03-18 14:00",
+          "TotalUsers": 746,
+          "TotalTransactions": 1088,
+          "SuccessTransactions": 215
+        },
+        {
+          "Date": "2026-02-22 03:00",
+          "TotalUsers": 60,
+          "TotalTransactions": 75,
+          "SuccessTransactions": 20
+        },
+        {
+          "Date": "2026-03-19 23:00",
+          "TotalUsers": 468,
+          "TotalTransactions": 668,
+          "SuccessTransactions": 139
+        },
+        {
+          "Date": "2026-02-26 11:00",
+          "TotalUsers": 1100,
+          "TotalTransactions": 1571,
+          "SuccessTransactions": 370
+        },
+        {
+          "Date": "2026-03-14 06:00",
+          "TotalUsers": 300,
+          "TotalTransactions": 425,
+          "SuccessTransactions": 106
+        },
+        {
+          "Date": "2026-03-22 16:00",
+          "TotalUsers": 821,
+          "TotalTransactions": 1226,
+          "SuccessTransactions": 269
+        },
+        {
+          "Date": "2026-02-22 14:00",
+          "TotalUsers": 736,
+          "TotalTransactions": 1054,
+          "SuccessTransactions": 226
+        },
+        {
+          "Date": "2026-02-20 05:00",
+          "TotalUsers": 119,
+          "TotalTransactions": 148,
+          "SuccessTransactions": 43
+        },
+        {
+          "Date": "2026-02-28 12:00",
+          "TotalUsers": 1069,
+          "TotalTransactions": 1642,
+          "SuccessTransactions": 342
+        },
+        {
+          "Date": "2026-02-18 10:00",
+          "TotalUsers": 1105,
+          "TotalTransactions": 1658,
+          "SuccessTransactions": 380
+        },
+        {
+          "Date": "2026-02-15 02:00",
+          "TotalUsers": 88,
+          "TotalTransactions": 117,
+          "SuccessTransactions": 27
+        },
+        {
+          "Date": "2026-02-16 08:00",
+          "TotalUsers": 645,
+          "TotalTransactions": 935,
+          "SuccessTransactions": 225
+        },
+        {
+          "Date": "2026-03-19 16:00",
+          "TotalUsers": 925,
+          "TotalTransactions": 1324,
+          "SuccessTransactions": 291
+        },
+        {
+          "Date": "2026-03-02 19:00",
+          "TotalUsers": 1029,
+          "TotalTransactions": 1492,
+          "SuccessTransactions": 277
+        },
+        {
+          "Date": "2026-03-26 15:00",
+          "TotalUsers": 850,
+          "TotalTransactions": 1271,
+          "SuccessTransactions": 236
+        },
+        {
+          "Date": "2026-03-02 00:00",
+          "TotalUsers": 265,
+          "TotalTransactions": 389,
+          "SuccessTransactions": 72
+        },
+        {
+          "Date": "2026-02-21 16:00",
+          "TotalUsers": 859,
+          "TotalTransactions": 1302,
+          "SuccessTransactions": 307
+        },
+        {
+          "Date": "2026-03-24 20:00",
+          "TotalUsers": 1463,
+          "TotalTransactions": 2138,
+          "SuccessTransactions": 409
+        },
+        {
+          "Date": "2026-03-02 02:00",
+          "TotalUsers": 76,
+          "TotalTransactions": 110,
+          "SuccessTransactions": 28
+        },
+        {
+          "Date": "2026-03-09 03:00",
+          "TotalUsers": 44,
+          "TotalTransactions": 58,
+          "SuccessTransactions": 16
+        },
+        {
+          "Date": "2026-03-06 19:00",
+          "TotalUsers": 1146,
+          "TotalTransactions": 1598,
+          "SuccessTransactions": 312
+        },
+        {
+          "Date": "2026-02-14 04:00",
+          "TotalUsers": 60,
+          "TotalTransactions": 92,
+          "SuccessTransactions": 15
+        },
+        {
+          "Date": "2026-03-13 23:00",
+          "TotalUsers": 453,
+          "TotalTransactions": 664,
+          "SuccessTransactions": 129
+        },
+        {
+          "Date": "2026-03-23 23:00",
+          "TotalUsers": 441,
+          "TotalTransactions": 676,
+          "SuccessTransactions": 115
+        },
+        {
+          "Date": "2026-02-16 15:00",
+          "TotalUsers": 878,
+          "TotalTransactions": 1277,
+          "SuccessTransactions": 285
+        },
+        {
+          "Date": "2026-03-27 17:00",
+          "TotalUsers": 716,
+          "TotalTransactions": 1094,
+          "SuccessTransactions": 181
+        },
+        {
+          "Date": "2026-03-24 10:00",
+          "TotalUsers": 1075,
+          "TotalTransactions": 1709,
+          "SuccessTransactions": 346
+        },
+        {
+          "Date": "2026-02-27 04:00",
+          "TotalUsers": 71,
+          "TotalTransactions": 126,
+          "SuccessTransactions": 23
+        },
+        {
+          "Date": "2026-03-04 05:00",
+          "TotalUsers": 103,
+          "TotalTransactions": 141,
+          "SuccessTransactions": 32
+        },
+        {
+          "Date": "2026-02-25 04:00",
+          "TotalUsers": 77,
+          "TotalTransactions": 106,
+          "SuccessTransactions": 35
+        },
+        {
+          "Date": "2026-03-02 04:00",
+          "TotalUsers": 70,
+          "TotalTransactions": 95,
+          "SuccessTransactions": 24
+        },
+        {
+          "Date": "2026-02-17 01:00",
+          "TotalUsers": 122,
+          "TotalTransactions": 181,
+          "SuccessTransactions": 33
+        },
+        {
+          "Date": "2026-03-24 23:00",
+          "TotalUsers": 460,
+          "TotalTransactions": 657,
+          "SuccessTransactions": 129
+        },
+        {
+          "Date": "2026-02-23 01:00",
+          "TotalUsers": 142,
+          "TotalTransactions": 202,
+          "SuccessTransactions": 53
+        },
+        {
+          "Date": "2026-03-20 01:00",
+          "TotalUsers": 174,
+          "TotalTransactions": 256,
+          "SuccessTransactions": 57
+        },
+        {
+          "Date": "2026-03-22 20:00",
+          "TotalUsers": 972,
+          "TotalTransactions": 1434,
+          "SuccessTransactions": 304
+        },
+        {
+          "Date": "2026-03-05 23:00",
+          "TotalUsers": 330,
+          "TotalTransactions": 467,
+          "SuccessTransactions": 98
+        },
+        {
+          "Date": "2026-03-14 14:00",
+          "TotalUsers": 879,
+          "TotalTransactions": 1300,
+          "SuccessTransactions": 260
+        },
+        {
+          "Date": "2026-03-20 23:00",
+          "TotalUsers": 510,
+          "TotalTransactions": 777,
+          "SuccessTransactions": 139
+        },
+        {
+          "Date": "2026-03-23 19:00",
+          "TotalUsers": 1125,
+          "TotalTransactions": 1692,
+          "SuccessTransactions": 296
+        },
+        {
+          "Date": "2026-02-19 19:00",
+          "TotalUsers": 917,
+          "TotalTransactions": 1372,
+          "SuccessTransactions": 281
+        },
+        {
+          "Date": "2026-03-23 04:00",
+          "TotalUsers": 54,
+          "TotalTransactions": 72,
+          "SuccessTransactions": 16
+        },
+        {
+          "Date": "2026-02-26 07:00",
+          "TotalUsers": 479,
+          "TotalTransactions": 658,
+          "SuccessTransactions": 182
+        },
+        {
+          "Date": "2026-03-16 20:00",
+          "TotalUsers": 1391,
+          "TotalTransactions": 2056,
+          "SuccessTransactions": 384
+        },
+        {
+          "Date": "2026-03-08 12:00",
+          "TotalUsers": 984,
+          "TotalTransactions": 1463,
+          "SuccessTransactions": 321
+        },
+        {
+          "Date": "2026-03-13 03:00",
+          "TotalUsers": 72,
+          "TotalTransactions": 101,
+          "SuccessTransactions": 20
+        },
+        {
+          "Date": "2026-02-15 21:00",
+          "TotalUsers": 609,
+          "TotalTransactions": 863,
+          "SuccessTransactions": 176
+        },
+        {
+          "Date": "2026-03-10 12:00",
+          "TotalUsers": 1029,
+          "TotalTransactions": 1442,
+          "SuccessTransactions": 312
+        },
+        {
+          "Date": "2026-03-07 11:00",
+          "TotalUsers": 1167,
+          "TotalTransactions": 1754,
+          "SuccessTransactions": 377
+        },
+        {
+          "Date": "2026-02-27 18:00",
+          "TotalUsers": 863,
+          "TotalTransactions": 1281,
+          "SuccessTransactions": 263
+        },
+        {
+          "Date": "2026-03-18 19:00",
+          "TotalUsers": 988,
+          "TotalTransactions": 1486,
+          "SuccessTransactions": 334
+        },
+        {
+          "Date": "2026-03-16 03:00",
+          "TotalUsers": 60,
+          "TotalTransactions": 76,
+          "SuccessTransactions": 25
+        },
+        {
+          "Date": "2026-03-08 06:00",
+          "TotalUsers": 331,
+          "TotalTransactions": 445,
+          "SuccessTransactions": 93
+        }
+      ]
+    },
+    "data_source_id": 3,
+    "runtime": 15.3261566162109,
+    "retrieved_at": "2026-03-30T10:06:46.271Z"
+  }
+}

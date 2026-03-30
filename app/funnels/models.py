@@ -9,7 +9,7 @@ from typing import Any
 class EmailConfig:
     subject_prefix: str
     subscribers: list[str]
-    send_always_summary: bool
+    notify_on: str  # alert_only | always | never
 
 
 @dataclass(frozen=True)

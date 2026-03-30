@@ -38,6 +38,10 @@ class Settings:
     gemini_api_key: str | None
     gemini_model: str
 
+    notification_channel: str
+    google_chat_webhook_url: str | None
+    google_chat_app_name: str
+
     mailgun_api_key: str | None
     mailgun_domain: str | None
     mailgun_from_email: str | None
@@ -64,6 +68,9 @@ def get_settings() -> Settings:
         openai_model=os.getenv("OPENAI_MODEL", "gpt-5.4"),
         gemini_api_key=os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY"),
         gemini_model=os.getenv("GEMINI_MODEL", "gemini-3-flash-preview"),
+        notification_channel=os.getenv("NOTIFICATION_CHANNEL", "mail").strip().lower(),
+        google_chat_webhook_url=os.getenv("GOOGLE_CHAT_WEBHOOK_URL"),
+        google_chat_app_name=os.getenv("GOOGLE_CHAT_APP_NAME", "AI Funnel Health"),
         mailgun_api_key=os.getenv("MAILGUN_API_KEY"),
         mailgun_domain=os.getenv("MAILGUN_DOMAIN"),
         mailgun_from_email=os.getenv("MAILGUN_FROM_EMAIL"),

@@ -103,8 +103,29 @@ def _build_compact_payload(health_report: dict[str, Any]) -> dict[str, Any]:
         "overall_status": health_report.get("overall_status"),
         "alerted_events": health_report.get("alerted_events", []),
         "alerted_ratios": health_report.get("alerted_ratios", []),
-        "events": health_report.get("events", []),
-        "ratios": health_report.get("ratios", []),
+        "events": [
+            {
+                "event_name": e.get("event_name"),
+                "current_value": e.get("current_value"),
+                "benchmark_value": e.get("benchmark_value", e.get("baseline_mean")),
+                "drop_pct_vs_benchmark": e.get("drop_pct_vs_benchmark", e.get("drop_pct_vs_mean")),
+                "threshold_pct": e.get("threshold_pct"),
+                "alert": e.get("alert"),
+            }
+            for e in health_report.get("events", [])
+        ],
+        "ratios": [
+            {
+                "from_event": r.get("from_event"),
+                "to_event": r.get("to_event"),
+                "current_ratio": r.get("current_ratio"),
+                "benchmark_pct": r.get("benchmark_pct"),
+                "ratio_drop_pct_vs_benchmark": r.get("ratio_drop_pct_vs_benchmark", r.get("ratio_drop_pct_vs_mean")),
+                "threshold_pct": r.get("threshold_pct"),
+                "alert": r.get("alert"),
+            }
+            for r in health_report.get("ratios", [])
+        ],
     }
 
 
@@ -122,7 +143,9 @@ def _developer_prompt() -> str:
 def _user_prompt(compact_payload: dict[str, Any]) -> str:
     return (
         "Analyze this previous-hour funnel-health payload.\n"
-        "If ratio alerts fired but event counts did not drop, clearly say: traffic was okay, but conversion got weaker.\n"
+        "Important: compare current numbers only against the fixed benchmarks provided in the payload.\n"
+        "Do not refer to last-10-day averages or historical baselines.\n"
+        "If ratio alerts fired but traffic metrics look fine, clearly say: traffic was okay, but conversion got weaker.\n"
         f"Payload:\n{json.dumps(compact_payload, indent=2, ensure_ascii=False)}"
     )
 

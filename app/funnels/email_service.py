@@ -88,15 +88,6 @@ def _verdict_colors(verdict: str) -> tuple[str, str]:
 
 
 def _display_change_from_drop_pct(drop_pct: Any) -> tuple[str, str]:
-    """
-    Stored metric logic:
-    - positive drop_pct => current is below baseline
-    - negative drop_pct => current is above baseline
-
-    Display logic:
-    - show positive change in green
-    - show negative change in red
-    """
     if drop_pct is None:
         return "—", "#6B7280"
 
@@ -174,7 +165,10 @@ def _render_step_highlight_cards(
     cards = []
     for step_name in step_names:
         event = events.get(step_name, {})
-        change_text, change_color = _display_change_from_drop_pct(event.get("drop_pct_vs_mean"))
+        change_text, change_color = _display_change_from_drop_pct(
+            event.get("drop_pct_vs_benchmark", event.get("drop_pct_vs_mean"))
+        )
+        benchmark_value = event.get("benchmark_value", event.get("baseline_mean"))
 
         cards.append(
             f"""
@@ -182,7 +176,7 @@ def _render_step_highlight_cards(
               <div style="font-size:12px;color:#6b7280;">{_emoji_for_step(step_name)} {escape(step_name)}</div>
               <div style="margin-top:8px;font-size:24px;font-weight:700;color:#111827;">{_format_number(event.get("current_value"))}</div>
               <div style="margin-top:6px;font-size:13px;color:#6b7280;">
-                vs baseline {_format_number(event.get("baseline_mean"))}
+                vs benchmark {_format_number(benchmark_value)}
               </div>
               <div style="margin-top:6px;font-size:13px;color:#6b7280;">
                 Change:
@@ -206,7 +200,14 @@ def _render_ratio_cards(
         from_event = step_names[i]
         to_event = step_names[i + 1]
         ratio = ratios.get(f"{from_event}->{to_event}", {})
-        change_text, change_color = _display_change_from_drop_pct(ratio.get("ratio_drop_pct_vs_mean"))
+        change_text, change_color = _display_change_from_drop_pct(
+            ratio.get("ratio_drop_pct_vs_benchmark", ratio.get("ratio_drop_pct_vs_mean"))
+        )
+
+        benchmark_pct = ratio.get("benchmark_pct")
+        if benchmark_pct is None:
+            baseline_ratio = ratio.get("baseline_ratio_mean")
+            benchmark_pct = (baseline_ratio or 0) * 100
 
         cards.append(
             f"""
@@ -216,7 +217,7 @@ def _render_ratio_cards(
                 {_format_pct((ratio.get("current_ratio") or 0) * 100, 2)}
               </div>
               <div style="margin-top:6px;font-size:13px;color:#6b7280;">
-                Baseline {_format_pct((ratio.get("baseline_ratio_mean") or 0) * 100, 2)}
+                Benchmark {_format_pct(benchmark_pct, 2)}
               </div>
               <div style="margin-top:6px;font-size:13px;color:#6b7280;">
                 Change:
@@ -260,7 +261,7 @@ def render_email_html(
           
           <div style="padding:28px 30px;border-bottom:1px solid #e5e7eb;background:#fcfcfd;">
             <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;">
-              Hourly funnel health report
+              Hourly funnel health alert
             </div>
             <h1 style="margin:10px 0 6px;font-size:26px;line-height:1.3;">
               {escape(funnel.name)}
@@ -366,8 +367,13 @@ def maybe_send_email(
     summary: dict[str, Any],
     settings: Settings,
 ) -> bool:
-    status = (health_report.get("overall_status") or "healthy").lower()
-    if not funnel.email.send_always_summary and status == "healthy":
+    notify_on = (funnel.email.notify_on or "alert_only").lower()
+
+    if notify_on == "never":
+        return False
+
+    has_alert = bool(health_report.get("alerted_events")) or bool(health_report.get("alerted_ratios"))
+    if notify_on == "alert_only" and not has_alert:
         return False
 
     if not funnel.email.subscribers:

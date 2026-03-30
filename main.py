@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-from contextlib import asynccontextmanager
-from pathlib import Path
+import json
 import traceback
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, HTTPException
 from fastapi.concurrency import run_in_threadpool
@@ -37,6 +37,7 @@ def health() -> dict:
         "app_name": settings.app_name,
         "scheduler_enabled": settings.enable_scheduler,
         "timezone": settings.app_timezone,
+        "notification_channel": settings.notification_channel,
     }
 
 
@@ -54,9 +55,12 @@ def funnels() -> list[dict]:
 
 
 @app.post("/funnels/{funnel_id}/run")
-async def run_single_funnel(funnel_id: str) -> dict:
+async def run_single_funnel(
+    funnel_id: str,
+    force_notification: bool = False,
+) -> dict:
     try:
-        return await run_in_threadpool(run_funnel_monitor, funnel_id)
+        return await run_in_threadpool(run_funnel_monitor, funnel_id, None, force_notification)
     except Exception as exc:
         raise HTTPException(status_code=400, detail=traceback.format_exc()) from exc
 
@@ -76,7 +80,8 @@ def get_health_report(funnel_id: str) -> dict:
         path = funnel.output_file("health_report.json")
         if not path.exists():
             raise FileNotFoundError("health_report.json not found")
-        return __import__("json").load(path.open("r", encoding="utf-8"))
+        with path.open("r", encoding="utf-8") as f:
+            return json.load(f)
     except Exception as exc:
         raise HTTPException(status_code=400, detail=traceback.format_exc()) from exc
 
@@ -88,6 +93,20 @@ def get_summary(funnel_id: str) -> dict:
         path = funnel.output_file("summary.json")
         if not path.exists():
             raise FileNotFoundError("summary.json not found")
-        return __import__("json").load(path.open("r", encoding="utf-8"))
+        with path.open("r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as exc:
+        raise HTTPException(status_code=400, detail=traceback.format_exc()) from exc
+
+
+@app.get("/funnels/{funnel_id}/run-state")
+def get_run_state(funnel_id: str) -> dict:
+    try:
+        funnel = get_funnel(funnel_id)
+        path = funnel.output_file("run_state.json")
+        if not path.exists():
+            return {}
+        with path.open("r", encoding="utf-8") as f:
+            return json.load(f)
     except Exception as exc:
         raise HTTPException(status_code=400, detail=traceback.format_exc()) from exc

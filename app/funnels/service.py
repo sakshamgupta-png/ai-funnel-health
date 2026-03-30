@@ -5,15 +5,19 @@ from zoneinfo import ZoneInfo
 
 from app.configs.settings import get_settings
 from app.funnels.ai_summary import generate_and_store_summary
-from app.funnels.email_service import maybe_send_email
 from app.funnels.health import analyze_and_store_health
 from app.funnels.normalize import normalize_and_store_report
+from app.funnels.notification_service import maybe_send_notifications
 from app.funnels.redash_client import fetch_redash_report
 from app.funnels.registry import get_funnel, list_funnels
 from app.funnels.webengage_client import fetch_webengage_report
 
 
-def run_funnel_monitor(funnel_id: str, run_dt: datetime | None = None) -> dict:
+def run_funnel_monitor(
+    funnel_id: str,
+    run_dt: datetime | None = None,
+    force_notification: bool = False,
+) -> dict:
     settings = get_settings()
     funnel = get_funnel(funnel_id)
 
@@ -44,7 +48,14 @@ def run_funnel_monitor(funnel_id: str, run_dt: datetime | None = None) -> dict:
     )
 
     summary = generate_and_store_summary(funnel, health_report, settings)
-    email_sent = maybe_send_email(funnel, health_report, summary, settings)
+
+    notification_results = maybe_send_notifications(
+        funnel=funnel,
+        health_report=health_report,
+        summary=summary,
+        settings=settings,
+        force_notification=force_notification,
+    )
 
     print(f"[DONE] Finished funnel monitor for {funnel_id} with status={health_report.get('overall_status')}")
 
@@ -52,8 +63,10 @@ def run_funnel_monitor(funnel_id: str, run_dt: datetime | None = None) -> dict:
         "funnel_id": funnel.funnel_id,
         "name": funnel.name,
         "run_time": run_dt.isoformat(),
+        "target_hour": health_report.get("latest_complete_hour"),
         "status": health_report.get("overall_status"),
-        "email_sent": email_sent,
+        "mail_sent": notification_results["mail_sent"],
+        "chat_sent": notification_results["chat_sent"],
         "outputs_dir": str(funnel.outputs_dir),
     }
 

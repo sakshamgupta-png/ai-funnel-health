@@ -47,7 +47,7 @@ def list_funnels() -> list[FunnelConfig]:
                 email=EmailConfig(
                     subject_prefix=email_raw.get("subject_prefix", raw.get("name", raw["funnel_id"])),
                     subscribers=email_raw.get("subscribers", []),
-                    send_always_summary=bool(email_raw.get("send_always_summary", True)),
+                    notify_on=email_raw.get("notify_on", "alert_only"),
                 ),
             )
         )

@@ -1,0 +1,94 @@
+{
+  "latest_complete_hour": "2026-03-30T14:00:00",
+  "overall_status": "critical",
+  "source_meta": {
+    "webengage": {
+      "bucket_count": 280
+    },
+    "redash": {
+      "retrieved_at": "2026-03-30T10:06:46.271Z",
+      "query_result_id": 48619318,
+      "row_count": 1072,
+      "time_column": "Date"
+    }
+  },
+  "events": [
+    {
+      "event_name": "Sessions",
+      "current_value": 162368.0,
+      "latest_complete_hour": "2026-03-30T14:00:00",
+      "benchmark_value": 134607.0,
+      "drop_pct_vs_benchmark": -20.623741707340628,
+      "threshold_pct": 8.0,
+      "alert": false
+    },
+    {
+      "event_name": "Goal Page Visited",
+      "current_value": 3453.0,
+      "latest_complete_hour": "2026-03-30T14:00:00",
+      "benchmark_value": 33649.0,
+      "drop_pct_vs_benchmark": 89.73817944069661,
+      "threshold_pct": 10.0,
+      "alert": true
+    },
+    {
+      "event_name": "Orders Created",
+      "current_value": 931.0,
+      "latest_complete_hour": "2026-03-30T14:00:00",
+      "benchmark_value": 1165.0,
+      "drop_pct_vs_benchmark": 20.085836909871244,
+      "threshold_pct": 12.0,
+      "alert": true
+    },
+    {
+      "event_name": "Successful Orders",
+      "current_value": 145.0,
+      "latest_complete_hour": "2026-03-30T14:00:00",
+      "benchmark_value": 236.0,
+      "drop_pct_vs_benchmark": 38.559322033898304,
+      "threshold_pct": 15.0,
+      "alert": true
+    }
+  ],
+  "ratios": [
+    {
+      "from_event": "Sessions",
+      "to_event": "Goal Page Visited",
+      "current_ratio": 0.021266505715411905,
+      "benchmark_ratio": 0.25129999999999997,
+      "benchmark_pct": 25.13,
+      "ratio_drop_pct_vs_benchmark": 91.53740321710629,
+      "threshold_pct": 15.0,
+      "alert": true
+    },
+    {
+      "from_event": "Goal Page Visited",
+      "to_event": "Orders Created",
+      "current_ratio": 0.2696206197509412,
+      "benchmark_ratio": 0.0374,
+      "benchmark_pct": 3.74,
+      "ratio_drop_pct_vs_benchmark": -620.910747997169,
+      "threshold_pct": 12.0,
+      "alert": false
+    },
+    {
+      "from_event": "Orders Created",
+      "to_event": "Successful Orders",
+      "current_ratio": 0.15574650912996776,
+      "benchmark_ratio": 0.2023,
+      "benchmark_pct": 20.23,
+      "ratio_drop_pct_vs_benchmark": 23.01210621356018,
+      "threshold_pct": 10.0,
+      "alert": true
+    }
+  ],
+  "alerted_events": [
+    "Goal Page Visited",
+    "Orders Created",
+    "Successful Orders"
+  ],
+  "alerted_ratios": [
+    "Sessions->Goal Page Visited",
+    "Orders Created->Successful Orders"
+  ]
+}
