@@ -66,3 +66,5 @@ htmlcov/
 *.temp
 
 secrets/
+
+.venv/
