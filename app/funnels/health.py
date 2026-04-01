@@ -72,7 +72,7 @@ def _config_for_ratio(config: dict[str, Any], from_event: str, to_event: str) ->
         raise ValueError(f"Missing benchmark_pct for ratio: {key}")
     return {
         "benchmark_pct": float(ratio_cfg["benchmark_pct"]),
-        "drop_threshold_pct": float(ratio_cfg.get("drop_threshold_pct", 10)),
+        "drop_threshold_pct": float(ratio_cfg.get("drop_threshold_pct", 0)),
     }
 
 
@@ -89,11 +89,15 @@ def _safe_ratio(num: float, den: float) -> float | None:
 
 
 def _classify_overall(
+    alert_mode: str,
     event_results: list[dict[str, Any]],
     ratio_results: list[dict[str, Any]],
 ) -> str:
     alerted_events = [e for e in event_results if e.get("alert")]
     alerted_ratios = [r for r in ratio_results if r.get("alert")]
+
+    if alert_mode == "ratios_only":
+        return "critical" if alerted_ratios else "healthy"
 
     if not alerted_events and not alerted_ratios:
         return "healthy"
@@ -114,6 +118,7 @@ def analyze_and_store_health(
     timezone_name: str,
 ) -> dict[str, Any]:
     config = funnel.health_config
+    alert_mode = (config.get("alert_mode") or "events_and_ratios").lower()
     ordered_events = funnel.step_names()
 
     event_series = _build_event_series(normalized_report)
@@ -140,10 +145,13 @@ def analyze_and_store_health(
         benchmark_value = settings["benchmark_value"]
         drop_pct_vs_benchmark = _pct_drop(current_value, benchmark_value)
 
-        alert = (
-            drop_pct_vs_benchmark is not None
-            and drop_pct_vs_benchmark >= settings["drop_threshold_pct"]
-        )
+        # In ratios_only mode, event alerts are disabled
+        event_alert = False
+        if alert_mode != "ratios_only":
+            event_alert = (
+                drop_pct_vs_benchmark is not None
+                and drop_pct_vs_benchmark >= settings["drop_threshold_pct"]
+            )
 
         event_results.append(
             {
@@ -153,7 +161,7 @@ def analyze_and_store_health(
                 "benchmark_value": benchmark_value,
                 "drop_pct_vs_benchmark": drop_pct_vs_benchmark,
                 "threshold_pct": settings["drop_threshold_pct"],
-                "alert": alert,
+                "alert": event_alert,
             }
         )
 
@@ -188,7 +196,8 @@ def analyze_and_store_health(
 
     health_report = {
         "latest_complete_hour": target_dt.strftime("%Y-%m-%dT%H:00:00"),
-        "overall_status": _classify_overall(event_results, ratio_results),
+        "overall_status": _classify_overall(alert_mode, event_results, ratio_results),
+        "alert_mode": alert_mode,
         "source_meta": normalized_report.get("source_meta", {}),
         "events": event_results,
         "ratios": ratio_results,

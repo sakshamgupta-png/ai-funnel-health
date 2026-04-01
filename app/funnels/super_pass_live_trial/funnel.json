@@ -2,7 +2,6 @@
   "funnel_id": "super_pass_live_trial",
   "name": "Super Pass Live - Trial",
   "enabled": true,
-
   "email": {
     "subject_prefix": "Super Pass Live (Trial) Funnel",
     "subscribers": [
@@ -10,7 +9,6 @@
     ],
     "notify_on": "alert_only"
   },
-
   "sources": {
     "webengage": {
       "enabled": true,
@@ -25,6 +23,20 @@
           {
             "name": "user_session_started",
             "category": "system",
+            "filters": {
+              "logicalOperator": "AND",
+              "expressions": [
+                {
+                  "attribute": "app_id",
+                  "attributeCategory": "system",
+                  "values": [
+                    "com.testbook.tbapp"
+                  ],
+                  "operator": "EQ",
+                  "type": "string"
+                }
+              ]
+            },
             "series": "A",
             "displayName": "Session Started",
             "aggregation": {
@@ -44,7 +56,7 @@
                   "values": [
                     "685e851a620511f4ba002ff6"
                   ],
-                  "operator": "EQ",
+                  "operator": "IN",
                   "type": "string"
                 }
               ]
@@ -59,7 +71,6 @@
         ]
       }
     },
-
     "redash": {
       "enabled": true,
       "base_url": "https://data.testbook.com",
@@ -71,7 +82,6 @@
       "time_column": "Date"
     }
   },
-
   "steps": [
     {
       "name": "Sessions",
@@ -94,10 +104,9 @@
       "source_key": "SuccessTransactions"
     }
   ],
-
   "health_config": {
     "mode": "benchmark",
-
+    "alert_mode": "ratios_only",
     "events": {
       "Sessions": {
         "benchmark_value": 134607,
@@ -116,19 +125,18 @@
         "drop_threshold_pct": 15
       }
     },
-
     "ratios": {
       "Sessions->Goal Page Visited": {
-        "benchmark_pct": 25.13,
-        "drop_threshold_pct": 15
+        "benchmark_pct": 44,
+        "drop_threshold_pct": 3
       },
       "Goal Page Visited->Orders Created": {
-        "benchmark_pct": 3.74,
-        "drop_threshold_pct": 12
+        "benchmark_pct": 4,
+        "drop_threshold_pct": 1
       },
       "Orders Created->Successful Orders": {
-        "benchmark_pct": 20.23,
-        "drop_threshold_pct": 10
+        "benchmark_pct": 20,
+        "drop_threshold_pct": 2
       }
     }
   }

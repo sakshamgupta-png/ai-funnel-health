@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-from typing import Any
-
 from app.configs.settings import Settings
 from app.funnels.chat_service import send_google_chat_message
 from app.funnels.email_service import maybe_send_email
@@ -12,11 +10,16 @@ from app.funnels.run_state import (
 )
 
 
-def _has_alert(health_report: dict[str, Any]) -> bool:
+def _has_alert(funnel: FunnelConfig, health_report: dict[str, object]) -> bool:
+    alert_mode = (funnel.health_config.get("alert_mode") or "events_and_ratios").lower()
+
+    if alert_mode == "ratios_only":
+        return bool(health_report.get("alerted_ratios"))
+
     return bool(health_report.get("alerted_events")) or bool(health_report.get("alerted_ratios"))
 
 
-def _should_notify(funnel: FunnelConfig, health_report: dict[str, Any]) -> bool:
+def _should_notify(funnel: FunnelConfig, health_report: dict[str, object]) -> bool:
     mode = (funnel.email.notify_on or "alert_only").lower()
 
     if mode == "never":
@@ -24,7 +27,7 @@ def _should_notify(funnel: FunnelConfig, health_report: dict[str, Any]) -> bool:
     if mode == "always":
         return True
     if mode == "alert_only":
-        return _has_alert(health_report)
+        return _has_alert(funnel, health_report)
     return False
 
 
@@ -35,7 +38,6 @@ def _parse_channels(value: str) -> list[str]:
     if value in {"mail", "chat", "none"}:
         return [] if value == "none" else [value]
 
-    # support comma-separated values too
     channels = []
     for item in value.split(","):
         item = item.strip().lower()
@@ -46,8 +48,8 @@ def _parse_channels(value: str) -> list[str]:
 
 def maybe_send_notifications(
     funnel: FunnelConfig,
-    health_report: dict[str, Any],
-    summary: dict[str, Any],
+    health_report: dict,
+    summary: dict,
     settings: Settings,
     force_notification: bool = False,
 ) -> dict[str, bool]:

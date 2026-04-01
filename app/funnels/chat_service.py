@@ -92,24 +92,22 @@ def build_google_chat_text(
     events = _event_map(health_report)
     ratios = _ratio_map(health_report)
 
+    # Individual events: only current values
     step_lines = []
     for step_name in funnel.step_names():
         event = events.get(step_name, {})
-        benchmark_value = event.get("benchmark_value", event.get("baseline_mean"))
-        change = _display_change_from_drop_pct(
-            event.get("drop_pct_vs_benchmark", event.get("drop_pct_vs_mean"))
-        )
         step_lines.append(
-            f"• *{step_name}*: `{_format_number(event.get('current_value'))}` "
-            f"(benchmark `{_format_number(benchmark_value)}`, change *{change}*)"
+            f"• *{step_name}*: `{_format_number(event.get('current_value'))}`"
         )
 
+    # Ratios: current + benchmark + change
     ratio_lines = []
     step_names = funnel.step_names()
     for i in range(max(0, len(step_names) - 1)):
         from_event = step_names[i]
         to_event = step_names[i + 1]
         ratio = ratios.get(f"{from_event}->{to_event}", {})
+
         benchmark_pct = ratio.get("benchmark_pct")
         if benchmark_pct is None:
             baseline_ratio = ratio.get("baseline_ratio_mean")
@@ -118,6 +116,7 @@ def build_google_chat_text(
         ratio_change = _display_change_from_drop_pct(
             ratio.get("ratio_drop_pct_vs_benchmark", ratio.get("ratio_drop_pct_vs_mean"))
         )
+
         ratio_lines.append(
             f"• *{from_event} → {to_event}*: "
             f"`{_format_pct((ratio.get('current_ratio') or 0) * 100, 2)}` "
@@ -145,7 +144,7 @@ def build_google_chat_text(
         f"*Date:* {date_label}\n"
         f"*Time Range:* {time_range}\n\n"
         f"*Alerts*\n" + "\n".join(alert_lines) + "\n\n"
-        f"*Quick highlights*\n" + "\n".join(step_lines) + "\n\n"
+        f"*Current event values*\n" + "\n".join(step_lines) + "\n\n"
         f"*Funnel ratios*\n" + "\n".join(ratio_lines) + "\n\n"
         f"*Main insight*\n{summary.get('main_insight', '')}\n\n"
         f"*What to check now*\n" + "\n".join(action_lines)
