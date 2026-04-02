@@ -1,0 +1,65 @@
+# Base image
+FROM python:3.11-slim
+
+# Prevent Python from writing .pyc files and buffer logs less
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# App directory
+WORKDIR /app
+
+# Install OS packages needed by Playwright/Chromium + common build tools
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    wget \
+    gnupg \
+    ca-certificates \
+    build-essential \
+    libnss3 \
+    libatk1.0-0 \
+    libatk-bridge2.0-0 \
+    libcups2 \
+    libdrm2 \
+    libxkbcommon0 \
+    libxcomposite1 \
+    libxdamage1 \
+    libxfixes3 \
+    libxrandr2 \
+    libgbm1 \
+    libasound2 \
+    libpangocairo-1.0-0 \
+    libpango-1.0-0 \
+    libgtk-3-0 \
+    libx11-xcb1 \
+    libxcb1 \
+    libxext6 \
+    libxshmfence1 \
+    libglu1-mesa \
+    fonts-liberation \
+    libappindicator3-1 \
+    xdg-utils \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create virtual environment
+RUN python -m venv /app/.venv
+
+# "Activate" venv for all next commands
+ENV PATH="/app/.venv/bin:$PATH"
+
+# Copy dependency file first for better Docker layer caching
+COPY requirements.txt .
+
+# Install Python packages
+RUN pip install --upgrade pip setuptools wheel && \
+    pip install -r requirements.txt
+
+# Install Playwright browser(s)
+RUN playwright install chromium
+
+# Copy the rest of the project
+COPY . .
+
+# Railway provides PORT; fallback to 8000 locally
+EXPOSE 8000
+
+CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}"]
