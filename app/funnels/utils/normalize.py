@@ -2,20 +2,12 @@ from __future__ import annotations
 
 import json
 from datetime import datetime, timedelta
-from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
 
-from app.funnels.models import FunnelConfig
-
+from app.funnels.utils.models import FunnelConfig
 
 WEBENGAGE_BUCKET_FORMAT = "%Y-%m-%d-%H"
-
-
-def _save_json(path: Path, data: dict[str, Any]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
 
 
 def _coerce_float(value: Any) -> float:
@@ -160,7 +152,7 @@ def _normalize_redash(
     }
 
 
-def normalize_and_store_report(
+def normalize_report(
     funnel: FunnelConfig,
     run_dt: datetime,
     timezone_name: str,
@@ -196,11 +188,11 @@ def normalize_and_store_report(
             {
                 "bucket_start": dt.strftime("%Y-%m-%dT%H:00:00"),
                 "values": values,
-                "present_steps": present_steps
+                "present_steps": present_steps,
             }
         )
 
-    normalized_report = {
+    return {
         "funnel_id": funnel.funnel_id,
         "funnel_name": funnel.name,
         "generated_at": run_dt.isoformat(),
@@ -213,5 +205,19 @@ def normalize_and_store_report(
         "buckets": buckets,
     }
 
-    _save_json(funnel.output_file("last_report.json"), normalized_report)
-    return normalized_report
+
+# Backward-compatible alias
+def normalize_and_store_report(
+    funnel: FunnelConfig,
+    run_dt: datetime,
+    timezone_name: str,
+    webengage_report: dict[str, Any] | None,
+    redash_report: dict[str, Any] | None,
+) -> dict[str, Any]:
+    return normalize_report(
+        funnel=funnel,
+        run_dt=run_dt,
+        timezone_name=timezone_name,
+        webengage_report=webengage_report,
+        redash_report=redash_report,
+    )

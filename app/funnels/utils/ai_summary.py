@@ -1,23 +1,15 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
 from typing import Any
 
 import requests
 
 from app.configs.settings import Settings
-from app.funnels.models import FunnelConfig
-
+from app.funnels.utils.models import FunnelConfig
 
 OPENAI_RESPONSES_URL = "https://api.openai.com/v1/responses"
 GEMINI_GENERATE_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-
-
-def _save_json(path: Path, data: dict[str, Any]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
 
 
 def _extract_openai_output_text(response_json: dict[str, Any]) -> str:
@@ -221,7 +213,7 @@ def _generate_with_gemini(compact_payload: dict[str, Any], settings: Settings) -
     return _extract_json_block(raw_text)
 
 
-def generate_and_store_summary(
+def generate_summary(
     funnel: FunnelConfig,
     health_report: dict[str, Any],
     settings: Settings,
@@ -230,11 +222,20 @@ def generate_and_store_summary(
 
     try:
         if settings.ai_provider == "gemini":
-            summary = _generate_with_gemini(compact_payload, settings)
-        else:
-            summary = _generate_with_openai(compact_payload, settings)
+            return _generate_with_gemini(compact_payload, settings)
+        return _generate_with_openai(compact_payload, settings)
     except Exception:
-        summary = _fallback_summary(health_report)
+        return _fallback_summary(health_report)
 
-    _save_json(funnel.output_file("summary.json"), summary)
-    return summary
+
+# Backward-compatible alias
+def generate_and_store_summary(
+    funnel: FunnelConfig,
+    health_report: dict[str, Any],
+    settings: Settings,
+) -> dict[str, Any]:
+    return generate_summary(
+        funnel=funnel,
+        health_report=health_report,
+        settings=settings,
+    )

@@ -7,7 +7,7 @@ from typing import Any
 import requests
 
 from app.configs.settings import Settings
-from app.funnels.models import FunnelConfig
+from app.funnels.utils.models import FunnelConfig
 
 
 def build_subject(funnel: FunnelConfig, health_report: dict[str, Any]) -> str:
@@ -165,23 +165,12 @@ def _render_step_highlight_cards(
     cards = []
     for step_name in step_names:
         event = events.get(step_name, {})
-        change_text, change_color = _display_change_from_drop_pct(
-            event.get("drop_pct_vs_benchmark", event.get("drop_pct_vs_mean"))
-        )
-        benchmark_value = event.get("benchmark_value", event.get("baseline_mean"))
 
         cards.append(
             f"""
             <td style="width:{100/max(1, len(step_names)):.2f}%;vertical-align:top;background:#fafafa;border:1px solid #e5e7eb;border-radius:14px;padding:16px;">
               <div style="font-size:12px;color:#6b7280;">{_emoji_for_step(step_name)} {escape(step_name)}</div>
               <div style="margin-top:8px;font-size:24px;font-weight:700;color:#111827;">{_format_number(event.get("current_value"))}</div>
-              <div style="margin-top:6px;font-size:13px;color:#6b7280;">
-                vs benchmark {_format_number(benchmark_value)}
-              </div>
-              <div style="margin-top:6px;font-size:13px;color:#6b7280;">
-                Change:
-                <span style="font-weight:600;color:{change_color};">{change_text}</span>
-              </div>
             </td>
             """
         )
@@ -240,12 +229,8 @@ def render_email_html(
     one_line_summary = escape(summary.get("one_line_summary", ""))
 
     date_label, time_range = format_bucket_range(health_report.get("latest_complete_hour"))
-    reasons = summary.get("likely_reasons", []) or []
-    actions = summary.get("what_to_check_now", []) or []
     what_happened_bullets = _build_what_happened_bullets(health_report, summary)
 
-    reasons_html = "".join(f"<li>{escape(str(item))}</li>" for item in reasons[:3])
-    actions_html = "".join(f"<li>{escape(str(item))}</li>" for item in actions[:3])
     what_happened_html = "".join(f"<li>{escape(str(item))}</li>" for item in what_happened_bullets)
 
     step_cards_html = _render_step_highlight_cards(funnel, health_report)
@@ -305,16 +290,6 @@ def render_email_html(
             <div style="margin:0 0 22px;padding:14px 16px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;font-size:15px;line-height:1.8;color:#111827;">
               {main_insight}
             </div>
-
-            <h2 style="margin:0 0 10px;font-size:16px;">🤔 Likely reasons</h2>
-            <ul style="margin:0 0 22px 18px;padding:0;font-size:15px;line-height:1.8;color:#111827;">
-              {reasons_html}
-            </ul>
-
-            <h2 style="margin:0 0 10px;font-size:16px;">✅ What to check now</h2>
-            <ul style="margin:0 0 22px 18px;padding:0;font-size:15px;line-height:1.8;color:#111827;">
-              {actions_html}
-            </ul>
           </div>
         </div>
       </body>
@@ -330,6 +305,9 @@ def render_email_text(
     date_label, time_range = format_bucket_range(health_report.get("latest_complete_hour"))
     bullets = _build_what_happened_bullets(health_report, summary)
 
+    event_map = _event_map(health_report)
+    ratio_map = _ratio_map(health_report)
+
     lines = [
         funnel.name,
         summary.get("one_line_summary", ""),
@@ -337,8 +315,41 @@ def render_email_text(
         f"Time Range: {time_range}",
         f"Verdict: {summary.get('simple_verdict', '')}",
         "",
-        "What happened:",
+        "Quick insights:",
     ]
+
+    for step_name in funnel.step_names():
+        event = event_map.get(step_name, {})
+        lines.append(f"- {step_name}: {_format_number(event.get('current_value'))}")
+
+    step_names = funnel.step_names()
+    if len(step_names) > 1:
+        lines.append("")
+        lines.append("Funnel stages:")
+        for i in range(len(step_names) - 1):
+            from_event = step_names[i]
+            to_event = step_names[i + 1]
+            ratio = ratio_map.get(f"{from_event}->{to_event}", {})
+
+            benchmark_pct = ratio.get("benchmark_pct")
+            if benchmark_pct is None:
+                baseline_ratio = ratio.get("baseline_ratio_mean")
+                benchmark_pct = (baseline_ratio or 0) * 100
+
+            change_text, _ = _display_change_from_drop_pct(
+                ratio.get("ratio_drop_pct_vs_benchmark", ratio.get("ratio_drop_pct_vs_mean"))
+            )
+
+            lines.append(
+                f"- {from_event} → {to_event}: "
+                f"{_format_pct((ratio.get('current_ratio') or 0) * 100, 2)} "
+                f"(benchmark {_format_pct(benchmark_pct, 2)}, change {change_text})"
+            )
+
+    lines.extend([
+        "",
+        "What happened:",
+    ])
 
     for item in bullets:
         lines.append(f"- {item}")
@@ -347,16 +358,7 @@ def render_email_text(
         "",
         "Main insight:",
         str(summary.get("main_insight", "")),
-        "",
-        "Likely reasons:",
     ])
-
-    for item in summary.get("likely_reasons", []) or []:
-        lines.append(f"- {item}")
-
-    lines.extend(["", "What to check now:"])
-    for item in summary.get("what_to_check_now", []) or []:
-        lines.append(f"- {item}")
 
     return "\n".join(lines)
 

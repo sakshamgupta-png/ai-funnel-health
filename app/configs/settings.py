@@ -27,6 +27,10 @@ class Settings:
     scheduler_minute: int
     scheduler_timezone: str
 
+    mongodb_uri: str
+    mongodb_db_name: str
+    mongodb_server_selection_timeout_ms: int
+
     webengage_base_url: str
     webengage_account_id: str
     webengage_auth_state: Path
@@ -57,6 +61,11 @@ def get_settings() -> Settings:
         enable_scheduler=_as_bool(os.getenv("ENABLE_SCHEDULER"), True),
         scheduler_minute=int(os.getenv("SCHEDULER_MINUTE", "5")),
         scheduler_timezone=os.getenv("SCHEDULER_TIMEZONE", "Asia/Kolkata"),
+        mongodb_uri=os.getenv("MONGODB_URI", "mongodb://localhost:27017"),
+        mongodb_db_name=os.getenv("MONGODB_DB_NAME", "ai_funnel_health"),
+        mongodb_server_selection_timeout_ms=int(
+            os.getenv("MONGODB_SERVER_SELECTION_TIMEOUT_MS", "5000")
+        ),
         webengage_base_url=os.getenv("WEBENGAGE_BASE_URL", "https://dashboard.webengage.com").rstrip("/"),
         webengage_account_id=os.getenv("WEBENGAGE_ACCOUNT_ID", "").strip(),
         webengage_auth_state=Path(

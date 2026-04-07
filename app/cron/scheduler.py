@@ -6,8 +6,8 @@ from typing import Optional
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 from app.configs.settings import get_settings
-from app.funnels.registry import list_funnels
-from app.funnels.service import run_funnel_monitor
+from app.funnels.services.service import run_funnel_monitor
+from app.funnels.utils.registry import list_funnels
 
 _scheduler: Optional[AsyncIOScheduler] = None
 

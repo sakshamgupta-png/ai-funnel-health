@@ -6,7 +6,7 @@ from typing import Any
 import requests
 
 from app.configs.settings import Settings
-from app.funnels.models import FunnelConfig
+from app.funnels.utils.models import FunnelConfig
 
 
 def _format_hour(dt: datetime) -> str:

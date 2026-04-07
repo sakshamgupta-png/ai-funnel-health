@@ -1,19 +1,11 @@
 from __future__ import annotations
 
-import json
 from collections import defaultdict
 from datetime import datetime, timedelta
-from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
 
-from app.funnels.models import FunnelConfig
-
-
-def _save_json(path: Path, data: dict[str, Any]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+from app.funnels.utils.models import FunnelConfig
 
 
 def _parse_bucket_dt(bucket_start: str) -> datetime:
@@ -111,7 +103,7 @@ def _classify_overall(
     return "watch"
 
 
-def analyze_and_store_health(
+def analyze_health(
     funnel: FunnelConfig,
     normalized_report: dict[str, Any],
     run_dt: datetime,
@@ -145,7 +137,6 @@ def analyze_and_store_health(
         benchmark_value = settings["benchmark_value"]
         drop_pct_vs_benchmark = _pct_drop(current_value, benchmark_value)
 
-        # In ratios_only mode, event alerts are disabled
         event_alert = False
         if alert_mode != "ratios_only":
             event_alert = (
@@ -194,7 +185,7 @@ def analyze_and_store_health(
             }
         )
 
-    health_report = {
+    return {
         "latest_complete_hour": target_dt.strftime("%Y-%m-%dT%H:00:00"),
         "overall_status": _classify_overall(alert_mode, event_results, ratio_results),
         "alert_mode": alert_mode,
@@ -207,5 +198,17 @@ def analyze_and_store_health(
         ],
     }
 
-    _save_json(funnel.output_file("health_report.json"), health_report)
-    return health_report
+
+# Backward-compatible alias
+def analyze_and_store_health(
+    funnel: FunnelConfig,
+    normalized_report: dict[str, Any],
+    run_dt: datetime,
+    timezone_name: str,
+) -> dict[str, Any]:
+    return analyze_health(
+        funnel=funnel,
+        normalized_report=normalized_report,
+        run_dt=run_dt,
+        timezone_name=timezone_name,
+    )

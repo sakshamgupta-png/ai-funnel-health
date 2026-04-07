@@ -1,23 +1,15 @@
 from __future__ import annotations
 
 import copy
-import json
 import time
 from datetime import datetime, timedelta
-from pathlib import Path
 from typing import Any
 
 import requests
 
 from app.auth.playwright_auth import build_cookie_header_from_auth_state
 from app.configs.settings import Settings
-from app.funnels.models import FunnelConfig
-
-
-def _save_json(path: Path, data: dict[str, Any]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+from app.funnels.utils.models import FunnelConfig
 
 
 def build_webengage_runtime_payload(
@@ -68,7 +60,6 @@ def fetch_webengage_report(
         raise RuntimeError("WEBENGAGE_ACCOUNT_ID is missing")
 
     runtime_payload = build_webengage_runtime_payload(funnel, run_dt)
-    _save_json(funnel.output_file("webengage_runtime_payload.json"), runtime_payload)
 
     endpoint = (
         f"{settings.webengage_base_url}/api/v2/accounts/"
@@ -119,5 +110,7 @@ def fetch_webengage_report(
             result = poll_response.json()
             status, job_id = _extract_status_and_job_id(result)
 
-    _save_json(funnel.output_file("webengage_last_report.json"), result)
-    return result
+    return {
+        "runtime_payload": runtime_payload,
+        "report": result,
+    }

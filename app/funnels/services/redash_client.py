@@ -4,18 +4,11 @@ import json
 import os
 import time
 from datetime import datetime, timedelta
-from pathlib import Path
 from typing import Any
 
 import requests
 
-from app.funnels.models import FunnelConfig
-
-
-def _save_json(path: Path, data: dict[str, Any]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+from app.funnels.utils.models import FunnelConfig
 
 
 def _get_redash_user_api_key(source_cfg: dict[str, Any]) -> str:
@@ -30,7 +23,7 @@ def _get_redash_user_api_key(source_cfg: dict[str, Any]) -> str:
             return value
 
     raise RuntimeError(
-        "Redash User API key not found. Set user_api_key_env in funnel.json and the value in .env"
+        "Redash User API key not found. Set user_api_key_env in funnel config and the value in .env"
     )
 
 
@@ -90,12 +83,6 @@ def _run_results_request(
     max_age_seconds: int,
     timeout_seconds: int,
 ) -> dict[str, Any]:
-    """
-    Redash semantics:
-    - POST /api/queries/<id>/results with max_age>0 may return cached result
-    - if cache too old, Redash starts a new execution job
-    - max_age=0 guarantees a new execution
-    """
     url = f"{base_url}/api/queries/{query_id}/results"
     payload = {"max_age": max_age_seconds}
 
@@ -114,7 +101,6 @@ def _run_results_request(
     if "job" in data:
         return _poll_redash_job(base_url, api_key, data["job"]["id"], timeout_seconds)
 
-    # fallback for variant shapes
     if isinstance(data, dict) and data.get("status") in {1, 2, 3, 4, 5} and data.get("id"):
         return _poll_redash_job(base_url, api_key, data["id"], timeout_seconds)
 
@@ -155,7 +141,6 @@ def _parse_bucket_datetime(value: Any) -> datetime:
 
     raw = value.strip()
 
-    # try ISO first
     try:
         dt = datetime.fromisoformat(raw.replace("Z", "+00:00"))
         if dt.tzinfo is not None:
@@ -164,7 +149,6 @@ def _parse_bucket_datetime(value: Any) -> datetime:
     except Exception:
         pass
 
-    # common Redash string formats
     for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M", "%Y-%m-%d"):
         try:
             dt = datetime.strptime(raw, fmt)
@@ -202,10 +186,8 @@ def fetch_redash_report(
     freshness_tolerance_minutes = int(source_cfg.get("freshness_tolerance_minutes", 120))
     time_column = source_cfg["time_column"]
 
-    # previous-hour bucket we want aligned with WebEngage
     target_dt = run_dt.replace(minute=0, second=0, microsecond=0, tzinfo=None) - timedelta(hours=1)
 
-    # 1) normal fetch: cached if fresh enough, otherwise Redash runs query
     result = _run_results_request(
         base_url=base_url,
         api_key=api_key,
@@ -226,20 +208,18 @@ def fetch_redash_report(
 
     missing_target_bucket = latest_bucket is None or latest_bucket < target_dt
 
-    # 2) if stale or missing required bucket, force fresh execution
     if is_stale_by_retrieved_at or missing_target_bucket:
         result = _run_results_request(
             base_url=base_url,
             api_key=api_key,
             query_id=query_id,
-            max_age_seconds=0,   # guarantees fresh execution
+            max_age_seconds=0,
             timeout_seconds=timeout_seconds,
         )
 
         rows = _extract_rows(result)
         latest_bucket = _latest_bucket_from_rows(rows, time_column)
 
-    # 3) final validation: after forced refresh, the target bucket must exist
     if latest_bucket is None:
         raise RuntimeError("Redash returned no usable rows after refresh")
 
@@ -249,5 +229,4 @@ def fetch_redash_report(
             f"target_hour={target_dt.isoformat()} latest_redash_bucket={latest_bucket.isoformat()}"
         )
 
-    _save_json(funnel.output_file("redash_last_report.json"), result)
     return result

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
 from app.configs.settings import Settings
-from app.funnels.chat_service import send_google_chat_message
-from app.funnels.email_service import maybe_send_email
-from app.funnels.models import FunnelConfig
-from app.funnels.run_state import (
-    mark_notification_sent,
+from app.funnels.services.chat_service import send_google_chat_message
+from app.funnels.services.email_service import maybe_send_email
+from app.funnels.utils.models import FunnelConfig
+from app.repositories.funnel_run_repo import (
+    mark_notification_result,
     should_send_notification_for_hour,
 )
 
@@ -32,12 +32,6 @@ def _should_notify(funnel: FunnelConfig, health_report: dict[str, object]) -> bo
 
 
 def _parse_channels(value: str) -> list[str]:
-    value = (value or "mail").strip().lower()
-    if value == "both":
-        return ["mail", "chat"]
-    if value in {"mail", "chat", "none"}:
-        return [] if value == "none" else [value]
-
     channels = []
     for item in value.split(","):
         item = item.strip().lower()
@@ -51,6 +45,7 @@ def maybe_send_notifications(
     health_report: dict,
     summary: dict,
     settings: Settings,
+    run_id: str,
     force_notification: bool = False,
 ) -> dict[str, bool]:
     results = {
@@ -69,7 +64,7 @@ def maybe_send_notifications(
 
     for channel in channels:
         if not should_send_notification_for_hour(
-            outputs_dir=funnel.outputs_dir,
+            funnel_id=funnel.funnel_id,
             target_hour=target_hour,
             channel=channel,
             force_notification=force_notification,
@@ -77,16 +72,19 @@ def maybe_send_notifications(
             print(f"[SKIP] {channel} already sent for {funnel.funnel_id} target_hour={target_hour}")
             continue
 
-        if channel == "mail":
-            sent = maybe_send_email(funnel, health_report, summary, settings)
-            if sent:
-                mark_notification_sent(funnel.outputs_dir, target_hour, channel)
-                results["mail_sent"] = True
+        try:
+            if channel == "mail":
+                sent = maybe_send_email(funnel, health_report, summary, settings)
+                mark_notification_result(run_id, "mail", attempted=True, sent=bool(sent), error=None)
+                results["mail_sent"] = bool(sent)
 
-        elif channel == "chat":
-            sent = send_google_chat_message(funnel, health_report, summary, settings)
-            if sent:
-                mark_notification_sent(funnel.outputs_dir, target_hour, channel)
-                results["chat_sent"] = True
+            elif channel == "chat":
+                sent = send_google_chat_message(funnel, health_report, summary, settings)
+                mark_notification_result(run_id, "chat", attempted=True, sent=bool(sent), error=None)
+                results["chat_sent"] = bool(sent)
+
+        except Exception as exc:
+            mark_notification_result(run_id, channel, attempted=True, sent=False, error=str(exc))
+            raise
 
     return results
